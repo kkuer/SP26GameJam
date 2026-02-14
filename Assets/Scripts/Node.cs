@@ -19,6 +19,11 @@ public class Node : MonoBehaviour
     [SerializeField] private Material lineMaterial;
     [SerializeField] private Color lineColor = Color.white;
 
+    [Header("Line Animation Settings")]
+    [SerializeField] private float lineDrawSpeed = 2f; // Speed of line drawing animation
+    [SerializeField] private bool animateLines = true; // Toggle animation on/off
+    [SerializeField] private AnimationCurve drawEasingCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f); // Easing for animation
+
     private Vector3 targetPosition;
     private Vector3 offset;
     private bool isDragging = false;
@@ -30,6 +35,14 @@ public class Node : MonoBehaviour
     // Connection visualization
     private List<LineRenderer> connectionLines = new List<LineRenderer>();
     private Dictionary<NodeSlot, LineRenderer> activeConnections = new Dictionary<NodeSlot, LineRenderer>();
+
+    // Track which node owns each connection (to prevent duplicates)
+    private static Dictionary<(Node, Node), LineRenderer> globalConnections = new Dictionary<(Node, Node), LineRenderer>();
+
+    // Line animation tracking
+    private Dictionary<LineRenderer, float> lineDrawStartTime = new Dictionary<LineRenderer, float>();
+    private Dictionary<LineRenderer, bool> animationCompleted = new Dictionary<LineRenderer, bool>();
+    private float lastSnapTime;
 
     // Public properties
     public NodeType Type => nodeType;
@@ -72,6 +85,9 @@ public class Node : MonoBehaviour
             lr.enabled = false;
 
             connectionLines.Add(lr);
+
+            // Initialize tracking
+            animationCompleted[lr] = false;
         }
     }
 
@@ -104,7 +120,7 @@ public class Node : MonoBehaviour
             currentSlot.OccupyingNode = this;
 
             // Update connections for this node and all neighbors
-            UpdateConnections();
+            UpdateConnections(true); // Pass true to indicate this is a new connection
             NotifyNeighborsToUpdateConnections();
         }
         else
@@ -125,6 +141,9 @@ public class Node : MonoBehaviour
 
         // Hide connections while dragging
         HideAllConnections();
+
+        // Remove this node's connections from global dictionary
+        RemoveGlobalConnections();
 
         // If we're in a slot (not inventory), notify neighbors and free the slot
         if (currentSlot != null)
@@ -177,7 +196,6 @@ public class Node : MonoBehaviour
                     else
                     {
                         Debug.LogWarning($"No available slots of type {nodeType} found for node!");
-                        // Optionally: snap back to original slot? For now just stay in place
                     }
                 }
                 break;
@@ -206,14 +224,21 @@ public class Node : MonoBehaviour
             {
                 transform.position = snapTarget;
                 isSnapping = false;
+                lastSnapTime = Time.time;
+
+                // Reset animation completion flags for new connections
+                foreach (var lr in connectionLines)
+                {
+                    animationCompleted[lr] = false;
+                }
 
                 if (currentSlot != null)
                 {
                     currentSlot.state = NodeSlotState.Occupied;
                     currentSlot.OccupyingNode = this;
 
-                    // Update connections after snapping
-                    UpdateConnections();
+                    // Update connections after snapping - pass true for new connection
+                    UpdateConnections(true);
                     NotifyNeighborsToUpdateConnections();
 
                     // Notify NodeManager that state changed
@@ -224,27 +249,179 @@ public class Node : MonoBehaviour
                 }
             }
         }
+
+        // Update line animations
+        if (animateLines)
+        {
+            UpdateLineAnimations();
+        }
     }
 
-    void UpdateLinePoints(LineRenderer lr, Vector3 start, Vector3 end)
+    void UpdateLinePoints(LineRenderer lr, Vector3 start, Vector3 end, float progress = 1f)
     {
         if (lr.positionCount < 2) return;
 
         Vector3[] points = new Vector3[lr.positionCount];
 
+        // Apply easing to progress
+        float easedProgress = drawEasingCurve.Evaluate(Mathf.Clamp01(progress));
+        float totalDistance = Vector3.Distance(start, end);
+        float drawnDistance = totalDistance * easedProgress;
+
         for (int i = 0; i < lr.positionCount; i++)
         {
             float t = i / (float)(lr.positionCount - 1);
 
-            // Simple straight line interpolation
-            // You could replace this with bezier curve logic if needed
-            points[i] = Vector3.Lerp(start, end, t);
+            if (animateLines && progress < 1f)
+            {
+                // For animation, only draw up to the progress point
+                float pointDistance = t * totalDistance;
+                if (pointDistance <= drawnDistance)
+                {
+                    // Point is within drawn portion
+                    points[i] = Vector3.Lerp(start, end, t);
+                }
+                else
+                {
+                    // Point is beyond drawn portion - clamp to end of drawn portion
+                    float clampedT = drawnDistance / totalDistance;
+                    points[i] = Vector3.Lerp(start, end, clampedT);
+                }
+            }
+            else
+            {
+                // Full line
+                points[i] = Vector3.Lerp(start, end, t);
+            }
         }
 
         lr.SetPositions(points);
     }
 
-    public void UpdateConnections()
+    void UpdateLineAnimations()
+    {
+        List<(Node, Node)> toRemove = new List<(Node, Node)>();
+        bool anyAnimationJustCompleted = false;
+
+        foreach (var kvp in globalConnections)
+        {
+            var connection = kvp.Key;
+            LineRenderer lr = kvp.Value;
+
+            Node nodeA = connection.Item1;
+            Node nodeB = connection.Item2;
+
+            // Check if connection is still valid
+            if (nodeA == null || nodeB == null || nodeA.gameObject == null || nodeB.gameObject == null)
+            {
+                if (lr != null) lr.enabled = false;
+                toRemove.Add(connection);
+                continue;
+            }
+
+            // Check if nodes are still in adjacent slots
+            if (nodeA.CurrentSlot == null || nodeB.CurrentSlot == null)
+            {
+                if (lr != null) lr.enabled = false;
+                toRemove.Add(connection);
+                continue;
+            }
+
+            // Check if slots are still neighbors
+            if (!AreSlotsNeighbors(nodeA.CurrentSlot, nodeB.CurrentSlot))
+            {
+                if (lr != null) lr.enabled = false;
+                toRemove.Add(connection);
+                continue;
+            }
+
+            // Update line if renderer exists
+            if (lr != null && lr.enabled)
+            {
+                // Determine which node is newer to animate from it
+                float timeSinceSnapA = Time.time - nodeA.lastSnapTime;
+                float timeSinceSnapB = Time.time - nodeB.lastSnapTime;
+
+                if (timeSinceSnapA < timeSinceSnapB && timeSinceSnapA < 1f)
+                {
+                    // Animate from node A to node B
+                    float progress = Mathf.Clamp01(timeSinceSnapA * lineDrawSpeed);
+                    UpdateLinePoints(lr, nodeA.transform.position, nodeB.transform.position, progress);
+
+                    // Check if animation just completed
+                    if (progress >= 0.99f && !nodeA.animationCompleted[lr])
+                    {
+                        nodeA.animationCompleted[lr] = true;
+                        anyAnimationJustCompleted = true;
+                    }
+                }
+                else if (timeSinceSnapB < 1f)
+                {
+                    // Animate from node B to node A
+                    float progress = Mathf.Clamp01(timeSinceSnapB * lineDrawSpeed);
+                    UpdateLinePoints(lr, nodeB.transform.position, nodeA.transform.position, progress);
+
+                    // Check if animation just completed
+                    if (progress >= 0.99f && !nodeB.animationCompleted[lr])
+                    {
+                        nodeB.animationCompleted[lr] = true;
+                        anyAnimationJustCompleted = true;
+                    }
+                }
+                else
+                {
+                    // No animation, just draw full line
+                    UpdateLinePoints(lr, nodeA.transform.position, nodeB.transform.position, 1f);
+                }
+            }
+        }
+
+        // Clean up invalid connections
+        foreach (var connection in toRemove)
+        {
+            globalConnections.Remove(connection);
+        }
+
+        // --- ANIMATION COMPLETION HOOK ---
+        // Add your logic here when any animation completes
+        if (anyAnimationJustCompleted && NodeManager.Instance != null)
+        {
+            // Example: Call a method on the singleton
+            ShakeManager.Instance.shakeCam(2.5f, 1f, 0.5f);
+        }
+    }
+
+    bool AreSlotsNeighbors(NodeSlot slotA, NodeSlot slotB)
+    {
+        if (slotA == null || slotB == null) return false;
+
+        // Check if slotB is in slotA's nearbyNodes list
+        return slotA.nearbyNodes.Contains(slotB);
+    }
+
+    void RemoveGlobalConnections()
+    {
+        List<(Node, Node)> toRemove = new List<(Node, Node)>();
+
+        foreach (var kvp in globalConnections)
+        {
+            if (kvp.Key.Item1 == this || kvp.Key.Item2 == this)
+            {
+                if (kvp.Value != null)
+                {
+                    kvp.Value.enabled = false;
+                }
+                toRemove.Add(kvp.Key);
+            }
+        }
+
+        foreach (var connection in toRemove)
+        {
+            globalConnections.Remove(connection);
+        }
+    }
+
+    public void UpdateConnections(bool isNewConnection = false)
     {
         if (currentSlot == null)
         {
@@ -252,35 +429,75 @@ public class Node : MonoBehaviour
             return;
         }
 
-        HideAllConnections();
-
-        int lineIndex = 0;
-
         // Check each neighbor slot
-        for (int i = 0; i < currentSlot.nearbyNodes.Count && lineIndex < connectionLines.Count; i++)
+        for (int i = 0; i < currentSlot.nearbyNodes.Count; i++)
         {
             NodeSlot neighborSlot = currentSlot.nearbyNodes[i];
 
             // If neighbor exists and has an occupying node
             if (neighborSlot != null && neighborSlot.OccupyingNode != null)
             {
-                LineRenderer lr = connectionLines[lineIndex];
-                lr.enabled = true;
+                Node neighborNode = neighborSlot.OccupyingNode;
 
-                // Update line renderer settings (in case inspector values changed)
-                lr.widthCurve = lineWidthCurve;
-                lr.startColor = lineColor;
-                lr.endColor = lineColor;
+                // Create a unique key for this connection (always use consistent ordering)
+                var connectionKey = (this, neighborNode);
+                var reverseKey = (neighborNode, this);
 
-                // Set line points
-                UpdateLinePoints(lr, transform.position, neighborSlot.OccupyingNode.transform.position);
+                // Check if this connection already exists (either direction)
+                if (globalConnections.ContainsKey(connectionKey) || globalConnections.ContainsKey(reverseKey))
+                {
+                    continue; // Skip - connection already handled by other node
+                }
 
-                // Store in active connections
-                activeConnections[neighborSlot] = lr;
+                // Find an available line renderer
+                LineRenderer lr = GetAvailableLineRenderer();
+                if (lr != null)
+                {
+                    lr.enabled = true;
 
-                lineIndex++;
+                    // Update line renderer settings
+                    lr.widthCurve = lineWidthCurve;
+                    lr.startColor = lineColor;
+                    lr.endColor = lineColor;
+
+                    if (isNewConnection && animateLines)
+                    {
+                        // Record start time for animation
+                        lineDrawStartTime[lr] = Time.time;
+                        animationCompleted[lr] = false;
+
+                        // Start with just the start point
+                        Vector3[] startPoints = new Vector3[linePoints];
+                        for (int j = 0; j < linePoints; j++)
+                        {
+                            startPoints[j] = transform.position;
+                        }
+                        lr.SetPositions(startPoints);
+                    }
+                    else
+                    {
+                        // Set full line immediately
+                        UpdateLinePoints(lr, transform.position, neighborNode.transform.position, 1f);
+                        animationCompleted[lr] = true;
+                    }
+
+                    // Store in global connections (use consistent ordering)
+                    globalConnections[connectionKey] = lr;
+                }
             }
         }
+    }
+
+    LineRenderer GetAvailableLineRenderer()
+    {
+        foreach (var lr in connectionLines)
+        {
+            if (!lr.enabled)
+            {
+                return lr;
+            }
+        }
+        return null;
     }
 
     void NotifyNeighborsToUpdateConnections()
@@ -302,40 +519,6 @@ public class Node : MonoBehaviour
         {
             lr.enabled = false;
         }
-        activeConnections.Clear();
-    }
-
-    void LateUpdate()
-    {
-        // Update line positions if connections exist (for when other nodes move)
-        if (activeConnections.Count > 0)
-        {
-            List<NodeSlot> toRemove = new List<NodeSlot>();
-
-            foreach (var kvp in activeConnections)
-            {
-                NodeSlot neighborSlot = kvp.Key;
-                LineRenderer lr = kvp.Value;
-
-                if (neighborSlot != null && neighborSlot.OccupyingNode != null && neighborSlot.OccupyingNode.gameObject != null)
-                {
-                    // Update line points
-                    UpdateLinePoints(lr, transform.position, neighborSlot.OccupyingNode.transform.position);
-                }
-                else
-                {
-                    // Connection no longer valid
-                    lr.enabled = false;
-                    toRemove.Add(neighborSlot);
-                }
-            }
-
-            // Clean up any invalid connections
-            foreach (var slot in toRemove)
-            {
-                activeConnections.Remove(slot);
-            }
-        }
     }
 
     Vector3 GetMouseWorldPos()
@@ -347,6 +530,9 @@ public class Node : MonoBehaviour
 
     void OnDestroy()
     {
+        // Remove this node's connections from global dictionary
+        RemoveGlobalConnections();
+
         // Notify neighbors before destroying
         if (currentSlot != null)
         {
@@ -395,6 +581,9 @@ public class Node : MonoBehaviour
     // Method to place node in inventory (sets state and optionally moves it)
     public void MoveToInventory(Vector3 inventoryPosition)
     {
+        // Remove connections from global dictionary
+        RemoveGlobalConnections();
+
         // Free up current slot if occupied
         if (currentSlot != null)
         {

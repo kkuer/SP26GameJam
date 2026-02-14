@@ -3306,10 +3306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9c25f4de4f04e4a996dad7b73eb763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CamController
-  panSpeed: 1
+  panSpeed: 0.2
   invertPan: 0
   zoomSpeed: 5
-  minZoom: 5
+  minZoom: 7
   maxZoom: 19
   zoomSmoothing: 5
   enableBounds: 1

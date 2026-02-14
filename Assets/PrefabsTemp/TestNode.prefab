@@ -144,7 +144,7 @@ MonoBehaviour:
   nodeType: 1
   nodeState: 2
   dragSpeed: 20
-  snapSpeed: 15
+  snapSpeed: 25
   linePoints: 8
   lineWidthCurve:
     serializedVersion: 2
@@ -181,3 +181,29 @@ MonoBehaviour:
     m_RotationOrder: 4
   lineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   lineColor: {r: 1, g: 1, b: 1, a: 1}
+  lineDrawSpeed: 2
+  animateLines: 1
+  drawEasingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.4878277
+      outSlope: 1.4878277
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.032112394
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 3.665274
+      outSlope: 3.665274
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.014550984
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

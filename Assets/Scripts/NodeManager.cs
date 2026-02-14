@@ -6,7 +6,7 @@ public class NodeManager : MonoBehaviour
     public static NodeManager Instance { get; private set; }
 
     public List<NodeSlot> allNodes = new List<NodeSlot>();
-
+    
     [Header("Node Prefab")]
     [SerializeField] private GameObject nodePrefab; // Assign your node prefab here
 
@@ -33,11 +33,11 @@ public class NodeManager : MonoBehaviour
 
         GameObject newNode = Instantiate(nodePrefab, position, Quaternion.identity);
         Node nodeComponent = newNode.GetComponent<Node>();
-
+        
         // Set the node type (if the prefab has a default, this overrides it)
         // Note: You might want to set this in the prefab instead
         nodeComponent.SetNodeType(nodeType);
-
+        
         return newNode;
     }
 
@@ -52,7 +52,7 @@ public class NodeManager : MonoBehaviour
 
         // Find closest available slot of matching type
         NodeSlot closestSlot = GetClosestAvailableSlotOfType(position, nodeType);
-
+        
         if (closestSlot != null)
         {
             // Instantiate at slot position
@@ -98,7 +98,7 @@ public class NodeManager : MonoBehaviour
     public List<NodeSlot> GetAllAvailableSlotsOfType(NodeType nodeType)
     {
         List<NodeSlot> availableSlots = new List<NodeSlot>();
-
+        
         foreach (NodeSlot slot in allNodes)
         {
             if (slot.state != NodeSlotState.Occupied && slot.type == (SlotType)nodeType)
@@ -106,7 +106,7 @@ public class NodeManager : MonoBehaviour
                 availableSlots.Add(slot);
             }
         }
-
+        
         return availableSlots;
     }
 
