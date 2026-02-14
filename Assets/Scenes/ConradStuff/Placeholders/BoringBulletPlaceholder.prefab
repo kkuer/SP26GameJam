@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NormalBullet
   bullSpeed: 10
   bulletSplash: {fileID: 5670680589988066341, guid: 9536a5f9bd06e3844855a81f10c6af77, type: 3}
-  bulletLife: 15
+  bulletLife: 5
 --- !u!96 &4422539888365359213
 TrailRenderer:
   serializedVersion: 4
