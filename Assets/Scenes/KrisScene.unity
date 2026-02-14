@@ -1863,7 +1863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1264132521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2814,6 +2814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592028308}
   - component: {fileID: 1592028309}
+  - component: {fileID: 1592028310}
   m_Layer: 0
   m_Name: CoreDot
   m_TagString: Untagged
@@ -2895,6 +2896,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1592028310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592028307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes: []
 --- !u!1 &1699280825
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,7 +3738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2035498481
 MonoBehaviour:
   m_ObjectHideFlags: 0
