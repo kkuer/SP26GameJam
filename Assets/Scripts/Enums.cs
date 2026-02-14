@@ -19,3 +19,10 @@ public enum SlotType
     Abiility,
     Modifier
 }
+
+public enum NodeType
+{
+    Center,
+    Ability,
+    Modifier
+}

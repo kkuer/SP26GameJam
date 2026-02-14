@@ -6,54 +6,28 @@ public class NodeSlot : MonoBehaviour
     public List<NodeSlot> nearbyNodes = new List<NodeSlot>();
 
     public NodeSlotState state = NodeSlotState.Empty;
-    public SlotType type;
+    public SlotType type; // This is already here!
 
-    void Start()
+    private Node occupyingNode;
+    public Node OccupyingNode
     {
-        CreateConnections();
+        get { return occupyingNode; }
+        set { occupyingNode = value; }
     }
 
-    void Update()
+    public bool HasNeighborAt(int index)
     {
-        UpdateLinePositions();
+        return index < nearbyNodes.Count && nearbyNodes[index] != null;
     }
 
-    public Material lineMaterial;
-    public float lineWidth = 0.1f;
-    public Color lineColor = Color.white;
-
-    private LineRenderer lineRenderer;
-
-    
-    void CreateConnections()
+    public List<NodeSlot> GetValidNeighbors()
     {
-        lineRenderer = gameObject.AddComponent<LineRenderer>();
-
-        lineRenderer.startWidth = lineWidth;
-        lineRenderer.endWidth = lineWidth;
-        lineRenderer.material = lineMaterial ?? new Material(Shader.Find("Sprites/Default"));
-        lineRenderer.startColor = lineColor;
-        lineRenderer.endColor = lineColor;
-
-        UpdateLinePositions();
-    }
-    
-    void UpdateLinePositions()
-    {
-        Vector3[] positions = new Vector3[nearbyNodes.Count];
-        for (int i = 0; i < nearbyNodes.Count; i++)
+        List<NodeSlot> valid = new List<NodeSlot>();
+        foreach (var neighbor in nearbyNodes)
         {
-            if (nearbyNodes[i] == null) continue;
-            positions[i] = nearbyNodes[i].transform.position;
-            positions[i].z = 0;
+            if (neighbor != null)
+                valid.Add(neighbor);
         }
-        
-        lineRenderer.positionCount = positions.Length;
-        lineRenderer.SetPositions(positions);
-    }
-
-    public void FindNearbyNode()
-    {
-
+        return valid;
     }
 }
