@@ -19,6 +19,18 @@ public class Node : MonoBehaviour
     [SerializeField] private Material lineMaterial;
     [SerializeField] private Color lineColor = Color.white;
 
+    [Header("Preview Line Settings")]
+    [SerializeField] private bool showPreviewWhileDragging = true;
+    [SerializeField] private Color previewLineColor = new Color(1f, 1f, 0f, 0.5f); // Yellow semi-transparent
+    [SerializeField] private float previewLineWidth = 0.15f;
+    [SerializeField] private int maxPreviewLines = 6; // Maximum number of preview lines
+    [SerializeField] private Material previewMaterial; // Optional: different material for preview
+
+    [Header("Preview Pulse Settings")]
+    [SerializeField] private float pulseSpeed = 5f; // Speed of the pulse effect
+    [SerializeField] private float pulseIntensity = 0.2f; // How much the brightness varies (0 = no pulse, 1 = full variation)
+    [SerializeField] private float pulseBaseAlpha = 0.5f; // Base alpha value (same as previewLineColor.a)
+
     [Header("Line Animation Settings")]
     [SerializeField] private float lineDrawSpeed = 2f; // Speed of line drawing animation
     [SerializeField] private bool animateLines = true; // Toggle animation on/off
@@ -31,10 +43,15 @@ public class Node : MonoBehaviour
     private Vector3 snapTarget;
 
     private NodeSlot currentSlot;
+    private NodeSlot previewSlot; // The slot this node would snap to
 
     // Connection visualization
     private List<LineRenderer> connectionLines = new List<LineRenderer>();
     private Dictionary<NodeSlot, LineRenderer> activeConnections = new Dictionary<NodeSlot, LineRenderer>();
+
+    // Preview lines
+    private List<LineRenderer> previewLines = new List<LineRenderer>();
+    private Dictionary<NodeSlot, LineRenderer> activePreviews = new Dictionary<NodeSlot, LineRenderer>();
 
     // Track which node owns each connection (to prevent duplicates)
     private static Dictionary<(Node, Node), LineRenderer> globalConnections = new Dictionary<(Node, Node), LineRenderer>();
@@ -52,6 +69,7 @@ public class Node : MonoBehaviour
     void Awake()
     {
         CreateLineRenderers();
+        CreatePreviewLines();
     }
 
     void CreateLineRenderers()
@@ -88,6 +106,45 @@ public class Node : MonoBehaviour
 
             // Initialize tracking
             animationCompleted[lr] = false;
+        }
+    }
+
+    void CreatePreviewLines()
+    {
+        // Create preview line pool
+        for (int i = 0; i < maxPreviewLines; i++)
+        {
+            GameObject previewObj = new GameObject($"PreviewLine_{i}");
+            previewObj.transform.SetParent(transform);
+            previewObj.transform.localPosition = Vector3.zero;
+
+            LineRenderer lr = previewObj.AddComponent<LineRenderer>();
+
+            // Set preview material
+            if (previewMaterial != null)
+            {
+                lr.material = previewMaterial;
+            }
+            else if (lineMaterial != null)
+            {
+                lr.material = lineMaterial;
+            }
+            else
+            {
+                lr.material = new Material(Shader.Find("Sprites/Default"));
+            }
+
+            // Configure preview line
+            lr.startColor = previewLineColor;
+            lr.endColor = previewLineColor;
+            lr.startWidth = previewLineWidth;
+            lr.endWidth = previewLineWidth;
+            lr.positionCount = 2; // Simple straight line for preview
+            lr.numCornerVertices = 5;
+            lr.numCapVertices = 5;
+            lr.enabled = false;
+
+            previewLines.Add(lr);
         }
     }
 
@@ -129,6 +186,84 @@ public class Node : MonoBehaviour
         }
     }
 
+    void UpdatePreviewLines()
+    {
+        if (!showPreviewWhileDragging || !isDragging)
+        {
+            HideAllPreviews();
+            return;
+        }
+
+        // Find the closest available slot (where this node would snap)
+        if (NodeManager.Instance != null)
+        {
+            previewSlot = NodeManager.Instance.GetClosestAvailableSlotOfType(transform.position, nodeType);
+        }
+
+        if (previewSlot == null)
+        {
+            HideAllPreviews();
+            return;
+        }
+
+        int previewIndex = 0;
+
+        // Check all neighbors of that potential slot
+        foreach (var neighborSlot in previewSlot.nearbyNodes)
+        {
+            if (previewIndex >= maxPreviewLines) break;
+
+            // If neighbor exists and has an occupying node
+            if (neighborSlot != null && neighborSlot.OccupyingNode != null)
+            {
+                Node neighborNode = neighborSlot.OccupyingNode;
+
+                // Check if this connection already exists in global connections
+                var connectionKey = (this, neighborNode);
+                var reverseKey = (neighborNode, this);
+
+                // Only show preview for connections that don't already exist
+                if (!globalConnections.ContainsKey(connectionKey) && !globalConnections.ContainsKey(reverseKey))
+                {
+                    LineRenderer previewLine = previewLines[previewIndex];
+                    previewLine.enabled = true;
+
+                    // Draw from the slot position (not the node position)
+                    previewLine.SetPosition(0, previewSlot.transform.position);
+                    previewLine.SetPosition(1, neighborNode.transform.position);
+
+                    // Pulse effect while dragging - with separate speed and intensity controls
+                    float pulse = 1f + Mathf.Sin(Time.time * pulseSpeed + previewIndex) * pulseIntensity;
+                    Color pulsedColor = previewLineColor;
+                    pulsedColor.a = pulseBaseAlpha * pulse;
+                    previewLine.startColor = pulsedColor;
+                    previewLine.endColor = pulsedColor;
+
+                    // Store in active previews
+                    activePreviews[neighborSlot] = previewLine;
+
+                    previewIndex++;
+                }
+            }
+        }
+
+        // Hide any unused preview lines
+        for (int i = previewIndex; i < previewLines.Count; i++)
+        {
+            previewLines[i].enabled = false;
+        }
+    }
+
+    void HideAllPreviews()
+    {
+        foreach (var preview in previewLines)
+        {
+            preview.enabled = false;
+        }
+        activePreviews.Clear();
+        previewSlot = null;
+    }
+
     void OnMouseDown()
     {
         // Check if node is in a state that allows dragging
@@ -141,6 +276,7 @@ public class Node : MonoBehaviour
 
         // Hide connections while dragging
         HideAllConnections();
+        HideAllPreviews();
 
         // Remove this node's connections from global dictionary
         RemoveGlobalConnections();
@@ -172,6 +308,9 @@ public class Node : MonoBehaviour
         if (nodeState != NodeState.Draggable && nodeState != NodeState.InInventory) return;
 
         isDragging = false;
+
+        // Hide preview lines
+        HideAllPreviews();
 
         // Handle different states on release
         switch (nodeState)
@@ -211,6 +350,9 @@ public class Node : MonoBehaviour
                 targetPosition,
                 dragSpeed * Time.deltaTime
             );
+
+            // Update preview lines while dragging
+            UpdatePreviewLines();
         }
         else if (isSnapping)
         {
@@ -386,7 +528,6 @@ public class Node : MonoBehaviour
         // Add your logic here when any animation completes
         if (anyAnimationJustCompleted && NodeManager.Instance != null)
         {
-            // Example: Call a method on the singleton
             ShakeManager.Instance.shakeCam(2.5f, 1f, 0.5f);
         }
     }
@@ -560,6 +701,13 @@ public class Node : MonoBehaviour
                 Destroy(lr.gameObject);
         }
 
+        // Clean up preview lines
+        foreach (var preview in previewLines)
+        {
+            if (preview != null)
+                Destroy(preview.gameObject);
+        }
+
         // Notify NodeManager
         if (NodeManager.Instance != null)
         {
@@ -598,6 +746,9 @@ public class Node : MonoBehaviour
 
         // Hide connections
         HideAllConnections();
+
+        // Hide preview lines
+        HideAllPreviews();
 
         // Move to inventory position
         transform.position = inventoryPosition;
