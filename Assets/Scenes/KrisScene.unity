@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 13546386}
   - component: {fileID: 13546387}
+  - component: {fileID: 13546388}
   m_Layer: 0
   m_Name: GridDot (1)
   m_TagString: Untagged
@@ -201,7 +202,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -210,6 +211,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &13546388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13546385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 72482286}
+  - {fileID: 1906998636}
+  - {fileID: 573429719}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &72482283
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 72482284}
   - component: {fileID: 72482285}
+  - component: {fileID: 72482286}
   m_Layer: 0
   m_Name: GridDot (5)
   m_TagString: Untagged
@@ -292,7 +318,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -301,6 +327,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &72482286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72482283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1944255141}
+  - {fileID: 245334204}
+  - {fileID: 1906998636}
+  - {fileID: 13546388}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &201042336
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 201042337}
   - component: {fileID: 201042338}
+  - component: {fileID: 201042339}
   m_Layer: 0
   m_Name: GridDot (2)
   m_TagString: Untagged
@@ -383,7 +434,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -392,6 +443,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &201042339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201042336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 0}
+  - {fileID: 888357309}
+  - {fileID: 317390555}
+  - {fileID: 1991844304}
+  - {fileID: 0}
+  - {fileID: 0}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &245334201
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245334202}
   - component: {fileID: 245334203}
+  - component: {fileID: 245334204}
   m_Layer: 0
   m_Name: AbilityNode1
   m_TagString: Untagged
@@ -483,6 +559,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &245334204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245334201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 72482286}
+  - {fileID: 1944255141}
+  - {fileID: 2016705479}
+  - {fileID: 1592028310}
+  - {fileID: 553303689}
+  - {fileID: 1906998636}
+  state: 1
+  type: 1
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &285501097
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317390553}
   - component: {fileID: 317390554}
+  - component: {fileID: 317390555}
   m_Layer: 0
   m_Name: GridDot (7)
   m_TagString: Untagged
@@ -640,7 +741,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -649,6 +750,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &317390555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317390552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 888357309}
+  - {fileID: 553303689}
+  - {fileID: 1944822795}
+  - {fileID: 684940842}
+  - {fileID: 1991844304}
+  - {fileID: 201042339}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &324161856
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,6 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 353246006}
   - component: {fileID: 353246007}
+  - component: {fileID: 353246008}
   m_Layer: 0
   m_Name: GridDot (19)
   m_TagString: Untagged
@@ -806,7 +932,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -815,6 +941,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &353246008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353246005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 840773592}
+  - {fileID: 774660403}
+  - {fileID: 1474635130}
+  - {fileID: 1563215545}
+  - {fileID: 724318710}
+  - {fileID: 2016705479}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &449287743
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 449287744}
   - component: {fileID: 449287745}
+  - component: {fileID: 449287746}
   m_Layer: 0
   m_Name: AbilityNode4
   m_TagString: Untagged
@@ -906,6 +1057,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &449287746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449287743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 1592028310}
+  - {fileID: 724318710}
+  - {fileID: 1304327246}
+  - {fileID: 1352411340}
+  - {fileID: 1462714809}
+  - {fileID: 1944822795}
+  state: 1
+  type: 1
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &553303686
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +1091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 553303687}
   - component: {fileID: 553303688}
+  - component: {fileID: 553303689}
   m_Layer: 0
   m_Name: AbilityNode6
   m_TagString: Untagged
@@ -997,6 +1173,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &553303689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553303686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 1906998636}
+  - {fileID: 245334204}
+  - {fileID: 1592028310}
+  - {fileID: 1944822795}
+  - {fileID: 317390555}
+  - {fileID: 888357309}
+  state: 1
+  type: 1
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &573429716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 573429717}
   - component: {fileID: 573429718}
+  - component: {fileID: 573429719}
   m_Layer: 0
   m_Name: GridDot
   m_TagString: Untagged
@@ -1079,7 +1280,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1088,6 +1289,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &573429719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573429716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 0}
+  - {fileID: 13546388}
+  - {fileID: 1906998636}
+  - {fileID: 888357309}
+  - {fileID: 0}
+  - {fileID: 0}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &684940839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,6 +1323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684940840}
   - component: {fileID: 684940841}
+  - component: {fileID: 684940842}
   m_Layer: 0
   m_Name: GridDot (11)
   m_TagString: Untagged
@@ -1179,6 +1405,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &684940842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684940839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 317390555}
+  - {fileID: 1944822795}
+  - {fileID: 1462714809}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1991844304}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &724318707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 724318708}
   - component: {fileID: 724318709}
+  - component: {fileID: 724318710}
   m_Layer: 0
   m_Name: AbilityNode3
   m_TagString: Untagged
@@ -1270,6 +1521,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &724318710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724318707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 2016705479}
+  - {fileID: 353246008}
+  - {fileID: 1563215545}
+  - {fileID: 1304327246}
+  - {fileID: 449287746}
+  - {fileID: 1592028310}
+  state: 1
+  type: 1
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &774660400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 774660401}
   - component: {fileID: 774660402}
+  - component: {fileID: 774660403}
   m_Layer: 0
   m_Name: GridDot (20)
   m_TagString: Untagged
@@ -1352,7 +1628,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1361,6 +1637,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &774660403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774660400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1474635130}
+  - {fileID: 353246008}
+  - {fileID: 840773592}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &804487614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,7 +1797,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804487614}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03607c85bdf80ac4f9f4d819be195822, type: 3}
   m_Name: 
@@ -1519,6 +1819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 840773590}
   - component: {fileID: 840773591}
+  - component: {fileID: 840773592}
   m_Layer: 0
   m_Name: GridDot (15)
   m_TagString: Untagged
@@ -1591,7 +1892,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1600,6 +1901,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &840773592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840773589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 774660403}
+  - {fileID: 353246008}
+  - {fileID: 2016705479}
+  - {fileID: 1944255141}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &854411753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,6 +2014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888357307}
   - component: {fileID: 888357308}
+  - component: {fileID: 888357309}
   m_Layer: 0
   m_Name: GridDot (3)
   m_TagString: Untagged
@@ -1761,7 +2087,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1770,6 +2096,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &888357309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888357306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 573429719}
+  - {fileID: 1906998636}
+  - {fileID: 553303689}
+  - {fileID: 317390555}
+  - {fileID: 201042339}
+  - {fileID: 0}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1241435262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,6 +2313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1304327244}
   - component: {fileID: 1304327245}
+  - component: {fileID: 1304327246}
   m_Layer: 0
   m_Name: GridDot (22)
   m_TagString: Untagged
@@ -2035,7 +2386,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2044,6 +2395,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1304327246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304327243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 724318710}
+  - {fileID: 1563215545}
+  - {fileID: 2099094502}
+  - {fileID: 1965883986}
+  - {fileID: 1352411340}
+  - {fileID: 449287746}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1352411337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,6 +2429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1352411338}
   - component: {fileID: 1352411339}
+  - component: {fileID: 1352411340}
   m_Layer: 0
   m_Name: GridDot (21)
   m_TagString: Untagged
@@ -2135,6 +2511,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1352411340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352411337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 449287746}
+  - {fileID: 1304327246}
+  - {fileID: 1965883986}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1462714809}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1417976379
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,6 +2620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462714807}
   - component: {fileID: 1462714808}
+  - component: {fileID: 1462714809}
   m_Layer: 0
   m_Name: GridDot (16)
   m_TagString: Untagged
@@ -2301,6 +2702,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1462714809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462714806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 1944822795}
+  - {fileID: 449287746}
+  - {fileID: 1352411340}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 684940842}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1474635127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474635128}
   - component: {fileID: 1474635129}
+  - component: {fileID: 1474635130}
   m_Layer: 0
   m_Name: GridDot (24)
   m_TagString: Untagged
@@ -2383,7 +2809,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2392,6 +2818,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1474635130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474635127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 774660403}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1563215545}
+  - {fileID: 353246008}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1492955455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,6 +3173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1563215543}
   - component: {fileID: 1563215544}
+  - component: {fileID: 1563215545}
   m_Layer: 0
   m_Name: GridDot (23)
   m_TagString: Untagged
@@ -2795,7 +3246,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2804,6 +3255,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1563215545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563215542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 353246008}
+  - {fileID: 1474635130}
+  - {fileID: 0}
+  - {fileID: 2099094502}
+  - {fileID: 1304327246}
+  - {fileID: 724318710}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1592028307
 GameObject:
   m_ObjectHideFlags: 0
@@ -2908,7 +3383,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
-  nearbyNodes: []
+  nearbyNodes:
+  - {fileID: 245334204}
+  - {fileID: 2016705479}
+  - {fileID: 724318710}
+  - {fileID: 449287746}
+  - {fileID: 1944822795}
+  - {fileID: 553303689}
+  state: 0
+  type: 0
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1699280825
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,6 +3672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906998634}
   - component: {fileID: 1906998635}
+  - component: {fileID: 1906998636}
   m_Layer: 0
   m_Name: GridDot (4)
   m_TagString: Untagged
@@ -3258,7 +3745,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3267,6 +3754,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1906998636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906998633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 13546388}
+  - {fileID: 72482286}
+  - {fileID: 245334204}
+  - {fileID: 553303689}
+  - {fileID: 888357309}
+  - {fileID: 573429719}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1944255138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,6 +3788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1944255139}
   - component: {fileID: 1944255140}
+  - component: {fileID: 1944255141}
   m_Layer: 0
   m_Name: GridDot (10)
   m_TagString: Untagged
@@ -3349,7 +3861,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3358,6 +3870,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1944255141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944255138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 840773592}
+  - {fileID: 2016705479}
+  - {fileID: 245334204}
+  - {fileID: 72482286}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1944822792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3368,6 +3904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1944822793}
   - component: {fileID: 1944822794}
+  - component: {fileID: 1944822795}
   m_Layer: 0
   m_Name: AbilityNode5
   m_TagString: Untagged
@@ -3449,6 +3986,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1944822795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944822792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 553303689}
+  - {fileID: 1592028310}
+  - {fileID: 449287746}
+  - {fileID: 1462714809}
+  - {fileID: 684940842}
+  - {fileID: 317390555}
+  state: 1
+  type: 1
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1965883983
 GameObject:
   m_ObjectHideFlags: 0
@@ -3459,6 +4020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965883984}
   - component: {fileID: 1965883985}
+  - component: {fileID: 1965883986}
   m_Layer: 0
   m_Name: GridDot (25)
   m_TagString: Untagged
@@ -3531,7 +4093,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3540,6 +4102,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1965883986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965883983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 1304327246}
+  - {fileID: 2099094502}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1352411340}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1991844301
 GameObject:
   m_ObjectHideFlags: 0
@@ -3550,6 +4136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1991844302}
   - component: {fileID: 1991844303}
+  - component: {fileID: 1991844304}
   m_Layer: 0
   m_Name: GridDot (6)
   m_TagString: Untagged
@@ -3622,7 +4209,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3631,6 +4218,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1991844304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991844301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 201042339}
+  - {fileID: 317390555}
+  - {fileID: 684940842}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2016705476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,6 +4252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2016705477}
   - component: {fileID: 2016705478}
+  - component: {fileID: 2016705479}
   m_Layer: 0
   m_Name: AbilityNode2
   m_TagString: Untagged
@@ -3722,6 +4334,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2016705479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016705476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 1944255141}
+  - {fileID: 840773592}
+  - {fileID: 353246008}
+  - {fileID: 724318710}
+  - {fileID: 1592028310}
+  - {fileID: 245334204}
+  state: 1
+  type: 1
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2035498480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3732,8 +4368,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2035498482}
   - component: {fileID: 2035498481}
+  - component: {fileID: 2035498483}
   m_Layer: 0
-  m_Name: GridManager
+  m_Name: NodeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3746,7 +4383,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035498480}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 675a5ad7d6d90a84096903de233e4ff0, type: 3}
   m_Name: 
@@ -3757,7 +4394,7 @@ MonoBehaviour:
   maxX: 30
   minY: -22
   maxY: 22
-  gridDotPrefab: {fileID: 588393604339732351, guid: a05f4a973a40d9a44b7232f1be4249ec, type: 3}
+  gridDotPrefab: {fileID: 0}
   dotScale: 0.3
   validDotColor: {r: 1, g: 1, b: 1, a: 0.3}
   occupiedDotColor: {r: 1, g: 0.5, b: 0, a: 0.5}
@@ -3777,6 +4414,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1592028308}
+  - {fileID: 245334202}
+  - {fileID: 2016705477}
+  - {fileID: 724318708}
+  - {fileID: 449287744}
+  - {fileID: 1944822793}
+  - {fileID: 553303687}
   - {fileID: 573429717}
   - {fileID: 13546386}
   - {fileID: 201042337}
@@ -3785,17 +4429,10 @@ Transform:
   - {fileID: 72482284}
   - {fileID: 1991844302}
   - {fileID: 317390553}
-  - {fileID: 553303687}
-  - {fileID: 245334202}
   - {fileID: 1944255139}
   - {fileID: 684940840}
-  - {fileID: 1944822793}
-  - {fileID: 1592028308}
-  - {fileID: 2016705477}
   - {fileID: 840773590}
   - {fileID: 1462714807}
-  - {fileID: 449287744}
-  - {fileID: 724318708}
   - {fileID: 353246006}
   - {fileID: 774660401}
   - {fileID: 1352411338}
@@ -3806,6 +4443,46 @@ Transform:
   - {fileID: 2099094500}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2035498483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035498480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedbb1836becce94987b76bf92d8244e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeManager
+  allNodes:
+  - {fileID: 1592028310}
+  - {fileID: 245334204}
+  - {fileID: 2016705479}
+  - {fileID: 724318710}
+  - {fileID: 449287746}
+  - {fileID: 1944822795}
+  - {fileID: 553303689}
+  - {fileID: 573429719}
+  - {fileID: 13546388}
+  - {fileID: 201042339}
+  - {fileID: 888357309}
+  - {fileID: 1906998636}
+  - {fileID: 72482286}
+  - {fileID: 1991844304}
+  - {fileID: 317390555}
+  - {fileID: 1944255141}
+  - {fileID: 684940842}
+  - {fileID: 840773592}
+  - {fileID: 1462714809}
+  - {fileID: 353246008}
+  - {fileID: 774660403}
+  - {fileID: 1352411340}
+  - {fileID: 1304327246}
+  - {fileID: 1563215545}
+  - {fileID: 1474635130}
+  - {fileID: 1965883986}
+  - {fileID: 2099094502}
 --- !u!1 &2073530569
 GameObject:
   m_ObjectHideFlags: 0
@@ -3891,6 +4568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2099094500}
   - component: {fileID: 2099094501}
+  - component: {fileID: 2099094502}
   m_Layer: 0
   m_Name: GridDot (26)
   m_TagString: Untagged
@@ -3963,7 +4641,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3972,6 +4650,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2099094502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099094499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  nearbyNodes:
+  - {fileID: 2099094502}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1965883986}
+  - {fileID: 1304327246}
+  state: 1
+  type: 2
+  lineMaterial: {fileID: 0}
+  lineWidth: 0.1
+  lineColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
