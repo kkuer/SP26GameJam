@@ -46,8 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NormalEmitter
   reloadTime: 1
   isLoaded: 1
-  normalBullet: {fileID: 1750111502933581667, guid: f1e23bf38ef781f4689083a97fcb944f, type: 3}
+  bulletPrefab: {fileID: 1750111502933581667, guid: f1e23bf38ef781f4689083a97fcb944f, type: 3}
+  spawnedBullet: {fileID: 0}
   bullets: []
-  currentGun: 0
   burstAmount: 0
   burstWait: 0
+  fireRate: 0
+  swordCenter: {fileID: 0}
+  areSwords: 0
+  isAura: 0
+  isThorn: 0

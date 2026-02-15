@@ -4,10 +4,6 @@ public class SwordPrefab : MonoBehaviour
 {
     public GameObject bulletSplash;
     public EnemyTag enemyTag;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     private void OnCollisionEnter2D(Collision2D col)

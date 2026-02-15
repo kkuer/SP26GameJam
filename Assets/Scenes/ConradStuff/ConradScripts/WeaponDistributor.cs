@@ -90,7 +90,7 @@ public class WeaponDistributor : MonoBehaviour
                 emitterScript.fireRate = nodeFireRate;
                 if (currentWeapon == WeaponType.Sword)
                 {
-                    emitterScript.fireRate = nodeFireRate * 20;
+                    emitterScript.fireRate = nodeFireRate * 200;
                     emitterScript.swordCenter = swordCenter;
                 }
 
