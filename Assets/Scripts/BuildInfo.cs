@@ -16,7 +16,6 @@ public class ActiveAbility
     public int damageOverTimeCount;
     public int siphonCount;
 
-    // Helper methods (these are fine - just data manipulation)
     public int TotalModifiers => ricochetCount + attackSpeedCount + multiShotCount + sizeCount + damageOverTimeCount + siphonCount;
     public bool HasModifiers => TotalModifiers > 0;
 
@@ -53,19 +52,17 @@ public class BuildInfo : MonoBehaviour
 
     private void Awake()
     {
-        // Simple singleton pattern - no scene dependencies
-        if (Instance != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
+        if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Public method to clear all data (optional)
     public void ClearData()
     {
         playerHealthMultiplier = 1f;

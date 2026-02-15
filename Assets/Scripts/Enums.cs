@@ -45,3 +45,13 @@ public enum EffectType
     DamageOverTime,
     Siphon
 }
+
+public enum NodeColor
+{
+    Red,
+    Blue,
+    Green,
+    Purple,
+    Yellow,
+    Orange
+}
