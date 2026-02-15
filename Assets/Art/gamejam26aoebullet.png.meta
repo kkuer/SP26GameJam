@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9c6e92f4ed715e04f85f937dd7244d0c
+guid: 94d7d92cdd3498740a0ccdfaa99dcdba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4796307833070351459
-    second: GJMelee_0
+      213: -6747793980066750733
+    second: gamejam26aoebullet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GJMelee_0
+      name: gamejam26aoebullet_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 39
-        width: 323
-        height: 323
+        x: 107
+        y: 95
+        width: 677
+        height: 696
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d9b0b601077107db0800000000000000
-      internalID: -4796307833070351459
+      spriteID: 3fe1a9060250b52a0800000000000000
+      internalID: -6747793980066750733
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GJMelee_0: -4796307833070351459
+      gamejam26aoebullet_0: -6747793980066750733
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

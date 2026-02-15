@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: d10a05acb6beb71408de8d9ba583003a
+guid: 4a0913747b471f24d98cb31171a20861
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1923093704334148385
-    second: GJExplosive 1_0
+      213: 8234968318667473787
+    second: GJAura_0
   - first:
-      213: 6575206147539313832
-    second: GJExplosive 1_1
+      213: -1270631315073648419
+    second: GJAura_1
   - first:
-      213: 8564822967425199043
-    second: GJExplosive 1_2
+      213: 7398805116143345618
+    second: GJAura_2
   - first:
-      213: 1726937300448045924
-    second: GJExplosive 1_3
+      213: 7847099588094315346
+    second: GJAura_3
   - first:
-      213: -8788152105093551127
-    second: GJExplosive 1_4
+      213: 8782394777045807719
+    second: GJAura_4
   - first:
-      213: 7801421106618128729
-    second: GJExplosive 1_5
+      213: 3019525421547249058
+    second: GJAura_5
+  - first:
+      213: 6084807153548895137
+    second: GJAura_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,16 +114,130 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GJExplosive 1_0
+      name: GJAura_0
       rect:
         serializedVersion: 2
-        x: 135
-        y: 321
-        width: 29
+        x: 63
+        y: 67
+        width: 274
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7345ca1e0c784270800000000000000
+      internalID: 8234968318667473787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GJAura_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 278
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd83c801d8fcd5ee0800000000000000
+      internalID: -1270631315073648419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GJAura_2
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 281
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df11167d06dda660800000000000000
+      internalID: 7398805116143345618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GJAura_3
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 179
+        width: 72
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25bc979ef7f76ec60800000000000000
+      internalID: 7847099588094315346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GJAura_4
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 179
+        width: 60
         height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -130,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12380acf88330ba10800000000000000
-      internalID: 1923093704334148385
+      spriteID: 762bf03c48551e970800000000000000
+      internalID: 8782394777045807719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GJExplosive 1_1
+      name: GJAura_5
       rect:
         serializedVersion: 2
-        x: 184
-        y: 349
-        width: 14
-        height: 20
+        x: 109
+        y: 52
+        width: 41
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +269,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a4ab0d7723df3b50800000000000000
-      internalID: 6575206147539313832
+      spriteID: 2add59d6f5287e920800000000000000
+      internalID: 3019525421547249058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GJExplosive 1_2
+      name: GJAura_6
       rect:
         serializedVersion: 2
-        x: 75
-        y: 183
-        width: 54
-        height: 59
+        x: 247
+        y: 51
+        width: 46
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,74 +291,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cb6c794c1d5cd670800000000000000
-      internalID: 8564822967425199043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GJExplosive 1_3
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 132
-        width: 205
-        height: 213
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46be396335057f710800000000000000
-      internalID: 1726937300448045924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GJExplosive 1_4
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 116
-        width: 48
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9eb2cc7d8363a0680800000000000000
-      internalID: -8788152105093551127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GJExplosive 1_5
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 43
-        width: 158
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 959553ba927344c60800000000000000
-      internalID: 7801421106618128729
+      spriteID: 1a3a9021ed3917450800000000000000
+      internalID: 6084807153548895137
       vertices: []
       indices: 
       edges: []
@@ -260,12 +311,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GJExplosive 1_0: 1923093704334148385
-      GJExplosive 1_1: 6575206147539313832
-      GJExplosive 1_2: 8564822967425199043
-      GJExplosive 1_3: 1726937300448045924
-      GJExplosive 1_4: -8788152105093551127
-      GJExplosive 1_5: 7801421106618128729
+      GJAura_0: 8234968318667473787
+      GJAura_1: -1270631315073648419
+      GJAura_2: 7398805116143345618
+      GJAura_3: 7847099588094315346
+      GJAura_4: 8782394777045807719
+      GJAura_5: 3019525421547249058
+      GJAura_6: 6084807153548895137
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

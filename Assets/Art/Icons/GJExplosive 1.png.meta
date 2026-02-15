@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: d6b7e5df6df16d745af2b035b4f4289d
+guid: d10a05acb6beb71408de8d9ba583003a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4186711694863523094
-    second: GJAttackSpeed_0
+      213: 1923093704334148385
+    second: GJExplosive 1_0
   - first:
-      213: 7017817997700032740
-    second: GJAttackSpeed_1
+      213: 6575206147539313832
+    second: GJExplosive 1_1
   - first:
-      213: -3080755194347864199
-    second: GJAttackSpeed_2
+      213: 8564822967425199043
+    second: GJExplosive 1_2
   - first:
-      213: -5737850953829717842
-    second: GJAttackSpeed_3
+      213: 1726937300448045924
+    second: GJExplosive 1_3
   - first:
-      213: -794065679118162408
-    second: GJAttackSpeed_4
+      213: -8788152105093551127
+    second: GJExplosive 1_4
   - first:
-      213: 8831146113734019951
-    second: GJAttackSpeed_5
-  - first:
-      213: -2148917043424304134
-    second: GJAttackSpeed_6
+      213: 7801421106618128729
+    second: GJExplosive 1_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -114,16 +111,152 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GJAttackSpeed_0
+      name: GJExplosive 1_0
       rect:
         serializedVersion: 2
-        x: 115
-        y: 223
-        width: 94
+        x: 135
+        y: 321
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12380acf88330ba10800000000000000
+      internalID: 1923093704334148385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GJExplosive 1_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 349
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4ab0d7723df3b50800000000000000
+      internalID: 6575206147539313832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GJExplosive 1_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 183
+        width: 54
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb6c794c1d5cd670800000000000000
+      internalID: 8564822967425199043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GJExplosive 1_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 132
+        width: 205
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46be396335057f710800000000000000
+      internalID: 1726937300448045924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GJExplosive 1_4
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 116
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb2cc7d8363a0680800000000000000
+      internalID: -8788152105093551127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GJExplosive 1_5
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 43
+        width: 158
         height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -133,140 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae2afaa45efc5e5c0800000000000000
-      internalID: -4186711694863523094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GJAttackSpeed_1
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 215
-        width: 22
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4e8e043794c446160800000000000000
-      internalID: 7017817997700032740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GJAttackSpeed_2
-      rect:
-        serializedVersion: 2
-        x: 227
-        y: 220
-        width: 59
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 97fb4f82975fe35d0800000000000000
-      internalID: -3080755194347864199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GJAttackSpeed_3
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 247
-        width: 37
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ea8e7da35fe0f50b0800000000000000
-      internalID: -5737850953829717842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GJAttackSpeed_4
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 103
-        width: 155
-        height: 138
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 81625d3d879eaf4f0800000000000000
-      internalID: -794065679118162408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GJAttackSpeed_5
-      rect:
-        serializedVersion: 2
-        x: 203
-        y: 207
-        width: 27
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6b00bcd9988e8a70800000000000000
-      internalID: 8831146113734019951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GJAttackSpeed_6
-      rect:
-        serializedVersion: 2
-        x: 184
-        y: 80
-        width: 130
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af369ee95538d22e0800000000000000
-      internalID: -2148917043424304134
+      spriteID: 959553ba927344c60800000000000000
+      internalID: 7801421106618128729
       vertices: []
       indices: 
       edges: []
@@ -285,13 +286,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GJAttackSpeed_0: -4186711694863523094
-      GJAttackSpeed_1: 7017817997700032740
-      GJAttackSpeed_2: -3080755194347864199
-      GJAttackSpeed_3: -5737850953829717842
-      GJAttackSpeed_4: -794065679118162408
-      GJAttackSpeed_5: 8831146113734019951
-      GJAttackSpeed_6: -2148917043424304134
+      GJExplosive 1_0: 1923093704334148385
+      GJExplosive 1_1: 6575206147539313832
+      GJExplosive 1_2: 8564822967425199043
+      GJExplosive 1_3: 1726937300448045924
+      GJExplosive 1_4: -8788152105093551127
+      GJExplosive 1_5: 7801421106618128729
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

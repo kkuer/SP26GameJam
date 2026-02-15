@@ -1,28 +1,31 @@
 fileFormatVersion: 2
-guid: 4a0913747b471f24d98cb31171a20861
+guid: dabd7e13f11c7f94aa4ab485fc5ef2df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8234968318667473787
-    second: GJAura_0
+      213: 6828645688200633359
+    second: GJDoT_0
   - first:
-      213: -1270631315073648419
-    second: GJAura_1
+      213: 2370771115264671982
+    second: GJDoT_1
   - first:
-      213: 7398805116143345618
-    second: GJAura_2
+      213: -6904782302673471825
+    second: GJDoT_2
   - first:
-      213: 7847099588094315346
-    second: GJAura_3
+      213: -9144555417162962630
+    second: GJDoT_3
   - first:
-      213: 8782394777045807719
-    second: GJAura_4
+      213: 1958985950637744258
+    second: GJDoT_4
   - first:
-      213: 3019525421547249058
-    second: GJAura_5
+      213: -3571061286190543484
+    second: GJDoT_5
   - first:
-      213: 6084807153548895137
-    second: GJAura_6
+      213: -1365083596740893987
+    second: GJDoT_6
+  - first:
+      213: -4976335918330189302
+    second: GJDoT_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -114,17 +117,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GJAura_0
+      name: GJDoT_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 67
-        width: 274
-        height: 255
+        x: 66
+        y: 117
+        width: 162
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b7345ca1e0c784270800000000000000
-      internalID: 8234968318667473787
+      spriteID: f0c933ed21934ce50800000000000000
+      internalID: 6828645688200633359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GJAura_1
+      name: GJDoT_1
       rect:
         serializedVersion: 2
-        x: 108
-        y: 278
-        width: 42
-        height: 63
+        x: 195
+        y: 207
+        width: 57
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd83c801d8fcd5ee0800000000000000
-      internalID: -1270631315073648419
+      spriteID: ee08b19b4cba6e020800000000000000
+      internalID: 2370771115264671982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GJAura_2
+      name: GJDoT_2
       rect:
         serializedVersion: 2
-        x: 247
-        y: 281
+        x: 227
+        y: 187
         width: 45
-        height: 55
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2df11167d06dda660800000000000000
-      internalID: 7398805116143345618
+      spriteID: fa67ebd24194d20a0800000000000000
+      internalID: -6904782302673471825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GJAura_3
+      name: GJDoT_3
       rect:
         serializedVersion: 2
-        x: 31
-        y: 179
-        width: 72
-        height: 42
+        x: 254
+        y: 85
+        width: 34
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +228,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25bc979ef7f76ec60800000000000000
-      internalID: 7847099588094315346
+      spriteID: a39a02b4c43081180800000000000000
+      internalID: -9144555417162962630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GJAura_4
+      name: GJDoT_4
       rect:
         serializedVersion: 2
-        x: 301
-        y: 179
-        width: 60
-        height: 40
+        x: 293
+        y: 116
+        width: 18
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 762bf03c48551e970800000000000000
-      internalID: 8782394777045807719
+      spriteID: 2806ebbc757bf2b10800000000000000
+      internalID: 1958985950637744258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GJAura_5
+      name: GJDoT_5
       rect:
         serializedVersion: 2
-        x: 109
-        y: 52
-        width: 41
-        height: 55
+        x: 307
+        y: 147
+        width: 26
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,20 +272,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2add59d6f5287e920800000000000000
-      internalID: 3019525421547249058
+      spriteID: 48d86753eaa017ec0800000000000000
+      internalID: -3571061286190543484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GJAura_6
+      name: GJDoT_6
       rect:
         serializedVersion: 2
-        x: 247
-        y: 51
-        width: 46
-        height: 54
+        x: 111
+        y: 67
+        width: 79
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +294,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a3a9021ed3917450800000000000000
-      internalID: 6084807153548895137
+      spriteID: dd2eb8783bf3e0de0800000000000000
+      internalID: -1365083596740893987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GJDoT_7
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 67
+        width: 50
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a69e819d080fab0800000000000000
+      internalID: -4976335918330189302
       vertices: []
       indices: 
       edges: []
@@ -285,13 +336,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GJAura_0: 8234968318667473787
-      GJAura_1: -1270631315073648419
-      GJAura_2: 7398805116143345618
-      GJAura_3: 7847099588094315346
-      GJAura_4: 8782394777045807719
-      GJAura_5: 3019525421547249058
-      GJAura_6: 6084807153548895137
+      GJDoT_0: 6828645688200633359
+      GJDoT_1: 2370771115264671982
+      GJDoT_2: -6904782302673471825
+      GJDoT_3: -9144555417162962630
+      GJDoT_4: 1958985950637744258
+      GJDoT_5: -3571061286190543484
+      GJDoT_6: -1365083596740893987
+      GJDoT_7: -4976335918330189302
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
