@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4101431961570737931}
-  - component: {fileID: 3346272600509297427}
   - component: {fileID: 848311434558229397}
-  - component: {fileID: 9163621348423434189}
-  - component: {fileID: 9082182946219813461}
   - component: {fileID: 6469669969536561497}
+  - component: {fileID: 9082182946219813461}
+  - component: {fileID: 3346272600509297427}
+  - component: {fileID: 9163621348423434189}
   m_Layer: 0
   m_Name: HomunculusOBJ
   m_TagString: Untagged
@@ -44,6 +44,60 @@ Transform:
   - {fileID: 4044646718535854823}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848311434558229397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2648443083871766879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2d37de501ecbb4c903eb166268ceb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HomunMove
+  startDir: {x: 2, y: 3}
+  velocity: {x: 0, y: 0}
+  maxSpeed: 5.1
+  minSpeed: 0
+  CurrentSpeed: 0
+  torque: 0
+--- !u!114 &6469669969536561497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2648443083871766879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674527e00513c4e408c52d1bdfea4343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HomunManager
+  AURA: {fileID: 1696577020741727413}
+  THORNS: {fileID: 630628401135433653}
+  SWORD: {fileID: 1195337683048509564}
+  PIERCE: {fileID: 3891041151794063420}
+  BURST: {fileID: 711001957377404395}
+  EXPLODE: {fileID: 3832699654157447215}
+  healthTracker: {fileID: 0}
+  pierceRiochetTimes: 0
+  burstRiochetTimes: 0
+  explodeRiochetTimes: 0
+--- !u!114 &9082182946219813461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2648443083871766879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd543315275fd14e8c72ae3281f7a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthTracker
+  maxHealth: 200
+  currentHealth: 0
 --- !u!50 &3346272600509297427
 Rigidbody2D:
   serializedVersion: 5
@@ -71,24 +125,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &848311434558229397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2648443083871766879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe2d37de501ecbb4c903eb166268ceb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HomunMove
-  startDir: {x: 2, y: 3}
-  velocity: {x: 0, y: 0}
-  maxSpeed: 5.1
-  minSpeed: 0
-  CurrentSpeed: 0
-  torque: 0
 --- !u!60 &9163621348423434189
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -144,42 +180,6 @@ PolygonCollider2D:
       - {x: 0.5, y: 0}
       - {x: 0.35, y: 0.35}
   m_UseDelaunayMesh: 1
---- !u!114 &9082182946219813461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2648443083871766879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bd543315275fd14e8c72ae3281f7a1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthTracker
-  maxHealth: 20
-  currentHealth: 0
---- !u!114 &6469669969536561497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2648443083871766879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 674527e00513c4e408c52d1bdfea4343, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HomunManager
-  AURA: {fileID: 1696577020741727413}
-  THORNS: {fileID: 630628401135433653}
-  SWORD: {fileID: 1195337683048509564}
-  PIERCE: {fileID: 3891041151794063420}
-  BURST: {fileID: 711001957377404395}
-  EXPLODE: {fileID: 3832699654157447215}
-  healthTracker: {fileID: 0}
-  pierceRiochetTimes: 0
-  burstRiochetTimes: 0
-  explodeRiochetTimes: 0
 --- !u!1 &7305000035901968270
 GameObject:
   m_ObjectHideFlags: 0
