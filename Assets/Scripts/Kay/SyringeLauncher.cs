@@ -75,9 +75,9 @@ public class SyringeLauncher : MonoBehaviour
         HomunMove homun = Instantiate(HomunculousPrefab, spawnPos, Quaternion.identity).GetComponent<HomunMove>();
         homun.startDir = transform.right;
 
-        //CanLaunch = false;
+        CanLaunch = false;
         Debug.Log("Launch!");
 
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
