@@ -32,11 +32,13 @@ public class NormalEmitter : MonoBehaviour
         {
             swordCenter.spinSpeed = fireRate;
             spawnedBullet = Instantiate(bulletPrefab, transform.position, transform.localRotation);
+            spawnedBullet.GetComponent<DamageExecutor>().damageToDeal *= BuildInfo.Instance.activeAbilities[0].damageMultiplier;
             spawnedBullet.transform.SetParent(this.transform);
         }
         if (isThorn)
         {
             spawnedBullet = Instantiate(bulletPrefab, transform.position, transform.localRotation);
+            spawnedBullet.GetComponent<DamageExecutor>().damageToDeal *= BuildInfo.Instance.activeAbilities[0].damageMultiplier;
             spawnedBullet.transform.SetParent(this.transform);
         }
     }
@@ -62,6 +64,7 @@ public class NormalEmitter : MonoBehaviour
                 for (int i = 0; i < burstAmount; i++)
                 {
                     spawnedBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+                    spawnedBullet.GetComponent<DamageExecutor>().damageToDeal *= BuildInfo.Instance.activeAbilities[0].damageMultiplier;
                     if (isAura)
                     {
                         spawnedBullet.transform.SetParent(this.transform);
@@ -74,6 +77,7 @@ public class NormalEmitter : MonoBehaviour
             else
             {
                 spawnedBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+                spawnedBullet.GetComponent<DamageExecutor>().damageToDeal *= BuildInfo.Instance.activeAbilities[0].damageMultiplier;
                 if (isAura)
                 {
                     spawnedBullet.transform.SetParent(this.transform);

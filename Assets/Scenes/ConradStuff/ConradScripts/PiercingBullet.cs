@@ -71,6 +71,10 @@ public class PiercingBullet : MonoBehaviour
         if (enemyTag != null)
         {
             Instantiate(bulletSplash, this.transform.position, Quaternion.identity);
+            if (col.GetComponent<HealthTracker>() != null)
+            {
+                // deal damage
+            }
         }
         else
         {

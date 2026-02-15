@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2538309718620856346}
   - component: {fileID: 5116755560538669688}
   - component: {fileID: 8693561103645103485}
+  - component: {fileID: -1156298200368910013}
   m_Layer: 6
   m_Name: PiercingBullet
   m_TagString: Untagged
@@ -67,7 +68,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -88,6 +89,7 @@ MonoBehaviour:
   bullSpeed: 10
   bulletSplash: {fileID: 5670680589988066341, guid: 9536a5f9bd06e3844855a81f10c6af77, type: 3}
   bulletLife: 4
+  ricochetTimes: 5
 --- !u!50 &5116755560538669688
 Rigidbody2D:
   serializedVersion: 5
@@ -252,6 +254,19 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &-1156298200368910013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497231941289114037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea960d5039ae23f4e8c0a498a020403e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageExecutor
+  damageToDeal: 0
 --- !u!1 &3660412044742380351
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,13 +292,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3660412044742380351}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7852243749372401688}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!212 &5983603459279395145
 SpriteRenderer:
   serializedVersion: 2
@@ -333,7 +348,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82359419bc80c2b4ca1a2942be26ca08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -359,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1940940399424550599
 Transform:
   m_ObjectHideFlags: 0

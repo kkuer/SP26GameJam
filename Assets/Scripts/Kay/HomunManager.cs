@@ -4,6 +4,15 @@ public class HomunManager : MonoBehaviour
 {
     public static HomunManager instance;
 
+    public GameObject AURA;
+    public GameObject THORNS;
+    public GameObject SWORD;
+    public GameObject PIERCE;
+    public GameObject BURST;
+    public GameObject EXPLODE;
+
+    public HealthTracker healthTracker;
+
     [Header("Ricochet Times")]
     public int pierceRiochetTimes;
     public int burstRiochetTimes;
@@ -13,6 +22,11 @@ public class HomunManager : MonoBehaviour
     {
         if(instance == null) instance = this;
         else Destroy(gameObject);
+
+        healthTracker = GetComponent<HealthTracker>();
+
+
+        UpdateActiveEmitters();
     }
     //public int GetRicochetTimes(EffectType abilityType)
     //{
@@ -26,10 +40,49 @@ public class HomunManager : MonoBehaviour
     //    explodeRiochetTimes = GetRicochetTimes(EffectType.ExplosiveShot);
     //}
 
+    private void Start()
+    {
+        healthTracker.maxHealth *= BuildInfo.Instance.playerHealthMultiplier;
+        healthTracker.SetHealth();
+    }
+    public void UpdateActiveEmitters()
+    {
+        BuildInfo.Instance.activeAbilities.ForEach(ability =>
+        {
+            switch (ability.abilityType) // set abilities active if present in the build
+            {
+                case EffectType.AuraBurst:
+                    AURA.SetActive(true);
+                    AbilityConfig(ability, AURA.GetComponent<WeaponDistributor>());
+                    break;
+                case EffectType.Thorns:
+                    THORNS.SetActive(true);
+                    AbilityConfig(ability, THORNS.GetComponent<WeaponDistributor>());
+                    break;
+                case EffectType.MeleeSwipe:
+                    SWORD.SetActive(true);
+                    AbilityConfig(ability, SWORD.GetComponent<WeaponDistributor>());
+                    break;
+                case EffectType.PiercingShot:
+                    PIERCE.SetActive(true);
+                    AbilityConfig(ability, PIERCE.GetComponent<WeaponDistributor>());
+                    break;
+                case EffectType.BurstShot:
+                    BURST.SetActive(true);
+                    AbilityConfig(ability, BURST.GetComponent<WeaponDistributor>());
+                    break;
+                case EffectType.ExplosiveShot:
+                    EXPLODE.SetActive(true);
+                    AbilityConfig(ability, EXPLODE.GetComponent<WeaponDistributor>());
+                    break;
+            }
+        });
+    }
 
-
-
-
-
-
+    private void AbilityConfig(ActiveAbility ability, WeaponDistributor toConfig) // set spread based on modifiers
+    {
+        toConfig.nodeCount = ability.multiShotCount;
+        toConfig.nodeFireRate = ability.attackSpeedCount;
+        toConfig.nodeDamage = ability.damageMultiplier;
+    }
 }
