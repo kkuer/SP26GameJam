@@ -13,8 +13,15 @@ public class PiercingBullet : MonoBehaviour
     EnemyTag enemyTag;
     //Bullet jitter
     //public float bulletDeviation;
+
+    public int ricochetTimes = 5;
+
+
+
     void Start()
     {
+        //ricochetTimes = HomunManager.instance.GetRicochetTimes(EffectType.PiercingShot);
+        ricochetTimes = 5;
         StartCoroutine(SelfDes());
     }
 
@@ -32,10 +39,29 @@ public class PiercingBullet : MonoBehaviour
         {
             Instantiate(bulletSplash, this.transform.position, Quaternion.identity);
         }
-        else
+        else 
         {
-            Instantiate(bulletSplash, this.transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            //CHECK FOR RICOCHET HERE
+            if(ricochetTimes > 0)
+            {
+                //if ricochet, then need to bounce from the wall here
+                ricochetTimes--;
+
+
+                //THIS PART ISNT WORKING IDK WHY 
+                Vector2 inDirection = this.GetComponent<Rigidbody2D>().linearVelocity;
+                Vector2 inNormal = col.contacts[0].normal;
+                Vector2 newDirection = Vector2.Reflect(inDirection, inNormal);
+                this.GetComponent<Rigidbody2D>().linearVelocity = newDirection;
+                return;
+            }
+            else
+            {
+                //If no ricochet, then vfx and destroy
+                //Instantiate(bulletSplash, this.transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+
         }
     }
 
@@ -49,7 +75,7 @@ public class PiercingBullet : MonoBehaviour
         else
         {
             Instantiate(bulletSplash, this.transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 

@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6990223883548756985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4614565040697540750}
+  m_Layer: 7
+  m_Name: GunNodeSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4614565040697540750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6990223883548756985}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6071828671861401631}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7251483640891241805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6071828671861401631}
+  - component: {fileID: 2634173054096155950}
+  m_Layer: 7
+  m_Name: GunNodeEmitterCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6071828671861401631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251483640891241805}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4614565040697540750}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2634173054096155950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251483640891241805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b65ebd2273dee4eac7cfcfd034fb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDistributor
+  nodeCount: 7
+  nodeFireRate: 3
+  nodeDamage: 0
+  weaponNode: {fileID: 0}
+  emitterScript: {fileID: 0}
+  playerGO: {fileID: 0}
+  spawnPoint: {fileID: 6990223883548756985}
+  swordCenter: {fileID: 0}
+  currentWeapon: 5
+  isDuplicable: 1
+  weaponList:
+  - {fileID: 5713715950693465677, guid: 9032a2fd0b65a9841a7f1d7275d88693, type: 3}
+  - {fileID: 5713715950693465677, guid: b371d9ee42850cd43813c6cad72a95fc, type: 3}
+  - {fileID: 5713715950693465677, guid: 11afd38e68970f541a48304fd13a9aff, type: 3}
+  - {fileID: 5713715950693465677, guid: 0e44ed680e2520643ab38a8e6f75c9c4, type: 3}
+  - {fileID: 5713715950693465677, guid: 6fad474aa9d26c041b8385e211d30acd, type: 3}
+  - {fileID: 5713715950693465677, guid: 1d89f09de46749446a7fc1da9c8c4227, type: 3}
+  - {fileID: 1279937360005314161, guid: 8fb5922efbfc4bb40b321dbc72792756, type: 3}
