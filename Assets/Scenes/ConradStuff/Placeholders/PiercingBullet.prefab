@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2538309718620856346}
   - component: {fileID: 5116755560538669688}
   - component: {fileID: 8693561103645103485}
-  m_Layer: 0
-  m_Name: ShotgunBullet
+  m_Layer: 6
+  m_Name: PiercingBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -87,8 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShotgunBullet
   bullSpeed: 10
   bulletSplash: {fileID: 5670680589988066341, guid: 9536a5f9bd06e3844855a81f10c6af77, type: 3}
-  bulletLife: 0.5
-  bulletDeviation: 0.1
+  bulletLife: 4
 --- !u!50 &5116755560538669688
 Rigidbody2D:
   serializedVersion: 5
@@ -263,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4557816623083119674}
   - component: {fileID: 5983603459279395145}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1940940399424550599}
   - component: {fileID: 8951274778608699657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

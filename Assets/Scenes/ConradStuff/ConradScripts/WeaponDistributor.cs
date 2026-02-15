@@ -9,14 +9,21 @@ public class WeaponDistributor : MonoBehaviour
     float rotateAmount;
     //Node emitter point count
     public int nodeCount;
-    //Node to generate
+    //Node firerate
+    public float nodeFireRate;
+    //Node damage
+    public float nodeDamage;
+    //Node to generate/script on node
     public GameObject weaponNode;
+    public NormalEmitter emitterScript;
     //Generated node (for parenting purposes)
     GameObject spawnedWeapon;
     //Player gameobject (for parenting purposes)
     public GameObject playerGO;
     //Node spawner point
     public GameObject spawnPoint;
+    //Center weapon point, used mainly for passing in for the spinning swords emitters
+    public ConradDumbSpin swordCenter;
     //Enum for selecting weapons from the list of weapons
     public enum WeaponType
     {
@@ -79,11 +86,19 @@ public class WeaponDistributor : MonoBehaviour
                 this.transform.localEulerAngles = new Vector3(0,0,this.transform.localEulerAngles.z + rotateAmount);
                 spawnedWeapon = Instantiate(weaponNode, spawnPoint.transform.position, this.transform.rotation);
                 spawnedWeapon.transform.SetParent(playerGO.transform);
+                emitterScript = spawnedWeapon.GetComponent<NormalEmitter>();
+                emitterScript.fireRate = nodeFireRate;
+                if (currentWeapon == WeaponType.Sword)
+                {
+                    emitterScript.fireRate = nodeFireRate * 20;
+                    emitterScript.swordCenter = swordCenter;
+                }
+
             }
         }
         else if (!isDuplicable)
         {
-            spawnedWeapon = Instantiate(weaponNode, spawnPoint.transform.position, this.transform.rotation);
+            spawnedWeapon = Instantiate(weaponNode, playerGO.transform.position, this.transform.rotation);
             spawnedWeapon.transform.SetParent(playerGO.transform);
         }
     }

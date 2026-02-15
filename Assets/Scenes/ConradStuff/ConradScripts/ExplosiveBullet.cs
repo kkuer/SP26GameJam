@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class ShotgunBullet : MonoBehaviour
+public class ExplosiveBullet : MonoBehaviour
 {
     //Bullet speed
     public float bullSpeed;
@@ -9,8 +9,8 @@ public class ShotgunBullet : MonoBehaviour
     public GameObject bulletSplash;
     //Bullet lifetime
     public float bulletLife;
-    //Bullet jitter
-    public float bulletDeviation;
+    //Explosion death
+    public GameObject bombBlast;
     void Start()
     {
         StartCoroutine(SelfDes());
@@ -20,12 +20,19 @@ public class ShotgunBullet : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * bullSpeed);
-        transform.position = new Vector3(transform.position.x + (Random.Range(-bulletDeviation, bulletDeviation)), transform.position.y + (Random.Range(-bulletDeviation, bulletDeviation)), transform.position.z + (Random.Range(-bulletDeviation, bulletDeviation)));
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
         Instantiate(bulletSplash, this.transform.position, Quaternion.identity);
+        Instantiate(bombBlast, this.transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        Instantiate(bulletSplash, this.transform.position, Quaternion.identity);
+        Instantiate(bombBlast, this.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

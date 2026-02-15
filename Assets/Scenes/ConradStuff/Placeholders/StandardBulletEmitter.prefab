@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4186140014353999323}
   - component: {fileID: 7048275703133812809}
   m_Layer: 7
-  m_Name: BulletEmitter
+  m_Name: StandardBulletEmitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,5 @@ MonoBehaviour:
   isLoaded: 1
   normalBullet: {fileID: 1750111502933581667, guid: d28b546385ac87249a8adc312765d7dd, type: 3}
   bullets: []
-  currentGun: 0
-  burstAmount: 0
+  burstAmount: 1
   burstWait: 0
