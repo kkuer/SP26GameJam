@@ -30,6 +30,7 @@ public class NormalEmitter : MonoBehaviour
     {
         if (areSwords)
         {
+            swordCenter = GetComponentInParent<ConradDumbSpin>();
             swordCenter.spinSpeed = fireRate;
             spawnedBullet = Instantiate(bulletPrefab, transform.position, transform.localRotation);
             spawnedBullet.GetComponent<DamageExecutor>().damageToDeal *= BuildInfo.Instance.activeAbilities[0].damageMultiplier;

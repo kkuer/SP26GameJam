@@ -132,4 +132,15 @@ public class NodeManager : MonoBehaviour
         // Small delay to ensure everything is updated
         Invoke(nameof(RefreshAllConnections), 0.1f);
     }
+
+    public void ForceRefreshAllConnections()
+    {
+        foreach (var slot in allNodes)
+        {
+            if (slot.OccupyingNode != null)
+            {
+                slot.OccupyingNode.UpdateConnections(true);
+            }
+        }
+    }
 }

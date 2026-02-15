@@ -25,8 +25,6 @@ public class HomunManager : MonoBehaviour
 
         healthTracker = GetComponent<HealthTracker>();
 
-
-        UpdateActiveEmitters();
     }
     //public int GetRicochetTimes(EffectType abilityType)
     //{
@@ -42,9 +40,12 @@ public class HomunManager : MonoBehaviour
 
     private void Start()
     {
+        
         healthTracker.maxHealth *= BuildInfo.Instance.playerHealthMultiplier;
         healthTracker.SetHealth();
+        UpdateActiveEmitters();
     }
+    //
     public void UpdateActiveEmitters()
     {
         BuildInfo.Instance.activeAbilities.ForEach(ability =>
@@ -81,8 +82,16 @@ public class HomunManager : MonoBehaviour
 
     private void AbilityConfig(ActiveAbility ability, WeaponDistributor toConfig) // set spread based on modifiers
     {
-        toConfig.nodeCount = ability.multiShotCount;
+        toConfig.multishotCount = ability.multiShotCount;
         toConfig.nodeFireRate = ability.attackSpeedCount;
         toConfig.nodeDamage = ability.damageMultiplier;
+
+        Debug.Log("Build Emmiters");
+
+        toConfig.BuildEmitters();
+
     }
+
+
+
 }
