@@ -13,6 +13,16 @@ public class Node : MonoBehaviour
 
     [Header("Visual Properties")]
     [SerializeField] private NodeColor nodeColor; // Set this in each prefab
+
+    // Add this field to Node.cs in the header section
+    [Header("Slot Reference")]
+    [SerializeField] private string currentSlotName; // Will be set when placed in a slot
+
+    // Add this property
+    public string CurrentSlotName => currentSlotName;
+
+    private bool isLoadedFromSave = false;
+
     public NodeColor NodeColor => nodeColor;
 
     [Header("UI Settings")]
@@ -285,11 +295,24 @@ public class Node : MonoBehaviour
 
     void Start()
     {
-        // Only snap if not in inventory - this prevents auto-snap on instantiation
-        if (nodeState != NodeState.InInventory)
+        // If we already have a current slot but no name set, set it now
+        if (currentSlot != null && string.IsNullOrEmpty(currentSlotName))
+        {
+            currentSlotName = currentSlot.SlotName;
+            Debug.Log($"Set missing slot name on start: {currentSlotName}");
+        }
+
+        // CRITICAL: Skip snapping if this node was loaded from save
+        // or if it's already in a slot
+        if (nodeState != NodeState.InInventory && !isLoadedFromSave && currentSlot == null)
         {
             SnapToClosestAvailableSlot();
         }
+    }
+
+    public void MarkAsLoadedFromSave()
+    {
+        isLoadedFromSave = true;
     }
 
     void UpdateNodeUI()
@@ -380,7 +403,7 @@ public class Node : MonoBehaviour
 
             // Snap to slot position
             transform.position = closestSlot.transform.position;
-            currentSlot = closestSlot;
+            SetCurrentSlot(closestSlot);
             currentSlot.state = NodeSlotState.Occupied;
             currentSlot.OccupyingNode = this;
         }
@@ -772,7 +795,7 @@ public class Node : MonoBehaviour
                             {
                                 // Valid conversion - use the Modifier slot
                                 snapTarget = bestSlot.transform.position;
-                                currentSlot = bestSlot;
+                                SetCurrentSlot(bestSlot);
                                 pendingType = NodeType.Modifier;
 
                                 // Set pending effect to modifier counterpart
@@ -789,7 +812,7 @@ public class Node : MonoBehaviour
                                 if (fallbackAbilitySlot != null)
                                 {
                                     snapTarget = fallbackAbilitySlot.transform.position;
-                                    currentSlot = fallbackAbilitySlot;
+                                    SetCurrentSlot(fallbackAbilitySlot);
                                     pendingType = NodeType.Ability; // No conversion
                                     pendingEffect = effectType; // Keep same effect
                                     Debug.Log("Cannot convert - snapping to nearest Ability slot instead");
@@ -798,7 +821,7 @@ public class Node : MonoBehaviour
                                 {
                                     // No fallback available, use original slot
                                     snapTarget = bestSlot.transform.position;
-                                    currentSlot = bestSlot;
+                                    SetCurrentSlot(bestSlot);
                                     pendingType = NodeType.Ability;
                                     pendingEffect = effectType;
                                     Debug.Log("No Ability slots available - using Modifier slot without conversion (will this work?)");
@@ -809,7 +832,7 @@ public class Node : MonoBehaviour
                         {
                             // Normal snap - no conversion
                             snapTarget = bestSlot.transform.position;
-                            currentSlot = bestSlot;
+                            SetCurrentSlot(bestSlot);
                             pendingType = NodeType.Ability;
                             pendingEffect = effectType;
                         }
@@ -1354,9 +1377,12 @@ public class Node : MonoBehaviour
 
     public void SetCurrentSlot(NodeSlot slot)
     {
+        Debug.Log($"SetCurrentSlot called for {effectType} with slot: {(slot != null ? slot.SlotName : "null")}");
+
         // Clear previous slot if any
         if (currentSlot != null && currentSlot.OccupyingNode == this)
         {
+            Debug.Log($"Clearing previous slot: {currentSlot.SlotName}");
             currentSlot.OccupyingNode = null;
             currentSlot.state = NodeSlotState.Empty;
         }
@@ -1366,11 +1392,90 @@ public class Node : MonoBehaviour
 
         if (slot != null)
         {
+            currentSlotName = slot.SlotName; // THIS IS THE KEY LINE
             slot.OccupyingNode = this;
             slot.state = NodeSlotState.Occupied;
 
             // Update position to slot position
             transform.position = slot.transform.position;
+
+            Debug.Log($"Node {effectType} now in slot: {currentSlotName}");
         }
+        else
+        {
+            currentSlotName = "";
+            Debug.Log($"Node {effectType} removed from slot");
+        }
+    }
+
+    public void InitializeLoadedNode(NodeSlot slot, NodeState newState)
+    {
+        // Set the state first
+        nodeState = newState;
+
+        // Clear any pending operations
+        isDragging = false;
+        isSnapping = false;
+
+        // Set the slot
+        if (slot != null)
+        {
+            // Directly set currentSlot without triggering any side effects
+            currentSlot = slot;
+
+            // Update slot references
+            slot.OccupyingNode = this;
+            slot.state = NodeSlotState.Occupied;
+
+            // Set position to slot position
+            transform.position = slot.transform.position;
+
+            // Ensure node is locked if in slot
+            if (newState == NodeState.Locked)
+            {
+                nodeState = NodeState.Locked;
+            }
+        }
+
+        // Update UI
+        UpdateNodeUI();
+    }
+
+    public void InitializeFromSave(NodeSlot slot, NodeState newState)
+    {
+        // CRITICAL: Set these BEFORE anything else
+        nodeState = newState;
+
+        // Clear all flags
+        isDragging = false;
+        isSnapping = false;
+        pendingType = NodeType.Ability;
+        pendingEffect = effectType;
+
+        // Set the slot directly without triggering any callbacks
+        if (slot != null)
+        {
+            // Direct field assignment (bypass property)
+            currentSlot = slot;
+
+            // Update slot references
+            slot.OccupyingNode = this;
+            slot.state = NodeSlotState.Occupied;
+
+            // Set position to slot position
+            transform.position = slot.transform.position;
+
+            // Ensure state is Locked if in slot
+            if (newState == NodeState.Locked)
+            {
+                nodeState = NodeState.Locked;
+            }
+        }
+
+        // Update UI
+        UpdateNodeUI();
+
+        // Log for verification
+        Debug.Log($"Node {effectType} initialized in slot at {slot.transform.position}");
     }
 }
