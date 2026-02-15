@@ -324,6 +324,7 @@ MonoBehaviour:
   nodeType: 1
   nodeState: 2
   effectType: 4
+  nodeColor: 2
   effectText: {fileID: 3857323391923621464}
   iconImage: {fileID: 1153064339649391001}
   updateUIOnChange: 1

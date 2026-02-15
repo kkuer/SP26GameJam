@@ -11,6 +11,10 @@ public class Node : MonoBehaviour
     [SerializeField] private NodeState nodeState = NodeState.Draggable;
     [SerializeField] private EffectType effectType = EffectType.PiercingShot; // Current effect
 
+    [Header("Visual Properties")]
+    [SerializeField] private NodeColor nodeColor; // Set this in each prefab
+    public NodeColor NodeColor => nodeColor;
+
     [Header("UI Settings")]
     [SerializeField] private TMP_Text effectText; // Reference to the TextMeshPro component
     [SerializeField] private Image iconImage; // Reference to the UI Image component
@@ -1346,5 +1350,27 @@ public class Node : MonoBehaviour
             return modifierEffect;
         }
         return null;
+    }
+
+    public void SetCurrentSlot(NodeSlot slot)
+    {
+        // Clear previous slot if any
+        if (currentSlot != null && currentSlot.OccupyingNode == this)
+        {
+            currentSlot.OccupyingNode = null;
+            currentSlot.state = NodeSlotState.Empty;
+        }
+
+        // Set new slot
+        currentSlot = slot;
+
+        if (slot != null)
+        {
+            slot.OccupyingNode = this;
+            slot.state = NodeSlotState.Occupied;
+
+            // Update position to slot position
+            transform.position = slot.transform.position;
+        }
     }
 }
