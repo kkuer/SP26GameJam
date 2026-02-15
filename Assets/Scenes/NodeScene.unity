@@ -1454,13 +1454,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 540250487}
+        m_TargetAssemblyTypeName: InventoryNodeButtons, Assembly-CSharp
+        m_MethodName: InstantiateNode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1516,6 +1516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c8dcd3e6a4644448dd0a67fcfe3b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryNodeButtons
+  nodeColor: 2
   ownedColor: {r: 0.37254903, g: 0.83137256, b: 0.23137255, a: 1}
   unownedColor: {r: 0.37254903, g: 0.83137256, b: 0.23137255, a: 0.25882354}
   iconUnownedColor: {r: 1, g: 1, b: 1, a: 0.25882354}
@@ -1524,7 +1525,7 @@ MonoBehaviour:
   amountLabel: {fileID: 560838371}
   scaleMultiplier: 1.2
   animationSpeed: 10
-  spawnRadius: 3
+  spawnRadius: 6
   minDistanceBetweenNodes: 1.5
   spawnCenter: {fileID: 131805180}
   maxSpawnAttempts: 30
@@ -2371,13 +2372,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 686274368}
+        m_TargetAssemblyTypeName: InventoryNodeButtons, Assembly-CSharp
+        m_MethodName: InstantiateNode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2433,6 +2434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c8dcd3e6a4644448dd0a67fcfe3b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryNodeButtons
+  nodeColor: 0
   ownedColor: {r: 0.83137256, g: 0.23137255, b: 0.23137255, a: 1}
   unownedColor: {r: 0.83137256, g: 0.23137255, b: 0.23137255, a: 0.25882354}
   iconUnownedColor: {r: 1, g: 1, b: 1, a: 0.25882354}
@@ -2441,7 +2443,7 @@ MonoBehaviour:
   amountLabel: {fileID: 350983577}
   scaleMultiplier: 1.2
   animationSpeed: 10
-  spawnRadius: 3
+  spawnRadius: 6
   minDistanceBetweenNodes: 1.5
   spawnCenter: {fileID: 131805180}
   maxSpawnAttempts: 30
@@ -3673,13 +3675,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1188427874}
+        m_TargetAssemblyTypeName: InventoryNodeButtons, Assembly-CSharp
+        m_MethodName: InstantiateNode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3735,6 +3737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c8dcd3e6a4644448dd0a67fcfe3b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryNodeButtons
+  nodeColor: 3
   ownedColor: {r: 0.5647059, g: 0.23137255, b: 0.83137256, a: 1}
   unownedColor: {r: 0.5647059, g: 0.23137255, b: 0.83137256, a: 0.25882354}
   iconUnownedColor: {r: 1, g: 1, b: 1, a: 0.25882354}
@@ -3743,7 +3746,7 @@ MonoBehaviour:
   amountLabel: {fileID: 1964760243}
   scaleMultiplier: 1.2
   animationSpeed: 10
-  spawnRadius: 3
+  spawnRadius: 6
   minDistanceBetweenNodes: 1.5
   spawnCenter: {fileID: 131805180}
   maxSpawnAttempts: 30
@@ -4325,15 +4328,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c8dcd3e6a4644448dd0a67fcfe3b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryNodeButtons
+  nodeColor: 1
   ownedColor: {r: 0.23137255, g: 0.40392157, b: 0.83137256, a: 1}
   unownedColor: {r: 0.23137255, g: 0.40392157, b: 0.83137256, a: 0.25882354}
   iconUnownedColor: {r: 1, g: 1, b: 1, a: 0.25882354}
   icon: {fileID: 89915217}
-  amount: 2
+  amount: 0
   amountLabel: {fileID: 1229820475}
   scaleMultiplier: 1.2
   animationSpeed: 10
-  spawnRadius: 3
+  spawnRadius: 6
   minDistanceBetweenNodes: 1.5
   spawnCenter: {fileID: 131805180}
   maxSpawnAttempts: 30
@@ -5205,13 +5209,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1615917556}
+        m_TargetAssemblyTypeName: InventoryNodeButtons, Assembly-CSharp
+        m_MethodName: InstantiateNode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5267,6 +5271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c8dcd3e6a4644448dd0a67fcfe3b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryNodeButtons
+  nodeColor: 4
   ownedColor: {r: 0.83137256, g: 0.74509805, b: 0.23137255, a: 1}
   unownedColor: {r: 0.83137256, g: 0.74509805, b: 0.23137255, a: 0.25882354}
   iconUnownedColor: {r: 1, g: 1, b: 1, a: 0.25882354}
@@ -5275,7 +5280,7 @@ MonoBehaviour:
   amountLabel: {fileID: 661884922}
   scaleMultiplier: 1.2
   animationSpeed: 10
-  spawnRadius: 3
+  spawnRadius: 6
   minDistanceBetweenNodes: 1.5
   spawnCenter: {fileID: 131805180}
   maxSpawnAttempts: 30
@@ -5410,6 +5415,56 @@ MonoBehaviour:
   maxBounds: {x: 35, y: 25}
   showBoundsGizmo: 1
   boundsColor: {r: 0, g: 1, b: 0, a: 1}
+--- !u!1 &1730940925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1730940927}
+  - component: {fileID: 1730940926}
+  m_Layer: 0
+  m_Name: InventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1730940926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730940925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b5fe3a802f3164492538f0d4401e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  redNodesOwned: 0
+  blueNodesOwned: 0
+  greenNodesOwned: 0
+  purpleNodesOwned: 0
+  yellowNodesOwned: 0
+  orangeNodesOwned: 0
+--- !u!4 &1730940927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730940925}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751969529
 GameObject:
   m_ObjectHideFlags: 0
@@ -5495,13 +5550,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1751969534}
+        m_TargetAssemblyTypeName: InventoryNodeButtons, Assembly-CSharp
+        m_MethodName: InstantiateNode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5557,6 +5612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c8dcd3e6a4644448dd0a67fcfe3b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryNodeButtons
+  nodeColor: 5
   ownedColor: {r: 0.83137256, g: 0.5294118, b: 0.23137255, a: 1}
   unownedColor: {r: 0.83137256, g: 0.5294118, b: 0.23137255, a: 0.25882354}
   iconUnownedColor: {r: 1, g: 1, b: 1, a: 0.25882354}
@@ -5565,7 +5621,7 @@ MonoBehaviour:
   amountLabel: {fileID: 432536509}
   scaleMultiplier: 1.2
   animationSpeed: 10
-  spawnRadius: 3
+  spawnRadius: 6
   minDistanceBetweenNodes: 1.5
   spawnCenter: {fileID: 131805180}
   maxSpawnAttempts: 30
@@ -7019,3 +7075,4 @@ SceneRoots:
   - {fileID: 854411756}
   - {fileID: 1570555212}
   - {fileID: 581971239}
+  - {fileID: 1730940927}

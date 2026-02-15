@@ -53,7 +53,6 @@ public class BuildInfo : MonoBehaviour
 
     private void Awake()
     {
-        // Simple singleton pattern - no scene dependencies
         if (Instance == null)
         {
             Instance = this;
@@ -65,7 +64,6 @@ public class BuildInfo : MonoBehaviour
         }
     }
 
-    // Public method to clear all data (optional)
     public void ClearData()
     {
         playerHealthMultiplier = 1f;

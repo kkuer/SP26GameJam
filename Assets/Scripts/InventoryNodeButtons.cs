@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class InventoryNodeButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public NodeColor nodeColor;
+
     public Color ownedColor;
     public Color unownedColor;
 
@@ -66,6 +68,11 @@ public class InventoryNodeButtons : MonoBehaviour, IPointerEnterHandler, IPointe
             targetScale,
             Time.deltaTime * animationSpeed
         );
+
+        if (InventoryManager.Instance != null)
+        {
+            UpdateAmount();
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -94,7 +101,7 @@ public class InventoryNodeButtons : MonoBehaviour, IPointerEnterHandler, IPointe
         GameObject newNode = Instantiate(nodeToInstantiate, spawnPosition, Quaternion.identity);
 
         // Decrease amount
-        amount--;
+        DecreaseAmount();
 
         Debug.Log($"Spawned node at {spawnPosition}");
     }
@@ -179,6 +186,61 @@ public class InventoryNodeButtons : MonoBehaviour, IPointerEnterHandler, IPointe
         {
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(Vector3.zero, spawnRadius);
+        }
+    }
+
+    private void UpdateAmount()
+    {
+        if (nodeColor == NodeColor.Red)
+        {
+            amount = InventoryManager.Instance.redNodesOwned;
+        }
+        else if (nodeColor == NodeColor.Blue)
+        {
+            amount = InventoryManager.Instance.blueNodesOwned;
+        }
+        else if (nodeColor == NodeColor.Green)
+        {
+            amount = InventoryManager.Instance.greenNodesOwned;
+        }
+        else if (nodeColor == NodeColor.Purple)
+        {
+            amount = InventoryManager.Instance.purpleNodesOwned;
+        }
+        else if (nodeColor == NodeColor.Yellow)
+        {
+            amount = InventoryManager.Instance.yellowNodesOwned;
+        }
+        else if (nodeColor == NodeColor.Orange)
+        {
+            amount = InventoryManager.Instance.orangeNodesOwned;
+        }
+    }
+    private void DecreaseAmount()
+    {
+        if (nodeColor == NodeColor.Red)
+        {
+            InventoryManager.Instance.redNodesOwned--;
+        }
+        else if (nodeColor == NodeColor.Blue)
+        {
+            InventoryManager.Instance.blueNodesOwned--;
+        }
+        else if (nodeColor == NodeColor.Green)
+        {
+            InventoryManager.Instance.greenNodesOwned--;
+        }
+        else if (nodeColor == NodeColor.Purple)
+        {
+            InventoryManager.Instance.purpleNodesOwned--;
+        }
+        else if (nodeColor == NodeColor.Yellow)
+        {
+            InventoryManager.Instance.yellowNodesOwned--;
+        }
+        else if (nodeColor == NodeColor.Orange)
+        {
+            InventoryManager.Instance.orangeNodesOwned--;
         }
     }
 }

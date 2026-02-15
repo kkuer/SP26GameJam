@@ -281,7 +281,7 @@ public class Node : MonoBehaviour
 
     void Start()
     {
-        // Only snap if not in inventory
+        // Only snap if not in inventory - this prevents auto-snap on instantiation
         if (nodeState != NodeState.InInventory)
         {
             SnapToClosestAvailableSlot();
@@ -721,6 +721,7 @@ public class Node : MonoBehaviour
             currentSlot.OccupyingNode = null;
             currentSlot = null;
         }
+        // If we're in inventory, we don't need to do anything special - just start dragging
     }
 
     void OnMouseDrag()
@@ -745,10 +746,10 @@ public class Node : MonoBehaviour
         switch (nodeState)
         {
             case NodeState.InInventory:
-                // In inventory mode - just stay where released, no snapping
-                // When leaving inventory, become draggable and will snap on next release
-                nodeState = NodeState.Draggable;
-                break;
+                // In inventory mode - when released, we should snap like a draggable node
+                // So we fall through to the Draggable case
+                nodeState = NodeState.Draggable; // Set to draggable for future reference
+                goto case NodeState.Draggable; // Fall through to handle snapping
 
             case NodeState.Draggable:
                 // Find best available slot for this node
