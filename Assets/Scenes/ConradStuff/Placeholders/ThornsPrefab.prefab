@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 7612352619576928535}
   - component: {fileID: 2966983527950516518}
   - component: {fileID: 5230689595518456173}
-  - component: {fileID: 641970689735223546}
   - component: {fileID: 8330049409460546592}
   m_Layer: 6
-  m_Name: AuraPrefab
+  m_Name: ThornsPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3653340556957535733}
@@ -100,19 +99,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &641970689735223546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279937360005314161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ce9df56bafa55b47bc600ebbb62b68b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelfDestruct
-  selfTime: 0.3
 --- !u!114 &8330049409460546592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +114,7 @@ MonoBehaviour:
   bulletSplash: {fileID: 5670680589988066341, guid: 9536a5f9bd06e3844855a81f10c6af77, type: 3}
   enemyTag: {fileID: 0}
   auraGrowSpeed: 20
-  auraGrowMaxSize: 2
+  auraGrowMaxSize: 0.7
 --- !u!1 &1487363065982839251
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +197,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
