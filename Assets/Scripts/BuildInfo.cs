@@ -16,7 +16,6 @@ public class ActiveAbility
     public int damageOverTimeCount;
     public int siphonCount;
 
-    // Helper methods (these are fine - just data manipulation)
     public int TotalModifiers => ricochetCount + attackSpeedCount + multiShotCount + sizeCount + damageOverTimeCount + siphonCount;
     public bool HasModifiers => TotalModifiers > 0;
 
