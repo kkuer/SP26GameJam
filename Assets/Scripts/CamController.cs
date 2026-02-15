@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class CamController : MonoBehaviour
 {
+    public static CamController Instance { get; private set; }
+
     [Header("Pan Settings")]
     public float panSpeed = 10f;
     public bool invertPan = false;
@@ -28,13 +30,18 @@ public class CamController : MonoBehaviour
     public bool showBoundsGizmo = true;
     public Color boundsColor = Color.green;
 
+    void Awake()
+    {
+        if (Instance == null) { Instance = this; }
+        else { Destroy(gameObject); return; }
+    }
+
     void Start()
     {
         // Get the CinemachineCamera component
         cinemachineCamera = GetComponent<CinemachineCamera>();
         if (cinemachineCamera == null)
         {
-            Debug.LogError("CinemachineCamera component not found! Please attach this script to a GameObject with a CinemachineCamera.");
             return;
         }
 
@@ -76,6 +83,15 @@ public class CamController : MonoBehaviour
 
         // Apply zoom with smoothing
         ApplyZoomWithSmoothing();
+    }
+
+    public float GetCurrentOrthoSize()
+    {
+        if (cinemachineCamera != null)
+        {
+            return cinemachineCamera.Lens.OrthographicSize;
+        }
+        return 0f;
     }
 
     void HandlePan()

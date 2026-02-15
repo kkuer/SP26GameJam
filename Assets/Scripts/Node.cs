@@ -1,11 +1,39 @@
 using UnityEngine;
+using UnityEngine.UI; // Add this for UI Image
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 
 public class Node : MonoBehaviour
 {
     [Header("Node Settings")]
     [SerializeField] private NodeType nodeType = NodeType.Ability;
     [SerializeField] private NodeState nodeState = NodeState.Draggable;
+    [SerializeField] private EffectType effectType = EffectType.PiercingShot; // Current effect
+
+    [Header("UI Settings")]
+    [SerializeField] private TMP_Text effectText; // Reference to the TextMeshPro component
+    [SerializeField] private Image iconImage; // Reference to the UI Image component
+    [SerializeField] private bool updateUIOnChange = true; // Toggle UI updates
+
+    [Header("Camera Threshold Settings")]
+    [SerializeField] private float cameraThreshold = 13f; // Threshold for switching between text and icon
+    [SerializeField] private bool showIconAboveThreshold = true; // If true, show icon when ortho size > threshold, text when < threshold
+    [SerializeField] private float checkInterval = 0.2f; // How often to check camera size (performance)
+
+    [Header("Icon Sprites")]
+    [SerializeField] private Sprite piercingShotIcon;
+    [SerializeField] private Sprite burstShotIcon;
+    [SerializeField] private Sprite explosiveShotIcon;
+    [SerializeField] private Sprite meleeSwipeIcon;
+    [SerializeField] private Sprite auraBurstIcon;
+    [SerializeField] private Sprite thornsIcon;
+    [SerializeField] private Sprite ricochetIcon;
+    [SerializeField] private Sprite attackSpeedIcon;
+    [SerializeField] private Sprite multiShotIcon;
+    [SerializeField] private Sprite sizeIcon;
+    [SerializeField] private Sprite damageOverTimeIcon;
+    [SerializeField] private Sprite siphonIcon;
 
     [Header("Drag Settings")]
     [SerializeField] private float dragSpeed = 10f;
@@ -22,9 +50,18 @@ public class Node : MonoBehaviour
     [Header("Preview Line Settings")]
     [SerializeField] private bool showPreviewWhileDragging = true;
     [SerializeField] private Color previewLineColor = new Color(1f, 1f, 0f, 0.5f); // Yellow semi-transparent
+    [SerializeField] private Color conversionPreviewColor = new Color(1f, 0f, 1f, 0.5f); // Magenta for conversion preview
     [SerializeField] private float previewLineWidth = 0.15f;
     [SerializeField] private int maxPreviewLines = 6; // Maximum number of preview lines
     [SerializeField] private Material previewMaterial; // Optional: different material for preview
+
+    [Header("Preview Node Feedback")]
+    [SerializeField] private GameObject previewNodePrefab; // Prefab to instantiate on target slot
+    [SerializeField] private float previewNodeScale = 1.2f; // Scale multiplier for preview node
+    [SerializeField] private float previewNodePulseSpeed = 2f; // Speed of pulse animation
+    [SerializeField] private float previewNodePulseAmount = 0.2f; // Amount to pulse (0 = no pulse)
+    [SerializeField] private float previewNodeZoomSpeed = 1.5f; // Speed of zoom in/out
+    [SerializeField] private float previewNodeZoomAmount = 0.15f; // Amount to zoom (0 = no zoom)
 
     [Header("Preview Pulse Settings")]
     [SerializeField] private float pulseSpeed = 5f; // Speed of the pulse effect
@@ -36,6 +73,40 @@ public class Node : MonoBehaviour
     [SerializeField] private bool animateLines = true; // Toggle animation on/off
     [SerializeField] private AnimationCurve drawEasingCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f); // Easing for animation
 
+    // Mapping dictionary for Ability -> Modifier conversions
+    private static readonly Dictionary<EffectType, EffectType> abilityToModifierMap = new Dictionary<EffectType, EffectType>
+    {
+        { EffectType.PiercingShot, EffectType.Ricochet },
+        { EffectType.BurstShot, EffectType.AttackSpeed },
+        { EffectType.ExplosiveShot, EffectType.MultiShot },
+        { EffectType.MeleeSwipe, EffectType.Size },
+        { EffectType.AuraBurst, EffectType.DamageOverTime },
+        { EffectType.Thorns, EffectType.Siphon }
+    };
+
+    // Dictionary for display names (formatted nicely)
+    private static readonly Dictionary<EffectType, string> effectDisplayNames = new Dictionary<EffectType, string>
+    {
+        // Abilities
+        { EffectType.PiercingShot, "Piercing Shot" },
+        { EffectType.BurstShot, "Burst Shot" },
+        { EffectType.ExplosiveShot, "Explosive Shot" },
+        { EffectType.MeleeSwipe, "Melee Swipe" },
+        { EffectType.AuraBurst, "Aura Burst" },
+        { EffectType.Thorns, "Thorns" },
+        
+        // Modifiers
+        { EffectType.Ricochet, "Ricochet" },
+        { EffectType.AttackSpeed, "Attack Speed" },
+        { EffectType.MultiShot, "Multi-Shot" },
+        { EffectType.Size, "Size" },
+        { EffectType.DamageOverTime, "Damage Over Time" },
+        { EffectType.Siphon, "Siphon" }
+    };
+
+    // Dictionary for icons
+    private Dictionary<EffectType, Sprite> effectIcons;
+
     private Vector3 targetPosition;
     private Vector3 offset;
     private bool isDragging = false;
@@ -44,6 +115,10 @@ public class Node : MonoBehaviour
 
     private NodeSlot currentSlot;
     private NodeSlot previewSlot; // The slot this node would snap to
+    private NodeSlot fallbackSlot; // Fallback slot if conversion fails
+    private NodeType pendingType; // Type after conversion (if any)
+    private EffectType pendingEffect; // Effect after conversion (if any)
+    private bool isShowingConversionPreview = false;
 
     // Connection visualization
     private List<LineRenderer> connectionLines = new List<LineRenderer>();
@@ -53,6 +128,12 @@ public class Node : MonoBehaviour
     private List<LineRenderer> previewLines = new List<LineRenderer>();
     private Dictionary<NodeSlot, LineRenderer> activePreviews = new Dictionary<NodeSlot, LineRenderer>();
 
+    // Preview node feedback
+    private GameObject previewNodeInstance;
+    private Image previewNodeImage; // Changed from SpriteRenderer to Image
+    private Vector3 previewNodeOriginalScale;
+    private float previewNodeAnimationTime = 0f;
+
     // Track which node owns each connection (to prevent duplicates)
     private static Dictionary<(Node, Node), LineRenderer> globalConnections = new Dictionary<(Node, Node), LineRenderer>();
 
@@ -61,15 +142,47 @@ public class Node : MonoBehaviour
     private Dictionary<LineRenderer, bool> animationCompleted = new Dictionary<LineRenderer, bool>();
     private float lastSnapTime;
 
+    // Camera tracking
+    private float cameraCheckTimer = 0f;
+    private float currentOrthoSize;
+
     // Public properties
     public NodeType Type => nodeType;
     public NodeState State => nodeState;
     public NodeSlot CurrentSlot => currentSlot;
+    public EffectType Effect => effectType;
 
     void Awake()
     {
+        InitializeIconDictionary();
         CreateLineRenderers();
         CreatePreviewLines();
+        CreatePreviewNode();
+
+        // Initialize UI on awake
+        UpdateNodeUI();
+    }
+
+    void InitializeIconDictionary()
+    {
+        effectIcons = new Dictionary<EffectType, Sprite>
+        {
+            // Abilities
+            { EffectType.PiercingShot, piercingShotIcon },
+            { EffectType.BurstShot, burstShotIcon },
+            { EffectType.ExplosiveShot, explosiveShotIcon },
+            { EffectType.MeleeSwipe, meleeSwipeIcon },
+            { EffectType.AuraBurst, auraBurstIcon },
+            { EffectType.Thorns, thornsIcon },
+            
+            // Modifiers
+            { EffectType.Ricochet, ricochetIcon },
+            { EffectType.AttackSpeed, attackSpeedIcon },
+            { EffectType.MultiShot, multiShotIcon },
+            { EffectType.Size, sizeIcon },
+            { EffectType.DamageOverTime, damageOverTimeIcon },
+            { EffectType.Siphon, siphonIcon }
+        };
     }
 
     void CreateLineRenderers()
@@ -148,6 +261,24 @@ public class Node : MonoBehaviour
         }
     }
 
+    void CreatePreviewNode()
+    {
+        if (previewNodePrefab == null) return;
+
+        previewNodeInstance = Instantiate(previewNodePrefab, Vector3.zero, Quaternion.identity);
+        previewNodeInstance.transform.SetParent(null); // Keep in world space
+        previewNodeInstance.SetActive(false);
+
+        // Get Image component instead of SpriteRenderer
+        previewNodeImage = previewNodeInstance.GetComponent<Image>();
+        if (previewNodeImage == null)
+        {
+            Debug.LogWarning("Preview node prefab does not have an Image component!");
+        }
+
+        previewNodeOriginalScale = previewNodeInstance.transform.localScale;
+    }
+
     void Start()
     {
         // Only snap if not in inventory
@@ -155,6 +286,60 @@ public class Node : MonoBehaviour
         {
             SnapToClosestAvailableSlot();
         }
+    }
+
+    void UpdateNodeUI()
+    {
+        if (!updateUIOnChange) return;
+
+        UpdateEffectText();
+        UpdateEffectIcon();
+    }
+
+    void UpdateEffectText()
+    {
+        if (effectText == null) return;
+
+        // Get the display name for the current effect
+        if (effectDisplayNames.TryGetValue(effectType, out string displayName))
+        {
+            effectText.text = displayName;
+        }
+        else
+        {
+            // Fallback to enum name if not in dictionary
+            effectText.text = effectType.ToString();
+        }
+    }
+
+    void UpdateEffectIcon()
+    {
+        if (iconImage == null) return;
+
+        // Get the icon for the current effect
+        if (effectIcons.TryGetValue(effectType, out Sprite icon))
+        {
+            iconImage.sprite = icon;
+        }
+        else
+        {
+            Debug.LogWarning($"No icon found for effect type: {effectType}");
+        }
+    }
+
+    void UpdateUIBasedOnCamera()
+    {
+        if (effectText == null || iconImage == null || CamController.Instance == null) return;
+
+        // Get current orthographic size
+        currentOrthoSize = CamController.Instance.GetCurrentOrthoSize();
+
+        // Determine which UI element to show
+        bool showIcon = showIconAboveThreshold ? currentOrthoSize > cameraThreshold : currentOrthoSize < cameraThreshold;
+
+        // Enable/disable based on threshold
+        iconImage.gameObject.SetActive(showIcon);
+        effectText.gameObject.SetActive(!showIcon);
     }
 
     void SnapToClosestAvailableSlot()
@@ -165,24 +350,202 @@ public class Node : MonoBehaviour
             return;
         }
 
-        // Find the closest available node slot that matches this node's type
-        NodeSlot closestSlot = NodeManager.Instance.GetClosestAvailableSlotOfType(transform.position, nodeType);
+        // Find the closest available node slot that matches this node's type OR allows conversion
+        NodeSlot closestSlot = FindBestAvailableSlot(transform.position);
 
         if (closestSlot != null)
         {
+            // Handle type conversion if needed
+            if (closestSlot.type == SlotType.Modifier && nodeType == NodeType.Ability)
+            {
+                // Ability placed in Modifier slot - will convert to Modifier
+                pendingType = NodeType.Modifier;
+
+                // Also convert the effect to its modifier counterpart
+                if (abilityToModifierMap.TryGetValue(effectType, out EffectType modifierEffect))
+                {
+                    pendingEffect = modifierEffect;
+                    Debug.Log($"Ability {effectType} will convert to Modifier {modifierEffect}");
+                }
+                else
+                {
+                    Debug.LogWarning($"No modifier counterpart found for ability {effectType}");
+                    pendingEffect = effectType; // Fallback to same effect
+                }
+            }
+
             // Snap to slot position
             transform.position = closestSlot.transform.position;
             currentSlot = closestSlot;
             currentSlot.state = NodeSlotState.Occupied;
             currentSlot.OccupyingNode = this;
-
-            // Update connections for this node and all neighbors
-            UpdateConnections(true); // Pass true to indicate this is a new connection
-            NotifyNeighborsToUpdateConnections();
         }
         else
         {
-            Debug.LogWarning($"No available slots of type {nodeType} found for node!");
+            Debug.LogWarning($"No available slots found for node of type {nodeType}!");
+        }
+    }
+
+    NodeSlot FindBestAvailableSlot(Vector3 position)
+    {
+        NodeSlot bestSlot = null;
+        float bestDistance = float.MaxValue;
+
+        foreach (NodeSlot slot in NodeManager.Instance.allNodes)
+        {
+            if (slot.state == NodeSlotState.Occupied) continue;
+
+            bool slotValid = false;
+
+            // Check if this slot type is compatible with current node
+            switch (nodeType)
+            {
+                case NodeType.Center:
+                    // Center can only go in Center slots
+                    slotValid = (slot.type == SlotType.Center);
+                    break;
+
+                case NodeType.Ability:
+                    // Ability can go in Ability slots OR Modifier slots (with conversion)
+                    slotValid = (slot.type == SlotType.Ability || slot.type == SlotType.Modifier);
+                    break;
+
+                case NodeType.Modifier:
+                    // Modifier can only go in Modifier slots
+                    slotValid = (slot.type == SlotType.Modifier);
+                    break;
+            }
+
+            if (!slotValid) continue;
+
+            float distance = Vector3.Distance(position, slot.transform.position);
+            if (distance < bestDistance)
+            {
+                bestDistance = distance;
+                bestSlot = slot;
+            }
+        }
+
+        return bestSlot;
+    }
+
+    NodeSlot FindClosestAbilitySlot(Vector3 position)
+    {
+        NodeSlot bestSlot = null;
+        float bestDistance = float.MaxValue;
+
+        foreach (NodeSlot slot in NodeManager.Instance.allNodes)
+        {
+            if (slot.state == NodeSlotState.Occupied) continue;
+            if (slot.type != SlotType.Ability) continue;
+
+            float distance = Vector3.Distance(position, slot.transform.position);
+            if (distance < bestDistance)
+            {
+                bestDistance = distance;
+                bestSlot = slot;
+            }
+        }
+
+        return bestSlot;
+    }
+
+    bool CanConnectTo(Node otherNode)
+    {
+        if (otherNode == null) return false;
+
+        // Get effective types (considering pending conversions)
+        NodeType thisType = pendingType != NodeType.Ability ? pendingType : nodeType;
+        NodeType otherType = otherNode.nodeType;
+
+        // Connection rules based on node types
+        switch (thisType)
+        {
+            case NodeType.Center:
+                // Center can only connect to Ability
+                return otherType == NodeType.Ability;
+
+            case NodeType.Ability:
+                // Ability can connect to Center and Modifier ONLY
+                // NOT to other Ability nodes
+                return otherType == NodeType.Center || otherType == NodeType.Modifier;
+
+            case NodeType.Modifier:
+                // Modifier can connect to Modifier and Ability ONLY
+                return otherType == NodeType.Modifier || otherType == NodeType.Ability;
+
+            default:
+                return false;
+        }
+    }
+
+    bool HasValidNeighborForConversion(NodeSlot targetSlot)
+    {
+        if (targetSlot == null) return false;
+
+        // Check all neighbors of the potential slot
+        foreach (var neighborSlot in targetSlot.nearbyNodes)
+        {
+            if (neighborSlot != null && neighborSlot.OccupyingNode != null)
+            {
+                Node neighborNode = neighborSlot.OccupyingNode;
+
+                // For an Ability trying to convert to Modifier, need a nearby Ability or Modifier
+                if (neighborNode.nodeType == NodeType.Ability || neighborNode.nodeType == NodeType.Modifier)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    void UpdatePreviewNode()
+    {
+        if (previewNodeInstance == null || previewSlot == null)
+        {
+            if (previewNodeInstance != null)
+                previewNodeInstance.SetActive(false);
+            return;
+        }
+
+        // Position preview node at the target slot
+        previewNodeInstance.transform.position = previewSlot.transform.position;
+        previewNodeInstance.SetActive(true);
+
+        // Update animation time
+        previewNodeAnimationTime += Time.deltaTime;
+
+        // Combined animation: pulse + zoom
+        float pulse = 1f + Mathf.Sin(previewNodeAnimationTime * previewNodePulseSpeed) * previewNodePulseAmount;
+        float zoom = 1f + Mathf.Sin(previewNodeAnimationTime * previewNodeZoomSpeed) * previewNodeZoomAmount;
+
+        // Apply scale with both effects
+        Vector3 newScale = previewNodeOriginalScale * previewNodeScale * pulse * zoom;
+        previewNodeInstance.transform.localScale = newScale;
+
+        // Update color based on preview type (using Image instead of SpriteRenderer)
+        if (previewNodeImage != null)
+        {
+            Color targetColor;
+            if (isShowingConversionPreview)
+            {
+                targetColor = previewLineColor; // Normal for fallback
+            }
+            else if (nodeType == NodeType.Ability && previewSlot.type == SlotType.Modifier &&
+                     HasValidNeighborForConversion(previewSlot))
+            {
+                targetColor = conversionPreviewColor; // Magenta for conversion
+            }
+            else
+            {
+                targetColor = previewLineColor; // Normal yellow
+            }
+
+            // Pulse alpha along with the lines
+            float alphaPulse = 0.8f + Mathf.Sin(previewNodeAnimationTime * pulseSpeed) * 0.2f;
+            targetColor.a = pulseBaseAlpha * alphaPulse;
+            previewNodeImage.color = targetColor;
         }
     }
 
@@ -194,10 +557,13 @@ public class Node : MonoBehaviour
             return;
         }
 
-        // Find the closest available slot (where this node would snap)
+        // Find the best available slot (where this node would snap)
         if (NodeManager.Instance != null)
         {
-            previewSlot = NodeManager.Instance.GetClosestAvailableSlotOfType(transform.position, nodeType);
+            previewSlot = FindBestAvailableSlot(transform.position);
+
+            // Also find the closest ability slot as fallback
+            fallbackSlot = FindClosestAbilitySlot(transform.position);
         }
 
         if (previewSlot == null)
@@ -207,6 +573,51 @@ public class Node : MonoBehaviour
         }
 
         int previewIndex = 0;
+        isShowingConversionPreview = false;
+
+        // For Ability nodes trying to go into Modifier slots, check if conversion is valid
+        bool conversionValid = true;
+        if (nodeType == NodeType.Ability && previewSlot.type == SlotType.Modifier)
+        {
+            conversionValid = HasValidNeighborForConversion(previewSlot);
+
+            // If conversion not valid, use fallback slot for previews
+            if (!conversionValid && fallbackSlot != null)
+            {
+                isShowingConversionPreview = true;
+                previewSlot = fallbackSlot;
+            }
+        }
+
+        // Update the preview node
+        UpdatePreviewNode();
+
+        // Determine effective type for connection rules (consider conversion)
+        NodeType effectiveType;
+        Color previewColorToUse = previewLineColor;
+
+        if (isShowingConversionPreview)
+        {
+            // When showing fallback, we're still an Ability
+            effectiveType = NodeType.Ability;
+            previewColorToUse = previewLineColor; // Normal color for ability slot preview
+        }
+        else if (nodeType == NodeType.Ability && previewSlot.type == SlotType.Modifier && conversionValid)
+        {
+            // Valid conversion preview
+            effectiveType = NodeType.Modifier;
+            previewColorToUse = conversionPreviewColor;
+        }
+        else
+        {
+            // Normal preview
+            effectiveType = nodeType;
+            previewColorToUse = previewLineColor;
+        }
+
+        // Store original type and temporarily set effective type for connection checks
+        NodeType originalType = nodeType;
+        pendingType = (effectiveType != originalType) ? effectiveType : NodeType.Ability;
 
         // Check all neighbors of that potential slot
         foreach (var neighborSlot in previewSlot.nearbyNodes)
@@ -217,6 +628,12 @@ public class Node : MonoBehaviour
             if (neighborSlot != null && neighborSlot.OccupyingNode != null)
             {
                 Node neighborNode = neighborSlot.OccupyingNode;
+
+                // Check if this connection is allowed by type rules (using effective type)
+                if (!CanConnectTo(neighborNode))
+                {
+                    continue; // Skip - connection not allowed by type rules
+                }
 
                 // Check if this connection already exists in global connections
                 var connectionKey = (this, neighborNode);
@@ -234,7 +651,7 @@ public class Node : MonoBehaviour
 
                     // Pulse effect while dragging - with separate speed and intensity controls
                     float pulse = 1f + Mathf.Sin(Time.time * pulseSpeed + previewIndex) * pulseIntensity;
-                    Color pulsedColor = previewLineColor;
+                    Color pulsedColor = previewColorToUse;
                     pulsedColor.a = pulseBaseAlpha * pulse;
                     previewLine.startColor = pulsedColor;
                     previewLine.endColor = pulsedColor;
@@ -246,6 +663,9 @@ public class Node : MonoBehaviour
                 }
             }
         }
+
+        // Reset pending type
+        pendingType = NodeType.Ability;
 
         // Hide any unused preview lines
         for (int i = previewIndex; i < previewLines.Count; i++)
@@ -260,13 +680,22 @@ public class Node : MonoBehaviour
         {
             preview.enabled = false;
         }
+
+        if (previewNodeInstance != null)
+        {
+            previewNodeInstance.SetActive(false);
+        }
+
         activePreviews.Clear();
         previewSlot = null;
+        fallbackSlot = null;
+        isShowingConversionPreview = false;
     }
 
     void OnMouseDown()
     {
         // Check if node is in a state that allows dragging
+        // Only Draggable and InInventory nodes can be dragged
         if (nodeState != NodeState.Draggable && nodeState != NodeState.InInventory) return;
 
         offset = transform.position - GetMouseWorldPos();
@@ -309,7 +738,7 @@ public class Node : MonoBehaviour
 
         isDragging = false;
 
-        // Hide preview lines
+        // Hide preview lines and node
         HideAllPreviews();
 
         // Handle different states on release
@@ -317,24 +746,74 @@ public class Node : MonoBehaviour
         {
             case NodeState.InInventory:
                 // In inventory mode - just stay where released, no snapping
+                // When leaving inventory, become draggable and will snap on next release
                 nodeState = NodeState.Draggable;
                 break;
 
             case NodeState.Draggable:
-                // Find closest available slot that matches this node's type
+                // Find best available slot for this node
                 if (NodeManager.Instance != null)
                 {
-                    NodeSlot closestSlot = NodeManager.Instance.GetClosestAvailableSlotOfType(transform.position, nodeType);
+                    NodeSlot bestSlot = FindBestAvailableSlot(transform.position);
+                    NodeSlot fallbackAbilitySlot = FindClosestAbilitySlot(transform.position);
 
-                    if (closestSlot != null)
+                    if (bestSlot != null)
                     {
-                        snapTarget = closestSlot.transform.position;
-                        currentSlot = closestSlot;
+                        // For Ability trying to go into Modifier slot
+                        if (nodeType == NodeType.Ability && bestSlot.type == SlotType.Modifier)
+                        {
+                            // Check if conversion is valid
+                            if (HasValidNeighborForConversion(bestSlot))
+                            {
+                                // Valid conversion - use the Modifier slot
+                                snapTarget = bestSlot.transform.position;
+                                currentSlot = bestSlot;
+                                pendingType = NodeType.Modifier;
+
+                                // Set pending effect to modifier counterpart
+                                if (abilityToModifierMap.TryGetValue(effectType, out EffectType modifierEffect))
+                                {
+                                    pendingEffect = modifierEffect;
+                                }
+
+                                Debug.Log($"Ability {effectType} converting to Modifier {pendingEffect}!");
+                            }
+                            else
+                            {
+                                // Invalid conversion - use fallback Ability slot if available
+                                if (fallbackAbilitySlot != null)
+                                {
+                                    snapTarget = fallbackAbilitySlot.transform.position;
+                                    currentSlot = fallbackAbilitySlot;
+                                    pendingType = NodeType.Ability; // No conversion
+                                    pendingEffect = effectType; // Keep same effect
+                                    Debug.Log("Cannot convert - snapping to nearest Ability slot instead");
+                                }
+                                else
+                                {
+                                    // No fallback available, use original slot
+                                    snapTarget = bestSlot.transform.position;
+                                    currentSlot = bestSlot;
+                                    pendingType = NodeType.Ability;
+                                    pendingEffect = effectType;
+                                    Debug.Log("No Ability slots available - using Modifier slot without conversion (will this work?)");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            // Normal snap - no conversion
+                            snapTarget = bestSlot.transform.position;
+                            currentSlot = bestSlot;
+                            pendingType = NodeType.Ability;
+                            pendingEffect = effectType;
+                        }
+
                         isSnapping = true;
                     }
                     else
                     {
-                        Debug.LogWarning($"No available slots of type {nodeType} found for node!");
+                        Debug.LogWarning($"No available slots found for node of type {nodeType}!");
                     }
                 }
                 break;
@@ -368,6 +847,29 @@ public class Node : MonoBehaviour
                 isSnapping = false;
                 lastSnapTime = Time.time;
 
+                // Apply type conversion if pending
+                if (pendingType != NodeType.Ability)
+                {
+                    nodeType = pendingType;
+
+                    // Apply effect conversion if pending
+                    if (pendingEffect != effectType)
+                    {
+                        effectType = pendingEffect;
+
+                        // UPDATE THE UI HERE!
+                        UpdateNodeUI();
+
+                        Debug.Log($"Effect converted to {effectType}");
+                    }
+
+                    Debug.Log($"Node converted to {nodeType}");
+                }
+
+                // Reset pending values
+                pendingType = NodeType.Ability;
+                pendingEffect = effectType;
+
                 // Reset animation completion flags for new connections
                 foreach (var lr in connectionLines)
                 {
@@ -388,6 +890,16 @@ public class Node : MonoBehaviour
                     {
                         NodeManager.Instance.OnNodeStateChanged();
                     }
+
+                    // LOCK THE NODE AFTER SNAPPING IS COMPLETE
+                    nodeState = NodeState.Locked;
+
+                    if (BuildManager.Instance != null)
+                    {
+                        BuildManager.Instance.OnNodeStateChanged();
+                    }
+
+                    Debug.Log($"Node locked in place at {currentSlot.transform.position} with effect {effectType}");
                 }
             }
         }
@@ -396,6 +908,14 @@ public class Node : MonoBehaviour
         if (animateLines)
         {
             UpdateLineAnimations();
+        }
+
+        // Update camera-based UI with throttling
+        cameraCheckTimer += Time.deltaTime;
+        if (cameraCheckTimer >= checkInterval)
+        {
+            cameraCheckTimer = 0f;
+            UpdateUIBasedOnCamera();
         }
     }
 
@@ -471,6 +991,14 @@ public class Node : MonoBehaviour
 
             // Check if slots are still neighbors
             if (!AreSlotsNeighbors(nodeA.CurrentSlot, nodeB.CurrentSlot))
+            {
+                if (lr != null) lr.enabled = false;
+                toRemove.Add(connection);
+                continue;
+            }
+
+            // Check if connection is still allowed by type rules
+            if (!nodeA.CanConnectTo(nodeB))
             {
                 if (lr != null) lr.enabled = false;
                 toRemove.Add(connection);
@@ -579,6 +1107,12 @@ public class Node : MonoBehaviour
             if (neighborSlot != null && neighborSlot.OccupyingNode != null)
             {
                 Node neighborNode = neighborSlot.OccupyingNode;
+
+                // Check if this connection is allowed by type rules
+                if (!CanConnectTo(neighborNode))
+                {
+                    continue; // Skip - connection not allowed by type rules
+                }
 
                 // Create a unique key for this connection (always use consistent ordering)
                 var connectionKey = (this, neighborNode);
@@ -708,10 +1242,19 @@ public class Node : MonoBehaviour
                 Destroy(preview.gameObject);
         }
 
+        // Clean up preview node
+        if (previewNodeInstance != null)
+            Destroy(previewNodeInstance);
+
         // Notify NodeManager
         if (NodeManager.Instance != null)
         {
             NodeManager.Instance.OnNodeStateChanged();
+        }
+
+        if (BuildManager.Instance != null)
+        {
+            BuildManager.Instance.OnNodeStateChanged();
         }
     }
 
@@ -724,6 +1267,22 @@ public class Node : MonoBehaviour
     public void SetNodeType(NodeType newType)
     {
         nodeType = newType;
+    }
+
+    public void SetEffectType(EffectType newEffect)
+    {
+        effectType = newEffect;
+        UpdateNodeUI(); // Update UI when manually changing effect
+    }
+
+    // Method to unlock a node (make it draggable again)
+    public void UnlockNode()
+    {
+        if (nodeState == NodeState.Locked)
+        {
+            nodeState = NodeState.Draggable;
+            Debug.Log("Node unlocked");
+        }
     }
 
     // Method to place node in inventory (sets state and optionally moves it)
@@ -770,5 +1329,21 @@ public class Node : MonoBehaviour
 
         // Redraw connections
         UpdateConnections();
+    }
+
+    // Helper method to check if this node can convert to a modifier
+    public bool CanConvertToModifier()
+    {
+        return nodeType == NodeType.Ability && abilityToModifierMap.ContainsKey(effectType);
+    }
+
+    // Helper method to get the modifier counterpart for this ability
+    public EffectType? GetModifierCounterpart()
+    {
+        if (abilityToModifierMap.TryGetValue(effectType, out EffectType modifierEffect))
+        {
+            return modifierEffect;
+        }
+        return null;
     }
 }

@@ -16,7 +16,7 @@ public enum NodeState
 public enum SlotType
 {
     Center,
-    Abiility,
+    Ability,
     Modifier
 }
 
@@ -25,4 +25,23 @@ public enum NodeType
     Center,
     Ability,
     Modifier
+}
+
+public enum EffectType
+{
+    //abilities
+    PiercingShot,
+    BurstShot,
+    ExplosiveShot,
+    MeleeSwipe,
+    AuraBurst,
+    Thorns,
+
+    //modifiers
+    Ricochet,
+    AttackSpeed,
+    MultiShot,
+    Size,
+    DamageOverTime,
+    Siphon
 }

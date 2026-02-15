@@ -6,7 +6,7 @@ public class NodeSlot : MonoBehaviour
     public List<NodeSlot> nearbyNodes = new List<NodeSlot>();
 
     public NodeSlotState state = NodeSlotState.Empty;
-    public SlotType type; // This is already here!
+    public SlotType type;
 
     private Node occupyingNode;
     public Node OccupyingNode

@@ -8,7 +8,7 @@ public class NodeManager : MonoBehaviour
     public List<NodeSlot> allNodes = new List<NodeSlot>();
     
     [Header("Node Prefab")]
-    [SerializeField] private GameObject nodePrefab; // Assign your node prefab here
+    [SerializeField] private GameObject nodePrefab;
 
     void Awake()
     {
