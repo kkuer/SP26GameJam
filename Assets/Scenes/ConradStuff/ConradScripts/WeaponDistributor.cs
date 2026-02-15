@@ -41,7 +41,8 @@ public class WeaponDistributor : MonoBehaviour
     //List of all the potential weapons to spawn
     public List<GameObject> weaponList = new List<GameObject>();
 
-    //Takes stock of how many nodes of the given weapon are asked to spawn, then divides that off a 360 degree total rotation while creating a node in turn, so there's a properly rotated bunch of emitters spread along the center player ball.
+    //Takes stock of how many nodes of the given weapon are asked to spawn, then divides that off a 360 degree total rotation
+    //while creating a node in turn, so there's a properly rotated bunch of emitters spread along the center player ball.
     void Start()
     {
         //Selects the weapon generated 
