@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 13546387}
   - component: {fileID: 13546388}
   m_Layer: 0
-  m_Name: GridDot (1)
+  m_Name: ModifierSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot2
   nearbyNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -248,7 +249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &61249894
 Transform:
   m_ObjectHideFlags: 0
@@ -271,7 +272,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61249892}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3142c425cb48e4f4584fc54150df8c3c, type: 3}
   m_Name: 
@@ -427,7 +428,7 @@ GameObject:
   - component: {fileID: 72482285}
   - component: {fileID: 72482286}
   m_Layer: 0
-  m_Name: GridDot (5)
+  m_Name: ModifierSlot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,6 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot6
   nearbyNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -721,7 +723,7 @@ GameObject:
   - component: {fileID: 201042338}
   - component: {fileID: 201042339}
   m_Layer: 0
-  m_Name: GridDot (2)
+  m_Name: ModifierSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -813,6 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot3
   nearbyNodes:
   - {fileID: 0}
   - {fileID: 888357309}
@@ -834,7 +837,7 @@ GameObject:
   - component: {fileID: 245334203}
   - component: {fileID: 245334204}
   m_Layer: 0
-  m_Name: AbilityNode1
+  m_Name: AbilitySlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -926,6 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: AbilitySlot1
   nearbyNodes:
   - {fileID: 72482286}
   - {fileID: 1944255141}
@@ -947,7 +951,7 @@ GameObject:
   - component: {fileID: 317390554}
   - component: {fileID: 317390555}
   m_Layer: 0
-  m_Name: GridDot (7)
+  m_Name: ModifierSlot8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1039,6 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot8
   nearbyNodes:
   - {fileID: 888357309}
   - {fileID: 553303689}
@@ -1199,7 +1204,7 @@ GameObject:
   - component: {fileID: 353246007}
   - component: {fileID: 353246008}
   m_Layer: 0
-  m_Name: GridDot (19)
+  m_Name: ModifierSlot13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1291,6 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot13
   nearbyNodes:
   - {fileID: 840773592}
   - {fileID: 774660403}
@@ -1451,7 +1457,7 @@ GameObject:
   - component: {fileID: 449287745}
   - component: {fileID: 449287746}
   m_Layer: 0
-  m_Name: AbilityNode4
+  m_Name: AbilitySlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1543,6 +1549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: AbilitySlot4
   nearbyNodes:
   - {fileID: 1592028310}
   - {fileID: 724318710}
@@ -1727,7 +1734,7 @@ GameObject:
   - component: {fileID: 553303688}
   - component: {fileID: 553303689}
   m_Layer: 0
-  m_Name: AbilityNode6
+  m_Name: AbilitySlot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1819,6 +1826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: AbilitySlot6
   nearbyNodes:
   - {fileID: 1906998636}
   - {fileID: 245334204}
@@ -2116,7 +2124,7 @@ GameObject:
   - component: {fileID: 573429718}
   - component: {fileID: 573429719}
   m_Layer: 0
-  m_Name: GridDot
+  m_Name: ModifierSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2208,6 +2216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot1
   nearbyNodes:
   - {fileID: 0}
   - {fileID: 13546388}
@@ -2596,7 +2605,7 @@ GameObject:
   - component: {fileID: 684940841}
   - component: {fileID: 684940842}
   m_Layer: 0
-  m_Name: GridDot (11)
+  m_Name: ModifierSlot10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2688,6 +2697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot10
   nearbyNodes:
   - {fileID: 317390555}
   - {fileID: 1944822795}
@@ -2872,7 +2882,7 @@ GameObject:
   - component: {fileID: 724318709}
   - component: {fileID: 724318710}
   m_Layer: 0
-  m_Name: AbilityNode3
+  m_Name: AbilitySlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2964,6 +2974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: AbilitySlot3
   nearbyNodes:
   - {fileID: 2016705479}
   - {fileID: 353246008}
@@ -2985,7 +2996,7 @@ GameObject:
   - component: {fileID: 774660402}
   - component: {fileID: 774660403}
   m_Layer: 0
-  m_Name: GridDot (20)
+  m_Name: ModifierSlot14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3077,6 +3088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot14
   nearbyNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -3098,7 +3110,7 @@ GameObject:
   - component: {fileID: 840773591}
   - component: {fileID: 840773592}
   m_Layer: 0
-  m_Name: GridDot (15)
+  m_Name: ModifierSlot11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3190,6 +3202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot11
   nearbyNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -3365,7 +3378,7 @@ GameObject:
   - component: {fileID: 888357308}
   - component: {fileID: 888357309}
   m_Layer: 0
-  m_Name: GridDot (3)
+  m_Name: ModifierSlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3457,6 +3470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot4
   nearbyNodes:
   - {fileID: 573429719}
   - {fileID: 1906998636}
@@ -3638,24 +3652,25 @@ MonoBehaviour:
   nodeState: 1
   effectType: 0
   nodeColor: 0
+  currentSlotName: CoreNode
   effectText: {fileID: 0}
   iconImage: {fileID: 0}
   updateUIOnChange: 1
   cameraThreshold: 13
-  showIconAboveThreshold: 1
+  showIconAboveThreshold: 0
   checkInterval: 0.2
-  piercingShotIcon: {fileID: 0}
-  burstShotIcon: {fileID: 0}
-  explosiveShotIcon: {fileID: 0}
-  meleeSwipeIcon: {fileID: 0}
-  auraBurstIcon: {fileID: 0}
-  thornsIcon: {fileID: 0}
-  ricochetIcon: {fileID: 0}
-  attackSpeedIcon: {fileID: 0}
-  multiShotIcon: {fileID: 0}
-  sizeIcon: {fileID: 0}
-  damageOverTimeIcon: {fileID: 0}
-  siphonIcon: {fileID: 0}
+  piercingShotIcon: {fileID: 21300000, guid: 50723cf8c89e3aa4da7ff0ce74131638, type: 3}
+  burstShotIcon: {fileID: 21300000, guid: 07aec16862fc71c46be8ea0a4a734c03, type: 3}
+  explosiveShotIcon: {fileID: 21300000, guid: d10a05acb6beb71408de8d9ba583003a, type: 3}
+  meleeSwipeIcon: {fileID: 21300000, guid: 9c6e92f4ed715e04f85f937dd7244d0c, type: 3}
+  auraBurstIcon: {fileID: 21300000, guid: 0ed5400f10446d946ac8d8d6cf74fbd1, type: 3}
+  thornsIcon: {fileID: 21300000, guid: e319313fd1f413146bb6f05517254ce2, type: 3}
+  ricochetIcon: {fileID: 21300000, guid: d1429805c430de34a8dad456f0c856d3, type: 3}
+  attackSpeedIcon: {fileID: 21300000, guid: d6b7e5df6df16d745af2b035b4f4289d, type: 3}
+  multiShotIcon: {fileID: 21300000, guid: 5fab035abe8ec354083dd5dee8f4bc4f, type: 3}
+  sizeIcon: {fileID: 21300000, guid: 73a59118de0bf24409e6f642b8949dfc, type: 3}
+  damageOverTimeIcon: {fileID: 21300000, guid: dabd7e13f11c7f94aa4ab485fc5ef2df, type: 3}
+  siphonIcon: {fileID: 21300000, guid: eacf3b2383efb5947a055152fb0fcfa1, type: 3}
   dragSpeed: 20
   snapSpeed: 25
   linePoints: 8
@@ -3692,8 +3707,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  lineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-  lineColor: {r: 1, g: 1, b: 1, a: 1}
+  lineMaterial: {fileID: 2100000, guid: a157219ab666cae4f8c256e980961d1b, type: 2}
+  lineColor: {r: 1, g: 0.6509804, b: 0.6509804, a: 1}
   showPreviewWhileDragging: 1
   previewLineColor: {r: 1, g: 1, b: 1, a: 0.14117648}
   conversionPreviewColor: {r: 1, g: 0, b: 1, a: 0.5}
@@ -4019,7 +4034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1130816846
 Transform:
   m_ObjectHideFlags: 0
@@ -4042,7 +4057,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130816844}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4de892abef6124428e46f150a0f45ca, type: 3}
   m_Name: 
@@ -4886,7 +4901,7 @@ GameObject:
   - component: {fileID: 1304327245}
   - component: {fileID: 1304327246}
   m_Layer: 0
-  m_Name: GridDot (22)
+  m_Name: ModifierSlot16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4978,6 +4993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot16
   nearbyNodes:
   - {fileID: 724318710}
   - {fileID: 1563215545}
@@ -5374,7 +5390,7 @@ GameObject:
   - component: {fileID: 1352411339}
   - component: {fileID: 1352411340}
   m_Layer: 0
-  m_Name: GridDot (21)
+  m_Name: ModifierSlot15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5466,6 +5482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot15
   nearbyNodes:
   - {fileID: 449287746}
   - {fileID: 1304327246}
@@ -5487,7 +5504,7 @@ GameObject:
   - component: {fileID: 1462714808}
   - component: {fileID: 1462714809}
   m_Layer: 0
-  m_Name: GridDot (16)
+  m_Name: ModifierSlot12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5579,6 +5596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot12
   nearbyNodes:
   - {fileID: 1944822795}
   - {fileID: 449287746}
@@ -5600,7 +5618,7 @@ GameObject:
   - component: {fileID: 1474635129}
   - component: {fileID: 1474635130}
   m_Layer: 0
-  m_Name: GridDot (24)
+  m_Name: ModifierSlot18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5692,6 +5710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot18
   nearbyNodes:
   - {fileID: 774660403}
   - {fileID: 0}
@@ -5754,6 +5773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeScene
   sceneIndex: 2
+  targetSceneName: 
 --- !u!114 &1489452544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6030,7 +6050,7 @@ GameObject:
   - component: {fileID: 1563215544}
   - component: {fileID: 1563215545}
   m_Layer: 0
-  m_Name: GridDot (23)
+  m_Name: ModifierSlot17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6122,6 +6142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot17
   nearbyNodes:
   - {fileID: 353246008}
   - {fileID: 1474635130}
@@ -6190,7 +6211,7 @@ GameObject:
   - component: {fileID: 1592028309}
   - component: {fileID: 1592028310}
   m_Layer: 0
-  m_Name: CoreDot
+  m_Name: CoreSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6282,6 +6303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: CoreSlot
   nearbyNodes:
   - {fileID: 245334204}
   - {fileID: 2016705479}
@@ -7215,7 +7237,7 @@ GameObject:
   - component: {fileID: 1906998635}
   - component: {fileID: 1906998636}
   m_Layer: 0
-  m_Name: GridDot (4)
+  m_Name: ModifierSlot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7307,6 +7329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot5
   nearbyNodes:
   - {fileID: 13546388}
   - {fileID: 72482286}
@@ -7328,7 +7351,7 @@ GameObject:
   - component: {fileID: 1944255140}
   - component: {fileID: 1944255141}
   m_Layer: 0
-  m_Name: GridDot (10)
+  m_Name: ModifierSlot9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7420,6 +7443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot9
   nearbyNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -7441,7 +7465,7 @@ GameObject:
   - component: {fileID: 1944822794}
   - component: {fileID: 1944822795}
   m_Layer: 0
-  m_Name: AbilityNode5
+  m_Name: AbilitySlot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7533,6 +7557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: AbilitySlot5
   nearbyNodes:
   - {fileID: 553303689}
   - {fileID: 1592028310}
@@ -7693,7 +7718,7 @@ GameObject:
   - component: {fileID: 1965883985}
   - component: {fileID: 1965883986}
   m_Layer: 0
-  m_Name: GridDot (25)
+  m_Name: ModifierSlot19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7785,6 +7810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot19
   nearbyNodes:
   - {fileID: 1304327246}
   - {fileID: 2099094502}
@@ -7806,7 +7832,7 @@ GameObject:
   - component: {fileID: 1991844303}
   - component: {fileID: 1991844304}
   m_Layer: 0
-  m_Name: GridDot (6)
+  m_Name: ModifierSlot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7898,6 +7924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot7
   nearbyNodes:
   - {fileID: 201042339}
   - {fileID: 317390555}
@@ -7919,7 +7946,7 @@ GameObject:
   - component: {fileID: 2016705478}
   - component: {fileID: 2016705479}
   m_Layer: 0
-  m_Name: AbilityNode2
+  m_Name: AbilitySlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8011,6 +8038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: AbilitySlot2
   nearbyNodes:
   - {fileID: 1944255141}
   - {fileID: 840773592}
@@ -8132,7 +8160,7 @@ GameObject:
   - component: {fileID: 2099094501}
   - component: {fileID: 2099094502}
   m_Layer: 0
-  m_Name: GridDot (26)
+  m_Name: ModifierSlot20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8224,6 +8252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcffda21505d7b64a9c90e70f75e65d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeSlot
+  slotName: ModifierSlot20
   nearbyNodes:
   - {fileID: 2099094502}
   - {fileID: 0}

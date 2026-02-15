@@ -10,15 +10,9 @@ public class SavedNodeData
     public NodeState nodeState;
     public NodeColor nodeColor;
 
-    // Position
-    public float posX, posY, posZ;
-
-    // Slot info
-    public string slotId;
+    // Save by slot name instead of position
+    public string slotName;
     public SlotType slotType;
-
-    // Connections
-    public List<string> connectedNodeIds = new List<string>();
 }
 
 [System.Serializable]
@@ -65,7 +59,6 @@ public class BuildSaveData : MonoBehaviour
     {
         savedNodes.Clear();
         hasSavedData = false;
-        Debug.Log("BuildSaveData cleared");
     }
 
     private void OnDestroy()

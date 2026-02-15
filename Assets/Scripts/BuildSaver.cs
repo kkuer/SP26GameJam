@@ -18,19 +18,21 @@ public class BuildSaver : MonoBehaviour
     [SerializeField] private GameObject orangeNodePrefab;
 
     [Header("Scene Settings")]
-    [SerializeField] private string targetSceneName = "YourSceneName"; // Set this to the scene where you want to load
+    [SerializeField] private string targetSceneName = "NodeScene";
     [SerializeField] private bool saveOnSceneUnload = true;
     [SerializeField] private bool loadOnTargetScene = true;
 
     private Dictionary<NodeColor, GameObject> prefabLookup;
     private bool isSaving = false;
 
+    // Lookup for slots by their name
+    private Dictionary<string, NodeSlot> slotNameLookup;
+
     private void Awake()
     {
         if (Instance == null) { Instance = this; DontDestroyOnLoad(gameObject); }
         else { Destroy(gameObject); return; }
 
-        // Build the prefab lookup dictionary
         prefabLookup = new Dictionary<NodeColor, GameObject>
         {
             { NodeColor.Red, redNodePrefab },
@@ -60,18 +62,16 @@ public class BuildSaver : MonoBehaviour
 
     private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
     {
-        Debug.Log($"Scene loaded: {scene.name}");
-
-        // Only load if this is the target scene and we have saved data
-        if (loadOnTargetScene && scene.name == targetSceneName &&
-            BuildSaveData.Instance != null && BuildSaveData.Instance.hasSavedData)
+        if (loadOnTargetScene && scene.name == targetSceneName)
         {
-            Debug.Log($"Target scene detected, loading build...");
-            Invoke(nameof(LoadBuild), 0.1f);
+            if (BuildSaveData.Instance != null && BuildSaveData.Instance.hasSavedData)
+            {
+                Debug.Log($"Scene loaded, loading build immediately...");
+                LoadBuild();
+            }
         }
     }
 
-    // Call this BEFORE leaving a scene to save
     public void SaveBeforeLeavingScene()
     {
         Debug.Log("Saving before leaving scene...");
@@ -80,14 +80,9 @@ public class BuildSaver : MonoBehaviour
 
     public void SaveBuild()
     {
-        if (isSaving)
-        {
-            Debug.Log("Already saving, skipping...");
-            return;
-        }
+        if (isSaving) return;
 
         isSaving = true;
-        Debug.Log("SaveBuild started");
 
         if (BuildSaveData.Instance == null)
         {
@@ -99,26 +94,17 @@ public class BuildSaver : MonoBehaviour
         var saveData = BuildSaveData.Instance;
         saveData.ClearData();
 
-        // Find all nodes EXCEPT the core node
         Node[] allNodes = FindObjectsByType<Node>(FindObjectsSortMode.None)
             .Where(n => n.Type != NodeType.Center)
             .ToArray();
 
-        Debug.Log($"Found {allNodes.Length} nodes to save");
-
-        if (allNodes.Length == 0)
-        {
-            Debug.Log("No nodes to save");
-            isSaving = false;
-            return;
-        }
-
-        Dictionary<Node, SavedNodeData> nodeToData = new Dictionary<Node, SavedNodeData>();
-
-        // First pass: create saved data for each node
         foreach (var node in allNodes)
         {
-            NodeColor nodeColor = GetNodeColor(node);
+            if (string.IsNullOrEmpty(node.CurrentSlotName))
+            {
+                Debug.LogWarning($"Node {node.Effect} has no slot name, skipping save");
+                continue;
+            }
 
             SavedNodeData data = new SavedNodeData
             {
@@ -126,46 +112,16 @@ public class BuildSaver : MonoBehaviour
                 nodeType = node.Type,
                 effectType = node.Effect,
                 nodeState = node.State,
-                nodeColor = nodeColor,
-                posX = node.transform.position.x,
-                posY = node.transform.position.y,
-                posZ = node.transform.position.z
+                nodeColor = node.NodeColor,
+                slotName = node.CurrentSlotName,
+                slotType = node.CurrentSlot.type
             };
 
-            if (node.CurrentSlot != null)
-            {
-                data.slotId = node.CurrentSlot.gameObject.name + "_" + node.CurrentSlot.GetInstanceID();
-                data.slotType = node.CurrentSlot.type;
-            }
-
-            nodeToData[node] = data;
             saveData.savedNodes.Add(data);
+            Debug.Log($"Saved node {node.Effect} to slot {node.CurrentSlotName}");
         }
 
-        // Second pass: record connections
-        foreach (var node in allNodes)
-        {
-            if (nodeToData.ContainsKey(node) && node.CurrentSlot != null)
-            {
-                var nodeData = nodeToData[node];
-
-                foreach (var neighborSlot in node.CurrentSlot.nearbyNodes)
-                {
-                    if (neighborSlot != null && neighborSlot.OccupyingNode != null)
-                    {
-                        Node neighbor = neighborSlot.OccupyingNode;
-                        if (neighbor.Type == NodeType.Center) continue;
-
-                        if (nodeToData.ContainsKey(neighbor))
-                        {
-                            nodeData.connectedNodeIds.Add(nodeToData[neighbor].nodeId);
-                        }
-                    }
-                }
-            }
-        }
-
-        saveData.hasSavedData = true;
+        saveData.hasSavedData = saveData.savedNodes.Count > 0;
         Debug.Log($"Build saved: {saveData.savedNodes.Count} nodes");
         isSaving = false;
     }
@@ -183,81 +139,155 @@ public class BuildSaver : MonoBehaviour
         if (nodeManager == null)
             nodeManager = NodeManager.Instance;
 
-        var saveData = BuildSaveData.Instance;
-        Debug.Log($"Loading {saveData.savedNodes.Count} nodes");
+        if (nodeManager == null)
+        {
+            Debug.LogError("NodeManager not found!");
+            return;
+        }
 
-        // Clear existing nodes (preserve core)
+        // Build slot lookup by name
+        BuildSlotLookup();
+
+        var saveData = BuildSaveData.Instance;
+
+        // Clear existing nodes
         ClearExistingNodes();
 
-        // Dictionary to map saved IDs to instantiated nodes
-        Dictionary<string, Node> loadedNodes = new Dictionary<string, Node>();
+        // Track placed nodes
+        List<Node> placedNodes = new List<Node>();
 
-        // First pass: instantiate all nodes from their specific prefabs
+        // Place each saved node in its named slot
         foreach (var savedNode in saveData.savedNodes)
         {
-            // Get the correct prefab for this node's color
-            if (!prefabLookup.TryGetValue(savedNode.nodeColor, out GameObject prefab) || prefab == null)
+            if (string.IsNullOrEmpty(savedNode.slotName))
             {
-                Debug.LogError($"No prefab found for node color: {savedNode.nodeColor}");
+                Debug.LogWarning($"Saved node {savedNode.effectType} has no slot name, skipping");
                 continue;
             }
 
-            // Instantiate from the color-specific prefab
-            GameObject newNodeObj = Instantiate(prefab);
-            Node newNode = newNodeObj.GetComponent<Node>();
-
-            if (newNode == null) continue;
-
-            // Set all saved properties
-            newNode.SetNodeType(savedNode.nodeType);
-            newNode.SetEffectType(savedNode.effectType);
-            newNode.SetNodeState(savedNode.nodeState);
-
-            // Set position
-            newNodeObj.transform.position = new Vector3(savedNode.posX, savedNode.posY, savedNode.posZ);
-
-            // If it was in a slot, try to place it there
-            if (!string.IsNullOrEmpty(savedNode.slotId))
+            if (!slotNameLookup.TryGetValue(savedNode.slotName, out NodeSlot targetSlot))
             {
-                NodeSlot slot = FindSlotById(savedNode.slotId, savedNode.slotType);
-                if (slot != null && slot.state == NodeSlotState.Empty)
-                {
-                    newNodeObj.transform.position = slot.transform.position;
-                    newNode.SetCurrentSlot(slot);
-                }
+                Debug.LogError($"Could not find slot with name: {savedNode.slotName}");
+                continue;
             }
 
-            loadedNodes[savedNode.nodeId] = newNode;
+            if (targetSlot.state != NodeSlotState.Empty)
+            {
+                Debug.LogError($"Slot {savedNode.slotName} is already occupied!");
+                continue;
+            }
+
+            Node placedNode = PlaceNodeInSlot(savedNode, targetSlot);
+            if (placedNode != null)
+            {
+                placedNodes.Add(placedNode);
+            }
         }
 
-        // Let the nodes restore their connections automatically
-        foreach (var node in loadedNodes.Values)
+        // Let connections establish
+        StartCoroutine(RefreshConnections(placedNodes));
+
+        Debug.Log($"Build loaded: {placedNodes.Count} nodes");
+    }
+
+    private void BuildSlotLookup()
+    {
+        slotNameLookup = new Dictionary<string, NodeSlot>();
+
+        if (nodeManager == null)
+            nodeManager = NodeManager.Instance;
+
+        if (nodeManager != null)
         {
-            node.UpdateConnections(false);
+            Debug.Log($"Building slot lookup with {nodeManager.allNodes.Count} slots");
+
+            foreach (var slot in nodeManager.allNodes)
+            {
+                // Get the slot name from the NodeSlot component
+                NodeSlot nodeSlot = slot.GetComponent<NodeSlot>();
+                if (nodeSlot != null && !string.IsNullOrEmpty(nodeSlot.SlotName))
+                {
+                    slotNameLookup[nodeSlot.SlotName] = nodeSlot;
+                    Debug.Log($"Slot registered: {nodeSlot.SlotName}");
+                }
+                else
+                {
+                    Debug.LogWarning($"Slot on {slot.gameObject.name} has no name assigned!");
+                }
+            }
+        }
+    }
+
+    private Node PlaceNodeInSlot(SavedNodeData savedNode, NodeSlot targetSlot)
+    {
+        if (!prefabLookup.TryGetValue(savedNode.nodeColor, out GameObject prefab) || prefab == null)
+        {
+            Debug.LogError($"No prefab for color: {savedNode.nodeColor}");
+            return null;
         }
 
-        // Trigger BuildManager to recalculate
+        Debug.Log($"Instantiating {savedNode.effectType} in slot {targetSlot.SlotName}");
+
+        GameObject newNodeObj = Instantiate(prefab);
+        Node newNode = newNodeObj.GetComponent<Node>();
+
+        if (newNode == null) return null;
+
+        // CRITICAL: Mark as loaded BEFORE anything else
+        newNode.MarkAsLoadedFromSave();
+
+        // Set properties
+        newNode.SetNodeType(savedNode.nodeType);
+        newNode.SetEffectType(savedNode.effectType);
+
+        // Place in slot - this will set the slot and name
+        newNode.SetCurrentSlot(targetSlot);
+
+        // Set state
+        newNode.SetNodeState(NodeState.Locked);
+
+        return newNode;
+    }
+
+    private System.Collections.IEnumerator RefreshConnections(List<Node> loadedNodes)
+    {
+        // Wait a bit for all nodes to fully initialize
+        yield return new WaitForSeconds(0.5f);
+
+        Debug.Log("Refreshing connections...");
+
+        // First, clear any existing connections
+        foreach (var node in loadedNodes)
+        {
+            // Force hide all connections first
+            var method = typeof(Node).GetMethod("HideAllConnections",
+                System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            method?.Invoke(node, null);
+        }
+
+        yield return new WaitForSeconds(0.1f);
+
+        // Now trigger new connections with animation
+        foreach (var node in loadedNodes)
+        {
+            node.UpdateConnections(true);
+        }
+
+        yield return new WaitForSeconds(0.2f);
+
+        // Force NodeManager to refresh
+        if (NodeManager.Instance != null)
+        {
+            NodeManager.Instance.RefreshAllConnections();
+        }
+
+        // Update BuildManager
         if (BuildManager.Instance != null)
         {
             BuildManager.Instance.OnNodeStateChanged();
         }
 
-        Debug.Log($"Build loaded: {loadedNodes.Count} nodes");
-    }
-
-    private NodeColor GetNodeColor(Node node)
-    {
-        // You need to add NodeColor to your Node class
-        // For now, let's try to determine by name
-        if (node.name.Contains("Red")) return NodeColor.Red;
-        if (node.name.Contains("Blue")) return NodeColor.Blue;
-        if (node.name.Contains("Green")) return NodeColor.Green;
-        if (node.name.Contains("Purple")) return NodeColor.Purple;
-        if (node.name.Contains("Yellow")) return NodeColor.Yellow;
-        if (node.name.Contains("Orange")) return NodeColor.Orange;
-
-        // Default fallback
-        return NodeColor.Red;
+        Debug.Log("Connections refreshed");
     }
 
     private void ClearExistingNodes()
@@ -266,40 +296,19 @@ public class BuildSaver : MonoBehaviour
 
         foreach (var node in existing)
         {
-            if (node.Type == NodeType.Center)
-            {
-                // Reset core node's slot
-                if (node.CurrentSlot != null)
-                {
-                    node.CurrentSlot.state = NodeSlotState.Empty;
-                    node.CurrentSlot.OccupyingNode = null;
-                }
-                continue;
-            }
-
+            if (node.Type == NodeType.Center) continue;
             Destroy(node.gameObject);
         }
-    }
 
-    private NodeSlot FindSlotById(string slotId, SlotType type)
-    {
-        if (nodeManager == null) return null;
-
-        foreach (var slot in nodeManager.allNodes)
+        // Reset all slots to empty
+        if (nodeManager != null)
         {
-            string currentId = slot.gameObject.name + "_" + slot.GetInstanceID();
-            if (currentId == slotId)
-                return slot;
+            foreach (var slot in nodeManager.allNodes)
+            {
+                slot.state = NodeSlotState.Empty;
+                slot.OccupyingNode = null;
+            }
         }
-
-        // Fallback: find empty slot of same type
-        foreach (var slot in nodeManager.allNodes)
-        {
-            if (slot.type == type && slot.state == NodeSlotState.Empty)
-                return slot;
-        }
-
-        return null;
     }
 
     // Manual methods
