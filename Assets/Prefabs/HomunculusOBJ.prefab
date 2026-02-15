@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9082182946219813461}
   - component: {fileID: 3346272600509297427}
   - component: {fileID: 9163621348423434189}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HomunculusOBJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7126627152872165029}
   - component: {fileID: 8398800921826275984}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
