@@ -36,7 +36,7 @@ public class HealthMonitor : MonoBehaviour
         }
 
         float healthPercent = (playerHealth.currentHealth / playerHealth.maxHealth ) * 100;
-        healthPercentDisplay.text = $"{healthPercent}%";
+        healthPercentDisplay.text = $"{healthPercent.ToString("#")}%";
 
         if (healthPercent > 60)
         {
@@ -44,9 +44,9 @@ public class HealthMonitor : MonoBehaviour
             {
                 healthImage.sprite = healthy;
             }
-            if (healthImage.color != healthyColor)
+            if (healthPercentDisplay.color != healthyColor)
             {
-                healthImage.color = healthyColor;
+                healthPercentDisplay.color = healthyColor;
             }
         }
         else if (healthPercent > 25)
@@ -55,9 +55,9 @@ public class HealthMonitor : MonoBehaviour
             {
                 healthImage.sprite = damaged;
             }
-            if (healthImage.color != damagedColor)
+            if (healthPercentDisplay.color != damagedColor)
             {
-                healthImage.color = damagedColor;
+                healthPercentDisplay.color = damagedColor;
             }
         }
         else
@@ -66,9 +66,9 @@ public class HealthMonitor : MonoBehaviour
             {
                 healthImage.sprite = critical;
             }
-            if (healthImage.color != criticalColor)
+            if (healthPercentDisplay.color != criticalColor)
             {
-                healthImage.color = criticalColor;
+                healthPercentDisplay.color = criticalColor;
             }
         }
     }

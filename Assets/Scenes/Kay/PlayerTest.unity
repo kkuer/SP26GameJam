@@ -942,7 +942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8713193717969115353, guid: 1f6afaa7916082a428a2ce9b53b7590b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1058,18 +1058,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Syringe
       objectReference: {fileID: 0}
-    - target: {fileID: 542751643067754221, guid: 98f146f21693c7640865606ee46590d3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1729447518765199335, guid: 98f146f21693c7640865606ee46590d3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2001106757640800919, guid: 98f146f21693c7640865606ee46590d3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 3279401393067060019, guid: 98f146f21693c7640865606ee46590d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.85
@@ -1129,7 +1117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3391620141837473780, guid: b24f76746733f844881dc713b039eaed, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4027460324749030360, guid: b24f76746733f844881dc713b039eaed, type: 3}
       propertyPath: m_LocalPosition.x
