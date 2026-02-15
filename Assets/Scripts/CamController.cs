@@ -83,8 +83,27 @@ public class CamController : MonoBehaviour
         // Right mouse button pan
         if (Input.GetMouseButton(1))
         {
-            float panX = Input.GetAxis("Mouse X") * panSpeed * (invertPan ? 1 : -1);
-            float panY = Input.GetAxis("Mouse Y") * panSpeed * (invertPan ? 1 : -1);
+            // Get current zoom level for scaling
+            float currentZoom = GetCurrentCameraSize();
+
+            // Calculate zoom scale factor (normalized between min and max zoom)
+            float zoomRange = maxZoom - minZoom;
+            float zoomProgress = (currentZoom - minZoom) / zoomRange;
+
+            // Option 1: Linear scaling - faster when zoomed out, slower when zoomed in
+            float zoomScaleFactor = Mathf.Lerp(0.5f, 2f, zoomProgress);
+
+            // Option 2: Inverse scaling - slower when zoomed out, faster when zoomed in
+            // float zoomScaleFactor = Mathf.Lerp(2f, 0.5f, zoomProgress);
+
+            // Option 3: Exponential scaling for more dramatic effect
+            // float zoomScaleFactor = Mathf.Pow(zoomProgress, 2) * 2f + 0.5f;
+
+            // Apply zoom scaling to pan speed
+            float scaledPanSpeed = panSpeed * zoomScaleFactor;
+
+            float panX = Input.GetAxis("Mouse X") * scaledPanSpeed * (invertPan ? 1 : -1);
+            float panY = Input.GetAxis("Mouse Y") * scaledPanSpeed * (invertPan ? 1 : -1);
 
             Vector3 panDirection = new Vector3(panX, panY, 0);
             targetPosition += panDirection;

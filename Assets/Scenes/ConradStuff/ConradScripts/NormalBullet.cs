@@ -26,6 +26,12 @@ public class NormalBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Instantiate(bulletSplash, this.transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
     IEnumerator SelfDes()
     {
         yield return new WaitForSeconds(bulletLife);

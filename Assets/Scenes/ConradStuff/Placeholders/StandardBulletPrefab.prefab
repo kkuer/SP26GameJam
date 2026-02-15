@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3041964398921881017}
   - component: {fileID: 5040749159348904883}
   m_Layer: 6
-  m_Name: BoringBulletPlaceholder
+  m_Name: StandardBulletPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NormalBullet
   bullSpeed: 10
   bulletSplash: {fileID: 5670680589988066341, guid: 9536a5f9bd06e3844855a81f10c6af77, type: 3}
-  bulletLife: 15
+  bulletLife: 5
 --- !u!96 &4422539888365359213
 TrailRenderer:
   serializedVersion: 4
@@ -304,7 +304,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
