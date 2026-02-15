@@ -68,8 +68,8 @@ public class BuildManager : MonoBehaviour
         Dictionary<Node, float> abilityDamageMultipliers = CalculateAbilityDamageMultipliers(abilityModifierCounts);
 
         // Calculate player stats
-        float playerHealthMultiplier = 1f + (totalActiveNodes * 0.1f); // Health still scales
-        int playerSize = totalActiveNodes; // Size is now just the total number of nodes
+        float playerHealthMultiplier = 1f + (totalActiveNodes * 0.1f);
+        int playerSize = totalActiveNodes;
 
         // Build the list of active abilities with their modifier counts
         List<ActiveAbility> activeAbilityList = new List<ActiveAbility>();
@@ -98,14 +98,12 @@ public class BuildManager : MonoBehaviour
             activeAbilityList.Add(activeAbility);
         }
 
-        // Send to BuildInfo
-        BuildInfo.Instance.SetBuildData(
-            playerHealthMultiplier,
-            playerSize,
-            totalActiveNodes,
-            totalGlobalModifiers,
-            activeAbilityList
-        );
+        // DIRECTLY ASSIGN to BuildInfo's public fields (no method call)
+        BuildInfo.Instance.playerHealthMultiplier = playerHealthMultiplier;
+        BuildInfo.Instance.playerSize = playerSize;
+        BuildInfo.Instance.totalActiveNodes = totalActiveNodes;
+        BuildInfo.Instance.totalGlobalModifiers = totalGlobalModifiers;
+        BuildInfo.Instance.activeAbilities = activeAbilityList;
 
         Debug.Log($"BuildManager: {activeAbilities.Count} abilities, {totalActiveNodes} total nodes, {totalGlobalModifiers} modifiers");
     }
