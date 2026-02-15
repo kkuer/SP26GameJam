@@ -379,7 +379,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   lineMaterial: {fileID: 2100000, guid: a157219ab666cae4f8c256e980961d1b, type: 2}
-  lineColor: {r: 0.6084906, g: 0.19804646, b: 0.19804646, a: 1}
+  lineColor: {r: 1, g: 0.6509433, b: 0.6509433, a: 1}
   showPreviewWhileDragging: 1
   previewLineColor: {r: 1, g: 1, b: 1, a: 0.14117648}
   conversionPreviewColor: {r: 1, g: 0, b: 1, a: 0.5}
@@ -503,7 +503,7 @@ SpriteRenderer:
   m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 3f423a4a348ddd8488a4e3ed8b378ccd, type: 3}
-  m_Color: {r: 1, g: 0.85670906, b: 0.5660378, a: 0.09019608}
+  m_Color: {r: 1, g: 0.85670906, b: 0.5660378, a: 0.23529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
