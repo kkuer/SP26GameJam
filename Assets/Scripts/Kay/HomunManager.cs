@@ -44,28 +44,36 @@ public class HomunManager : MonoBehaviour
             {
                 case EffectType.AuraBurst:
                     AURA.SetActive(true);
+                    AbilityConfig(ability, AURA.GetComponent<WeaponDistributor>());
                     break;
                 case EffectType.Thorns:
                     THORNS.SetActive(true);
+                    AbilityConfig(ability, THORNS.GetComponent<WeaponDistributor>());
                     break;
                 case EffectType.MeleeSwipe:
                     SWORD.SetActive(true);
+                    AbilityConfig(ability, SWORD.GetComponent<WeaponDistributor>());
                     break;
                 case EffectType.PiercingShot:
                     PIERCE.SetActive(true);
+                    AbilityConfig(ability, PIERCE.GetComponent<WeaponDistributor>());
                     break;
                 case EffectType.BurstShot:
                     BURST.SetActive(true);
+                    AbilityConfig(ability, BURST.GetComponent<WeaponDistributor>());
                     break;
                 case EffectType.ExplosiveShot:
                     EXPLODE.SetActive(true);
+                    AbilityConfig(ability, EXPLODE.GetComponent<WeaponDistributor>());
                     break;
             }
         });
     }
 
-    private void AbilityConfig(EffectType ability, WeaponDistributor toConfig) // set spread based on modifiers
-    { 
-    
+    private void AbilityConfig(ActiveAbility ability, WeaponDistributor toConfig) // set spread based on modifiers
+    {
+        toConfig.nodeCount = ability.multiShotCount;
+        toConfig.nodeFireRate = ability.attackSpeedCount;
+        toConfig.nodeDamage = ability.damageMultiplier;
     }
 }
