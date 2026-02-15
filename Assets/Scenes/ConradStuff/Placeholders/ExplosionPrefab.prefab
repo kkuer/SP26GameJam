@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 3809720221710806051}
   - component: {fileID: 8168472547979232894}
   - component: {fileID: 4722897632010712761}
+  - component: {fileID: 8500785224845050791}
   m_Layer: 6
   m_Name: ExplosionPrefab
   m_TagString: Untagged
@@ -203,3 +204,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelfDestruct
   selfTime: 0.3
+--- !u!114 &8500785224845050791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3002471292204848454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0727fde6c4377a649a7325ee42213897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExplosionAuraBlast
+  bulletSplash: {fileID: 5670680589988066341, guid: 9536a5f9bd06e3844855a81f10c6af77, type: 3}
+  enemyTag: {fileID: 0}
+  auraGrowSpeed: 20
+  auraGrowMaxSize: 1
