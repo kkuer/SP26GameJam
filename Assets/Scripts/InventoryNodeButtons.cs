@@ -18,6 +18,7 @@ public class InventoryNodeButtons : MonoBehaviour, IPointerEnterHandler, IPointe
 
     public int amount;
     public TMP_Text amountLabel;
+    public GameObject nameLabel;
 
     [SerializeField] private float scaleMultiplier = 1.2f;
     [SerializeField] private float animationSpeed = 10f;
@@ -78,11 +79,13 @@ public class InventoryNodeButtons : MonoBehaviour, IPointerEnterHandler, IPointe
     public void OnPointerEnter(PointerEventData eventData)
     {
         targetScale = originalScale * scaleMultiplier;
+        nameLabel.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         targetScale = originalScale;
+        nameLabel.SetActive(false);
     }
 
     public void InstantiateNode()
