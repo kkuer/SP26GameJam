@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 8168472547979232894}
   - component: {fileID: 4722897632010712761}
   - component: {fileID: 8500785224845050791}
+  - component: {fileID: 1807075834859685900}
   m_Layer: 6
   m_Name: ExplosionPrefab
   m_TagString: Untagged
@@ -220,3 +221,16 @@ MonoBehaviour:
   enemyTag: {fileID: 0}
   auraGrowSpeed: 20
   auraGrowMaxSize: 1
+--- !u!114 &1807075834859685900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3002471292204848454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea960d5039ae23f4e8c0a498a020403e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageExecutor
+  damageToDeal: 0

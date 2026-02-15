@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3346272600509297427}
   - component: {fileID: 848311434558229397}
   - component: {fileID: 9163621348423434189}
+  - component: {fileID: 9082182946219813461}
   m_Layer: 0
   m_Name: HomunculusOBJ
   m_TagString: Untagged
@@ -142,6 +143,20 @@ PolygonCollider2D:
       - {x: 0.5, y: 0}
       - {x: 0.35, y: 0.35}
   m_UseDelaunayMesh: 1
+--- !u!114 &9082182946219813461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2648443083871766879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd543315275fd14e8c72ae3281f7a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthTracker
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1 &7305000035901968270
 GameObject:
   m_ObjectHideFlags: 0

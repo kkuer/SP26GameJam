@@ -54,14 +54,14 @@ public class BuildInfo : MonoBehaviour
     private void Awake()
     {
         // Simple singleton pattern - no scene dependencies
-        if (Instance == null)
+        if (Instance != null)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(this.gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 

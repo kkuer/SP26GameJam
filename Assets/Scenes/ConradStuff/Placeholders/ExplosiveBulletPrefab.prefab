@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3041964398921881017}
   - component: {fileID: 5040749159348904883}
   - component: {fileID: 5833704630509526871}
+  - component: {fileID: -439353967809402382}
   m_Layer: 6
   m_Name: ExplosiveBulletPrefab
   m_TagString: Untagged
@@ -312,3 +313,16 @@ MonoBehaviour:
   bulletSplash: {fileID: 5670680589988066341, guid: 9536a5f9bd06e3844855a81f10c6af77, type: 3}
   bulletLife: 4
   bombBlast: {fileID: 3002471292204848454, guid: 7da5a60a956511245ac6298d67b976c1, type: 3}
+--- !u!114 &-439353967809402382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750111502933581667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea960d5039ae23f4e8c0a498a020403e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageExecutor
+  damageToDeal: 0

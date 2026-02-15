@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2538309718620856346}
   - component: {fileID: 5116755560538669688}
   - component: {fileID: 8693561103645103485}
+  - component: {fileID: -1156298200368910013}
   m_Layer: 6
   m_Name: PiercingBullet
   m_TagString: Untagged
@@ -88,6 +89,7 @@ MonoBehaviour:
   bullSpeed: 10
   bulletSplash: {fileID: 5670680589988066341, guid: 9536a5f9bd06e3844855a81f10c6af77, type: 3}
   bulletLife: 4
+  ricochetTimes: 5
 --- !u!50 &5116755560538669688
 Rigidbody2D:
   serializedVersion: 5
@@ -252,6 +254,19 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &-1156298200368910013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497231941289114037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea960d5039ae23f4e8c0a498a020403e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageExecutor
+  damageToDeal: 0
 --- !u!1 &3660412044742380351
 GameObject:
   m_ObjectHideFlags: 0
