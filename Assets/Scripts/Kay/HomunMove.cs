@@ -45,9 +45,34 @@ public class HomunMove : MonoBehaviour
         {
             Debug.DrawRay(contact.point, contact.normal, Color.red, 2f);
 
-            velocity = contact.normal;
+            //// need to randomize direction if its too similar to previous one.
 
-            previousDir = velocity;
+            //if (contact.normal.magnitude + 0.02f < -previousDir.normalized.magnitude && contact.normal.magnitude - 0.02f > -previousDir.normalized.magnitude)
+
+            //if (contact.normal == -previousDir)
+            //{
+            //    Debug.Log("direction is like the exact same as last time.");
+            //    Vector2 newRandomDir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+
+            //    for(int i = 0; i < 10 && newRandomDir == Vector2.zero; i++) // make sure new random dir is not 0
+            //    {
+            //        newRandomDir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            //        if (newRandomDir != Vector2.zero) break;
+            //    }
+
+            //    float newVelocityComparedToNormal = Vector2.Dot(newRandomDir.normalized, contact.normal);
+
+            //    if (newVelocityComparedToNormal > 0.0f)
+            //    {
+            //        newRandomDir = -newRandomDir;
+            //    }
+            //    velocity = newRandomDir;
+            //}
+            //else velocity = contact.normal;
+
+            //previousDir = velocity;
+
+            velocity = contact.normal;
             rb.AddTorque(torque);
         }
     }
