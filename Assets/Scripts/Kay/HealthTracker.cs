@@ -4,7 +4,7 @@ public class HealthTracker : MonoBehaviour
 {
     public float maxHealth;
     public float currentHealth;
-    private void Start()
+    public void SetHealth()
     {
         currentHealth = maxHealth;
     }

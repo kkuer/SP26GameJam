@@ -11,6 +11,8 @@ public class HomunManager : MonoBehaviour
     public GameObject BURST;
     public GameObject EXPLODE;
 
+    public HealthTracker healthTracker;
+
     [Header("Ricochet Times")]
     public int pierceRiochetTimes;
     public int burstRiochetTimes;
@@ -20,6 +22,9 @@ public class HomunManager : MonoBehaviour
     {
         if(instance == null) instance = this;
         else Destroy(gameObject);
+
+        healthTracker = GetComponent<HealthTracker>();
+
 
         UpdateActiveEmitters();
     }
@@ -35,7 +40,11 @@ public class HomunManager : MonoBehaviour
     //    explodeRiochetTimes = GetRicochetTimes(EffectType.ExplosiveShot);
     //}
 
-
+    private void Start()
+    {
+        healthTracker.maxHealth *= BuildInfo.Instance.playerHealthMultiplier;
+        healthTracker.SetHealth();
+    }
     public void UpdateActiveEmitters()
     {
         BuildInfo.Instance.activeAbilities.ForEach(ability =>

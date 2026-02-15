@@ -176,6 +176,7 @@ MonoBehaviour:
   PIERCE: {fileID: 3891041151794063420}
   BURST: {fileID: 711001957377404395}
   EXPLODE: {fileID: 3832699654157447215}
+  healthTracker: {fileID: 0}
   pierceRiochetTimes: 0
   burstRiochetTimes: 0
   explodeRiochetTimes: 0
@@ -258,7 +259,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.77832156, g: 1, b: 0.16576815, a: 1}
