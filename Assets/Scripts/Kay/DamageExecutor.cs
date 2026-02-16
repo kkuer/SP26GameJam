@@ -8,6 +8,7 @@ public class DamageExecutor : MonoBehaviour
 
     public void DealDamage(HealthTracker target)
     {
-        target.TakeDamage(damageToDeal);
+        Debug.Log("Enemy hit by a weapon");
+        target.TakeDamage(damageToDeal, Color.red);
     }
 }
