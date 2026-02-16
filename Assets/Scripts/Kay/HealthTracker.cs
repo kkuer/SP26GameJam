@@ -33,6 +33,12 @@ public class HealthTracker : MonoBehaviour
             enemy.SpawnPickup();
             return;
         }
+        
+        var player = GetComponent<HomunManager>();
+        if(player != null)
+        {
+            FindFirstObjectByType<WinLoseCon>().EndGame();
+        }
 
 
         Destroy(gameObject);
