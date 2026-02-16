@@ -1,24 +1,62 @@
+using System.Xml;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class ChangeScene : MonoBehaviour
+public class ChangeScene : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public int sceneIndex;
-    public string targetSceneName; // Optional: for name-based checking
 
-    public void Change()
+    [SerializeField] private float scaleMultiplier = 1.2f;
+    [SerializeField] private float animationSpeed = 10f;
+
+    private Vector3 originalScale;
+    private Vector3 targetScale;
+
+    public void ChangeAndPopulateInventory()
     {
-        // Save before leaving if we're in the node tree scene
-        // You can check by build index or scene name
-        if (SceneManager.GetActiveScene().name == "NodeScene" ||
-            SceneManager.GetActiveScene().buildIndex == 1)
+        if (BuildManager.Instance != null)
         {
-            if (BuildSaver.Instance != null)
+            foreach (Node n in BuildManager.Instance.allActiveNodes)
             {
-                BuildSaver.Instance.SaveBeforeLeavingScene();
+                if (n.Type == NodeType.Center) continue;
+                switch (n.NodeColor)
+                {
+                    case NodeColor.Red: InventoryManager.Instance.redNodesOwned++; break;
+                    case NodeColor.Blue: InventoryManager.Instance.blueNodesOwned++; break;
+                    case NodeColor.Green: InventoryManager.Instance.greenNodesOwned++; break;
+                    case NodeColor.Purple: InventoryManager.Instance.purpleNodesOwned++; break;
+                    case NodeColor.Yellow: InventoryManager.Instance.yellowNodesOwned++; break;
+                    case NodeColor.Orange: InventoryManager.Instance.orangeNodesOwned++; break;
+                }
             }
         }
 
         SceneManager.LoadScene(sceneIndex);
+    }
+
+    private void Start()
+    {
+        originalScale = transform.localScale;
+        targetScale = originalScale;
+    }
+
+    private void Update()
+    {
+        transform.localScale = Vector3.Lerp(
+            transform.localScale,
+            targetScale,
+            Time.deltaTime * animationSpeed
+        );
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        targetScale = originalScale * scaleMultiplier;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        targetScale = originalScale;
     }
 }

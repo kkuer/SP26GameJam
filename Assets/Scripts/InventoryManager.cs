@@ -13,6 +13,8 @@ public class InventoryManager : MonoBehaviour
     public int yellowNodesOwned = 0;
     public int orangeNodesOwned = 0;
 
+    public int currentLevel;
+
     private void Awake()
     {
         if (Instance == null) { Instance = this; DontDestroyOnLoad(gameObject); }
@@ -23,18 +25,23 @@ public class InventoryManager : MonoBehaviour
     {
         if (!newGameStarted)
         {
+            currentLevel = 1;
+
             newGameStarted = true;
 
-            int randomIndex = Random.Range(0, 6);
-
-            switch (randomIndex)
+            for (int i = 0; i < 2; i++)
             {
-                case 0: redNodesOwned++; break;
-                case 1: blueNodesOwned++; break;
-                case 2: greenNodesOwned++; break;
-                case 3: purpleNodesOwned++; break;
-                case 4: yellowNodesOwned++; break;
-                case 5: orangeNodesOwned++; break;
+                int randomIndex = Random.Range(0, 6);
+
+                switch (randomIndex)
+                {
+                    case 0: redNodesOwned++; break;
+                    case 1: blueNodesOwned++; break;
+                    case 2: greenNodesOwned++; break;
+                    case 3: purpleNodesOwned++; break;
+                    case 4: yellowNodesOwned++; break;
+                    case 5: orangeNodesOwned++; break;
+                }
             }
         }
     }

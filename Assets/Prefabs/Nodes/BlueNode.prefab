@@ -325,6 +325,7 @@ MonoBehaviour:
   nodeState: 2
   effectType: 3
   nodeColor: 1
+  currentSlotName: 
   effectText: {fileID: 3857323391923621464}
   iconImage: {fileID: 2563841022159883528}
   updateUIOnChange: 1
@@ -383,7 +384,7 @@ MonoBehaviour:
   lineColor: {r: 1, g: 0.6509433, b: 0.6509433, a: 1}
   showPreviewWhileDragging: 1
   previewLineColor: {r: 1, g: 1, b: 1, a: 0.14117648}
-  conversionPreviewColor: {r: 1, g: 0, b: 1, a: 0.5}
+  conversionPreviewColor: {r: 0.014283657, g: 1, b: 0, a: 0.5}
   previewLineWidth: 0.15
   maxPreviewLines: 6
   previewMaterial: {fileID: 2100000, guid: e4d924a7beb2d1b4a93841da1cbdae57, type: 2}
