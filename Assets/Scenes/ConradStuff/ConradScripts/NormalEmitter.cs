@@ -26,6 +26,8 @@ public class NormalEmitter : MonoBehaviour
     public bool isAura;
     public bool isThorn;
 
+
+
     private void Start()
     {
         if (areSwords)
