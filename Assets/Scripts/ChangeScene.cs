@@ -35,6 +35,16 @@ public class ChangeScene : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         SceneManager.LoadScene(sceneIndex);
     }
 
+    public void GoBackToNodes()
+    {
+        if (BuildInfo.Instance != null)
+        {
+            Destroy(BuildInfo.Instance.gameObject);
+            InventoryManager.Instance.currentLevel++;
+        }
+        SceneManager.LoadScene(sceneIndex);
+    }
+
     private void Start()
     {
         originalScale = transform.localScale;
