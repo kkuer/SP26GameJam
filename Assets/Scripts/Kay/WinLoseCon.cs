@@ -31,10 +31,14 @@ public class WinLoseCon : MonoBehaviour
 
             onWin?.Invoke();
         }
-        if (HomunManager.instance.GetComponent<HealthTracker>().currentHealth <= 0)
+
+        if (HomunManager.instance.GetComponent<HealthTracker>() != null)
         {
-            Time.timeScale = 0f;
-            onLose?.Invoke();
+            if (HomunManager.instance.GetComponent<HealthTracker>().currentHealth <= 0)
+            {
+                Time.timeScale = 0f;
+                onLose?.Invoke();
+            }
         }
     }
 
