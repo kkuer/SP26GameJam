@@ -45,6 +45,16 @@ public class ChangeScene : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         SceneManager.LoadScene(sceneIndex);
     }
 
+    public void StartGame()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void ActuallyStartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     private void Start()
     {
         originalScale = transform.localScale;
