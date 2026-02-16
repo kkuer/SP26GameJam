@@ -53,10 +53,5 @@ public class ShakeManager : MonoBehaviour
                 perlin.FrequencyGain = 0f;
             }
         }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            shakeCam(3f, 2f, 0.3f);
-        }
     }
 }
