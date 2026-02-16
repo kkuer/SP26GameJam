@@ -39,6 +39,13 @@ public class WeaponDistributor : MonoBehaviour
     [Header("Attack Speed")]
     public float projectileAttackSpeed = 1;
     public float swordAttackSpeed = 200;
+    public float auraAttackSpeed = 10;
+
+    [Header("Modifier Values")]
+    public int sipohonCount;
+    public int dotCount;
+    public int sizeCount;
+    public int ricochetCount;
 
     //Enum for selecting weapons from the list of weapons
     public enum WeaponType
@@ -127,6 +134,8 @@ public class WeaponDistributor : MonoBehaviour
                         emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageToDeal *=
                             BuildInfo.Instance.activeAbilities[pierceIndex].damageMultiplier;
 
+                        emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageSource = EffectType.PiercingShot;
+
                         emitterScript.fireRate = (nodeFireRate + 1) * projectileAttackSpeed;
                         break;
 
@@ -142,6 +151,8 @@ public class WeaponDistributor : MonoBehaviour
                         }
                         emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageToDeal *=
                             BuildInfo.Instance.activeAbilities[burstIndex].damageMultiplier;
+
+                        emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageSource = EffectType.BurstShot;
 
                         emitterScript.fireRate = (nodeFireRate + 1) * projectileAttackSpeed;
                         break;
@@ -160,6 +171,8 @@ public class WeaponDistributor : MonoBehaviour
                         emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageToDeal *=
                             BuildInfo.Instance.activeAbilities[explodeIndex].damageMultiplier;
 
+                        emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageSource = EffectType.ExplosiveShot;
+
                         emitterScript.fireRate = (nodeFireRate + 1) * projectileAttackSpeed;
                         break;
 
@@ -175,6 +188,8 @@ public class WeaponDistributor : MonoBehaviour
                         }
                         emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageToDeal *=
                             BuildInfo.Instance.activeAbilities[swordIndex].damageMultiplier;
+
+                        emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageSource = EffectType.MeleeSwipe;
 
                         emitterScript.fireRate = (nodeFireRate + 1) * swordAttackSpeed;
                         emitterScript.swordCenter = swordCenter;
@@ -203,7 +218,8 @@ public class WeaponDistributor : MonoBehaviour
                     emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageToDeal *=
                             BuildInfo.Instance.activeAbilities[auraIndex].damageMultiplier;
 
-                    emitterScript.fireRate = (nodeFireRate + 1) * projectileAttackSpeed;
+                    emitterScript.fireRate = (nodeFireRate + 1) * auraAttackSpeed;
+                    emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageSource = EffectType.AuraBurst;
                     break;
 
                 case WeaponType.Thorns:
@@ -218,6 +234,7 @@ public class WeaponDistributor : MonoBehaviour
                     }
                     emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageToDeal *=
                             BuildInfo.Instance.activeAbilities[thornsIndex].damageMultiplier;
+                    emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageSource = EffectType.Thorns;
                     break;
             }
             

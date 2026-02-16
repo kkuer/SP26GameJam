@@ -17,6 +17,7 @@ public class HomunManager : MonoBehaviour
     public int pierceRiochetTimes;
     public int burstRiochetTimes;
     public int explodeRiochetTimes;
+    
 
     private void Awake()
     {
@@ -85,6 +86,11 @@ public class HomunManager : MonoBehaviour
         toConfig.multishotCount = ability.multiShotCount;
         toConfig.nodeFireRate = ability.attackSpeedCount;
         toConfig.nodeDamage = ability.damageMultiplier;
+
+        toConfig.dotCount = ability.damageOverTimeCount;
+        toConfig.sipohonCount = ability.sizeCount;
+        toConfig.sizeCount = ability.sizeCount;
+        toConfig.ricochetCount = ability.ricochetCount;
 
         Debug.Log("Build Emmiters");
 
