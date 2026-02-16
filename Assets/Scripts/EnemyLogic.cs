@@ -7,7 +7,7 @@ public class EnemyLogic : MonoBehaviour
 
     public float lifestealMult = 10;
     public int baseDotDamage = 10;
-
+    public int hitSoundIndex = 3;
 
     private void Start()
     {
@@ -22,7 +22,7 @@ public class EnemyLogic : MonoBehaviour
         if (damageObj != null)
         {
             Debug.Log("Enemy Hit 2");
-
+            AudioManager.Instance.PlaySound(hitSoundIndex);
             damageObj.DealDamage(GetComponent<HealthTracker>());
 
             switch (damageObj.damageSource)
