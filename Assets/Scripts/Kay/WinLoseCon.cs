@@ -38,11 +38,15 @@ public class WinLoseCon : MonoBehaviour
 
             onWin?.Invoke();
         }
-    }
-    public void EndGame()
-    {
-        Time.timeScale = 0f;
-        onLose?.Invoke();
+
+        if (HomunManager.instance.GetComponent<HealthTracker>() != null)
+        {
+            if (HomunManager.instance.GetComponent<HealthTracker>().currentHealth <= 0)
+            {
+                Time.timeScale = 0f;
+                onLose?.Invoke();
+            }
+        }
     }
 
     public void LoseRestart()

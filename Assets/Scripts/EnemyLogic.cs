@@ -5,8 +5,6 @@ public class EnemyLogic : MonoBehaviour
 {
     public float hitDamage = 10;
 
-    public GameObject pickupPrefab;
-
     public float lifestealMult = 10;
     public int baseDotDamage = 10;
     public int hitSoundIndex = 3;
@@ -71,6 +69,8 @@ public class EnemyLogic : MonoBehaviour
         var dotNum = weaponLogic.dotCount;
         if(dotNum == 0) return;
 
+
+
         StartCoroutine(TakeDoTDamage(weaponLogic, dotNum));
     }
     public IEnumerator TakeDoTDamage(WeaponDistributor weaponLogic, int dotNum)
@@ -94,12 +94,4 @@ public class EnemyLogic : MonoBehaviour
             player.healthTracker.TakeDamage(hitDamage, Color.red);        
         }
     }
-
-    public void SpawnPickup()
-    {
-        Instantiate(pickupPrefab, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
-
-
 }

@@ -13,11 +13,6 @@ public class HomunManager : MonoBehaviour
 
     public HealthTracker healthTracker;
 
-    [Header("Inventory Stuff")]
-    public int inventorySize;
-    public int currentInventoryAmount;
-    public bool canPickupMoreStuff  = true;
-
     [Header("Ricochet Times")]
     public int pierceRiochetTimes;
     public int burstRiochetTimes;
@@ -43,14 +38,7 @@ public class HomunManager : MonoBehaviour
     //    burstRiochetTimes = GetRicochetTimes(EffectType.BurstShot);
     //    explodeRiochetTimes = GetRicochetTimes(EffectType.ExplosiveShot);
     //}
-    public void CountInventory()
-    {
-        currentInventoryAmount++;
-        if(currentInventoryAmount >= inventorySize)
-        {
-            canPickupMoreStuff = false;
-        }
-    }
+
     private void Start()
     {
         
