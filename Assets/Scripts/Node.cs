@@ -23,11 +23,14 @@ public class Node : MonoBehaviour
 
     private bool isLoadedFromSave = false;
 
+    // HOVER PREVIEW VARIABLES - Add these with the other private variables
     private bool isHoveringOverSlot = false;
     private NodeSlot hoveredSlot;
     private EffectType originalEffectType;
     private Sprite originalIcon;
     private string originalText;
+    private Color originalIconColor;
+    private Color originalTextColor;
     private NodeType originalNodeType;
 
     public NodeColor NodeColor => nodeColor;
@@ -376,6 +379,97 @@ public class Node : MonoBehaviour
         effectText.gameObject.SetActive(!showIcon);
     }
 
+    // HOVER PREVIEW METHODS - Add these after UpdateUIBasedOnCamera
+    public void OnHoverEnter(NodeSlot slot)
+    {
+        if (nodeState != NodeState.Draggable || isDragging) return;
+        if (slot.state != NodeSlotState.Empty) return;
+
+        Debug.Log($"Hover enter: {effectType} over {slot.SlotName}");
+
+        // Store original values - make sure we capture current state
+        originalEffectType = effectType;
+        originalNodeType = nodeType;
+
+        if (iconImage != null)
+        {
+            originalIcon = iconImage.sprite;
+            originalIconColor = iconImage.color;
+        }
+        if (effectText != null)
+        {
+            originalText = effectText.text;
+            originalTextColor = effectText.color;
+        }
+
+        // Check if this is a conversion case (Ability over Modifier slot)
+        if (nodeType == NodeType.Ability && slot.type == SlotType.Modifier)
+        {
+            if (HasValidNeighborForConversion(slot) && abilityToModifierMap.TryGetValue(effectType, out EffectType modifierEffect))
+            {
+                // Valid conversion - show modifier preview
+                Debug.Log($"Showing modifier preview: {modifierEffect}");
+
+                if (effectDisplayNames.TryGetValue(modifierEffect, out string displayName))
+                {
+                    effectText.text = displayName;
+                }
+
+                if (effectIcons.TryGetValue(modifierEffect, out Sprite icon))
+                {
+                    iconImage.sprite = icon;
+                }
+
+                iconImage.color = conversionPreviewColor;
+                effectText.color = conversionPreviewColor;
+            }
+            else
+            {
+                // Invalid conversion - show grayed out
+                Debug.Log("Invalid conversion preview");
+                iconImage.color = Color.gray;
+                effectText.color = Color.gray;
+            }
+        }
+        else if (nodeType == NodeType.Modifier && slot.type == SlotType.Ability)
+        {
+            // Modifier over ability slot - show unavailable
+            iconImage.color = Color.gray;
+            effectText.color = Color.gray;
+        }
+        else
+        {
+            // Valid placement - highlight
+            iconImage.color = previewLineColor;
+            effectText.color = previewLineColor;
+        }
+
+        isHoveringOverSlot = true;
+        hoveredSlot = slot;
+    }
+
+    public void OnHoverExit()
+    {
+        if (!isHoveringOverSlot) return;
+
+        Debug.Log($"Hover exit: restoring original visuals");
+
+        // Restore original visuals
+        if (iconImage != null)
+        {
+            iconImage.sprite = originalIcon;
+            iconImage.color = originalIconColor;
+        }
+        if (effectText != null)
+        {
+            effectText.text = originalText;
+            effectText.color = originalTextColor;
+        }
+
+        isHoveringOverSlot = false;
+        hoveredSlot = null;
+    }
+
     void SnapToClosestAvailableSlot()
     {
         if (NodeManager.Instance == null)
@@ -411,8 +505,8 @@ public class Node : MonoBehaviour
             // Snap to slot position
             transform.position = closestSlot.transform.position;
             SetCurrentSlot(closestSlot);
-            currentSlot.state = NodeSlotState.Occupied;
-            currentSlot.OccupyingNode = this;
+            closestSlot.state = NodeSlotState.Occupied;
+            closestSlot.OccupyingNode = this;
         }
         else
         {
@@ -502,10 +596,12 @@ public class Node : MonoBehaviour
             case NodeType.Ability:
                 // Ability can connect to Center and Modifier ONLY
                 // NOT to other Ability nodes
+                if (otherType == NodeType.Ability) return false;
                 return otherType == NodeType.Center || otherType == NodeType.Modifier;
 
             case NodeType.Modifier:
                 // Modifier can connect to Modifier and Ability ONLY
+                if (otherType == NodeType.Center) return false;
                 return otherType == NodeType.Modifier || otherType == NodeType.Ability;
 
             default:
@@ -600,22 +696,33 @@ public class Node : MonoBehaviour
         // Find the best available slot (where this node would snap)
         if (NodeManager.Instance != null)
         {
-            previewSlot = FindBestAvailableSlot(transform.position);
-
-            // Also find the closest ability slot as fallback
+            NodeSlot newPreviewSlot = FindBestAvailableSlot(transform.position);
             fallbackSlot = FindClosestAbilitySlot(transform.position);
 
-            // Check if we're hovering over a different slot than before
-            if (previewSlot != null && previewSlot != hoveredSlot)
+            // Handle hover preview when preview slot changes
+            if (newPreviewSlot != previewSlot)
             {
                 // Exit previous hover
                 if (isHoveringOverSlot)
                 {
                     OnHoverExit();
                 }
-                // Enter new hover
+
+                // Update preview slot
+                previewSlot = newPreviewSlot;
+
+                // Enter new hover if we have a valid slot
+                if (previewSlot != null)
+                {
+                    OnHoverEnter(previewSlot);
+                }
+            }
+            // If we have a preview slot but somehow not hovering, enter hover
+            else if (previewSlot != null && !isHoveringOverSlot)
+            {
                 OnHoverEnter(previewSlot);
             }
+            // If no preview slot but we're hovering, exit hover
             else if (previewSlot == null && isHoveringOverSlot)
             {
                 OnHoverExit();
@@ -628,6 +735,7 @@ public class Node : MonoBehaviour
             return;
         }
 
+        // Rest of your existing UpdatePreviewLines code...
         int previewIndex = 0;
         isShowingConversionPreview = false;
 
@@ -1507,100 +1615,4 @@ public class Node : MonoBehaviour
         // Log for verification
         Debug.Log($"Node {effectType} initialized in slot at {slot.transform.position}");
     }
-
-    public void OnHoverEnter(NodeSlot slot)
-    {
-        if (nodeState != NodeState.Draggable || isDragging) return;
-
-        // Don't preview if slot is occupied
-        if (slot.state != NodeSlotState.Empty) return;
-
-        // Store original values
-        originalEffectType = effectType;
-        originalNodeType = nodeType;
-        if (iconImage != null) originalIcon = iconImage.sprite;
-        if (effectText != null) originalText = effectText.text;
-
-        // Check if this is a conversion case (Ability hovering over Modifier slot)
-        if (nodeType == NodeType.Ability && slot.type == SlotType.Modifier)
-        {
-            // Check if conversion would be valid (has neighboring Ability or Modifier)
-            if (HasValidNeighborForConversion(slot))
-            {
-                // Preview as Modifier
-                if (abilityToModifierMap.TryGetValue(effectType, out EffectType modifierEffect))
-                {
-                    // Temporarily change visuals to show modifier
-                    if (effectDisplayNames.TryGetValue(modifierEffect, out string displayName))
-                    {
-                        effectText.text = displayName;
-                    }
-
-                    if (effectIcons.TryGetValue(modifierEffect, out Sprite icon))
-                    {
-                        iconImage.sprite = icon;
-                    }
-
-                    // Optional: Change color or add effect to show it's a preview
-                    iconImage.color = conversionPreviewColor;
-                }
-            }
-            else
-            {
-                // Invalid conversion - show as unavailable
-                iconImage.color = Color.gray;
-                effectText.color = Color.gray;
-            }
-        }
-        // Ability hovering over Ability slot - show as ability
-        else if (nodeType == NodeType.Ability && slot.type == SlotType.Ability)
-        {
-            // Keep ability visuals (no change needed)
-            // But maybe highlight to show it's valid
-            iconImage.color = previewLineColor;
-        }
-        // Modifier hovering over Modifier slot - keep as modifier
-        else if (nodeType == NodeType.Modifier && slot.type == SlotType.Modifier)
-        {
-            // Keep modifier visuals
-            iconImage.color = previewLineColor;
-        }
-        // Modifier hovering over Ability slot - show as ability? (if conversion allowed)
-        else if (nodeType == NodeType.Modifier && slot.type == SlotType.Ability)
-        {
-            // Check if this modifier can convert to ability? (You might have a reverse map)
-            // For now, just show as unavailable
-            iconImage.color = Color.gray;
-            effectText.color = Color.gray;
-        }
-
-        isHoveringOverSlot = true;
-        hoveredSlot = slot;
-    }
-
-    // Add this method to handle hover exit
-    public void OnHoverExit()
-    {
-        if (!isHoveringOverSlot) return;
-
-        // Restore original visuals
-        if (iconImage != null)
-        {
-            iconImage.sprite = originalIcon;
-            iconImage.color = Color.white; // Restore original color
-        }
-
-        if (effectText != null)
-        {
-            effectText.text = originalText;
-            effectText.color = Color.white;
-        }
-
-        // Restore original type (though we never changed the actual type)
-        // effectType = originalEffectType; // Don't uncomment - we don't want to change actual data
-
-        isHoveringOverSlot = false;
-        hoveredSlot = null;
-    }
-
 }
