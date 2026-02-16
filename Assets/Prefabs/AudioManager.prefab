@@ -53,7 +53,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bde0d2ac43358444e805d93dc7a95f50, type: 3}
   - {fileID: 8300000, guid: 67823675daf5d31439d569dadc21e17c, type: 3}
   - {fileID: 8300000, guid: 132a86c24d4a32441aec027176e081bc, type: 3}
-  MusicList: []
+  - {fileID: 8300000, guid: 3a2aa94497260fb4593076cc97da4ba5, type: 3}
+  MusicList:
+  - {fileID: 8300000, guid: 9885d06d624dccf418aa6daa5b2e976b, type: 3}
+  - {fileID: 8300000, guid: a72ece25c6bdb5840af3c7340fa63a24, type: 3}
+  - {fileID: 8300000, guid: 81ff2a864376b3745a83a340cecb179c, type: 3}
+  - {fileID: 8300000, guid: 3478e8db8d513d14297bfb76aa254019, type: 3}
+  - {fileID: 8300000, guid: 65a553cf9c6db6f4a82a32e3cadbb0d2, type: 3}
+  - {fileID: 8300000, guid: 78df04d1ab55fb845abaca7bbf61fbd4, type: 3}
+  - {fileID: 8300000, guid: 37b3b4e98f9d61d4d90d9433402978cb, type: 3}
+  - {fileID: 8300000, guid: bc01e6fd7dfd7444d9c2bdbb00b61c5d, type: 3}
+  - {fileID: 8300000, guid: 9bfe11ec55d08ff4d941cf35342ed9cd, type: 3}
   soundBuffer: 0.01
   LowPitchRand: 0.9
   HighPitchRand: 1.1
@@ -72,7 +82,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
