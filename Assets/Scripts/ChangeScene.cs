@@ -1,4 +1,3 @@
-using System.Xml;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -37,6 +36,8 @@ public class ChangeScene : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void GoBackToNodes()
     {
+        if (InventoryManager.Instance.currentLevel + 1 >= 10)
+            SceneManager.LoadScene("Win");
         if (BuildInfo.Instance != null)
         {
             Destroy(BuildInfo.Instance.gameObject);
