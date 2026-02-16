@@ -1,6 +1,6 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class WinLoseCon : MonoBehaviour
 {
@@ -9,6 +9,8 @@ public class WinLoseCon : MonoBehaviour
 
     public float timeToWin = 60f;
     public float timeLeft;
+
+    public TMP_Text timerText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +21,11 @@ public class WinLoseCon : MonoBehaviour
     void Update()
     {
         timeLeft -= Time.deltaTime;
+        int minutes = Mathf.FloorToInt(timeLeft / 60F);
+        int seconds = Mathf.FloorToInt(timeLeft - minutes * 60);
+
+        string niceTime = string.Format("{0:0}:{1:00}", minutes, seconds);
+        timerText.text = niceTime;
 
         if (EnemySpawner.instance.spawnedEnemies.Count == 0 || timeLeft <= 0)
         {
