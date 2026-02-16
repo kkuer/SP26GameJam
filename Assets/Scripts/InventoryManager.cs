@@ -25,7 +25,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (!newGameStarted)
         {
-            currentLevel = 1;
+            currentLevel = 0;
 
             newGameStarted = true;
 
