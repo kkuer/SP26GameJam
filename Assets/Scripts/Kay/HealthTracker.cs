@@ -1,6 +1,5 @@
 using System.Collections;
 using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class HealthTracker : MonoBehaviour
@@ -13,6 +12,9 @@ public class HealthTracker : MonoBehaviour
     }
     public void TakeDamage(float damage, Color damageColor)
     {
+
+        Debug.Log("Take damage please?");
+
         currentHealth -= damage;
 
         StartCoroutine(FlashRed(damageColor));
@@ -30,6 +32,18 @@ public class HealthTracker : MonoBehaviour
         EnemyLogic enemy = GetComponent<EnemyLogic>();
         if(enemy != null)
         {
+            for(int i = 0; i < EnemySpawner.instance.spawnedEnemies.Count;  i++)
+            {
+                if (EnemySpawner.instance.spawnedEnemies[i] == this.gameObject)
+                {
+                    //int myIndex = EnemySpawner.instance.spawnedEnemies.IndexOf(enemyInstance);
+                    EnemySpawner.instance.spawnedEnemies.RemoveAt(i);
+                }
+            }
+
+
+            
+            
             enemy.SpawnPickup();
             return;
         }
