@@ -9,8 +9,11 @@ public class NormalBullet : MonoBehaviour
     public GameObject bulletSplash;
     //Bullet lifetime
     public float bulletLife;
+    //Audio clip for the bullet
+    public int audioIndex;
     void Start()
     {
+        AudioManager.Instance.PlaySound(audioIndex);
         StartCoroutine(SelfDes());
     }
 
