@@ -80,6 +80,8 @@ public class SyringeLauncher : MonoBehaviour
         CanLaunch = false;
         Debug.Log("Launch!");
 
+        ShakeManager.Instance.shakeCam(1f, 2f, 0.3f);
+
         gameObject.SetActive(false);
     }
 }
