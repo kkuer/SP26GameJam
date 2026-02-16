@@ -1,3 +1,6 @@
+using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class HealthTracker : MonoBehaviour
@@ -8,9 +11,12 @@ public class HealthTracker : MonoBehaviour
     {
         currentHealth = maxHealth;
     }
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Color damageColor)
     {
         currentHealth -= damage;
+
+        StartCoroutine(FlashRed(damageColor));
+
         if (currentHealth <= 0)
         {
             Die();
@@ -21,5 +27,21 @@ public class HealthTracker : MonoBehaviour
         // Handle death logic here (e.g., play animation, disable object, etc.)
         Debug.Log(gameObject.name + " has died.");
         Destroy(gameObject);
+    }
+
+    public IEnumerator FlashRed(Color damageColor)
+    {
+        var sr = GetComponent<SpriteRenderer>();
+
+        if(sr ==null)
+        {
+            sr = GetComponentInChildren<SpriteRenderer>();
+        }
+
+        sr.color = damageColor;
+
+        yield return new WaitForSeconds(0.25f);
+
+        sr.color = Color.white;
     }
 }

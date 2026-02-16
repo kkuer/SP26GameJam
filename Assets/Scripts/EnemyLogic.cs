@@ -15,9 +15,14 @@ public class EnemyLogic : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("Enemy Hit");
         var damageObj = col.gameObject.GetComponent<DamageExecutor>();
+
+
         if (damageObj != null)
         {
+            Debug.Log("Enemy Hit 2");
+
             damageObj.DealDamage(GetComponent<HealthTracker>());
 
             switch (damageObj.damageSource)
@@ -35,6 +40,7 @@ public class EnemyLogic : MonoBehaviour
                     break;
 
                 case EffectType.MeleeSwipe:
+                    Debug.Log("Enemy Hit 3");
                     DoTApplied(HomunManager.instance.SWORD.GetComponent<WeaponDistributor>());
                     SiphonHealth(HomunManager.instance.PIERCE.GetComponent<WeaponDistributor>());
                     break;
@@ -53,7 +59,7 @@ public class EnemyLogic : MonoBehaviour
     }
     public void SiphonHealth(WeaponDistributor weaponLogic)
     {
-        HomunManager.instance.gameObject.GetComponent<HealthTracker>().TakeDamage(-1 * weaponLogic.sipohonCount * lifestealMult);
+        HomunManager.instance.gameObject.GetComponent<HealthTracker>().TakeDamage(-1 * weaponLogic.sipohonCount * lifestealMult, Color.green);
     }
     public void DoTApplied(WeaponDistributor weaponLogic)
     {
@@ -70,13 +76,13 @@ public class EnemyLogic : MonoBehaviour
     public IEnumerator TakeDoTDamage(WeaponDistributor weaponLogic, int dotNum)
     {
         yield return new WaitForSeconds(1);
-        GetComponent<HealthTracker>().TakeDamage(baseDotDamage * dotNum);
+        GetComponent<HealthTracker>().TakeDamage(baseDotDamage * dotNum, Color.red);
 
         yield return new WaitForSeconds(1);
-        GetComponent<HealthTracker>().TakeDamage(baseDotDamage * dotNum);
+        GetComponent<HealthTracker>().TakeDamage(baseDotDamage * dotNum, Color.red);
 
         yield return new WaitForSeconds(1);
-        GetComponent<HealthTracker>().TakeDamage(baseDotDamage * dotNum);
+        GetComponent<HealthTracker>().TakeDamage(baseDotDamage * dotNum, Color.red);
 
     }
     private void OnCollisionEnter2D(Collision2D col)
@@ -85,7 +91,7 @@ public class EnemyLogic : MonoBehaviour
         if (player != null)
         {
             //deal damage to the player 
-            player.healthTracker.TakeDamage(hitDamage);        
+            player.healthTracker.TakeDamage(hitDamage, Color.red);        
         }
     }
 }

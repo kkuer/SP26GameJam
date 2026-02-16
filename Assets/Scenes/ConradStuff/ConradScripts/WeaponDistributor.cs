@@ -232,9 +232,10 @@ public class WeaponDistributor : MonoBehaviour
                             thornsIndex = j;
                         }
                     }
-                    emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageToDeal *=
+                    
+                    spawnedWeapon.GetComponent<DamageExecutor>().damageToDeal *=
                             BuildInfo.Instance.activeAbilities[thornsIndex].damageMultiplier;
-                    emitterScript.bulletPrefab.GetComponent<DamageExecutor>().damageSource = EffectType.Thorns;
+                    spawnedWeapon.GetComponent<DamageExecutor>().damageSource = EffectType.Thorns;
                     break;
             }
             
