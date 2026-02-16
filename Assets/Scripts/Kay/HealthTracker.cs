@@ -26,6 +26,21 @@ public class HealthTracker : MonoBehaviour
     {
         // Handle death logic here (e.g., play animation, disable object, etc.)
         Debug.Log(gameObject.name + " has died.");
+
+        EnemyLogic enemy = GetComponent<EnemyLogic>();
+        if(enemy != null)
+        {
+            enemy.SpawnPickup();
+            return;
+        }
+        
+        var player = GetComponent<HomunManager>();
+        if(player != null)
+        {
+            FindFirstObjectByType<WinLoseCon>().EndGame();
+        }
+
+
         Destroy(gameObject);
     }
 
