@@ -25,7 +25,7 @@ public class HomunVisuals : MonoBehaviour
         }
         else
         {
-            //animator.Play("Level3");
+            animator.Play("Level3");
         }
     }
 }
