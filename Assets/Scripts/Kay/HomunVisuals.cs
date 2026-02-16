@@ -18,14 +18,17 @@ public class HomunVisuals : MonoBehaviour
         if (InventoryManager.Instance.currentLevel < 3)
         {
             animator.Play("Level1");
+            HomunManager.instance.inventorySize = 1;
         }
         else if (InventoryManager.Instance.currentLevel < 6)
         {
             animator.Play("Level2");
+            HomunManager.instance.inventorySize = 2;
         }
         else
         {
             animator.Play("Level3");
+            HomunManager.instance.inventorySize = 3;
         }
     }
 }
