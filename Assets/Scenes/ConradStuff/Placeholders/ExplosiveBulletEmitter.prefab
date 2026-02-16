@@ -56,3 +56,4 @@ MonoBehaviour:
   areSwords: 0
   isAura: 0
   isThorn: 0
+  shootAudio: {fileID: 6247733062916502699, guid: 12b8ac2e8a57b2246b2ee4ab865093f5, type: 3}
