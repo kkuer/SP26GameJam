@@ -14,6 +14,8 @@ public class SyringeLauncher : MonoBehaviour
     [SerializeField]private float detectLength = 2f;
     [SerializeField] private float launchDistance = 2f;
 
+
+
     private void Start()
     {
         cam = Camera.main;

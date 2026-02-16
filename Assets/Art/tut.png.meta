@@ -1,0 +1,5915 @@
+fileFormatVersion: 2
+guid: 1c2f40c8e016fa848bdd03c1de83a64e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5268187495526859981
+    second: tut_0
+  - first:
+      213: 1760660402950515922
+    second: tut_1
+  - first:
+      213: -68090980661940792
+    second: tut_2
+  - first:
+      213: 7404470831791659195
+    second: tut_3
+  - first:
+      213: 8869697126157683375
+    second: tut_4
+  - first:
+      213: 3845985252328670921
+    second: tut_5
+  - first:
+      213: -5951674271509990955
+    second: tut_6
+  - first:
+      213: 5417173719663526468
+    second: tut_7
+  - first:
+      213: 6315440190732362512
+    second: tut_8
+  - first:
+      213: -2873186491859258793
+    second: tut_9
+  - first:
+      213: 4035431707723422893
+    second: tut_10
+  - first:
+      213: -5149097829973889173
+    second: tut_11
+  - first:
+      213: -4909102865863741545
+    second: tut_12
+  - first:
+      213: -4301174240307686598
+    second: tut_13
+  - first:
+      213: -2778532950520635154
+    second: tut_14
+  - first:
+      213: 7264898823027083630
+    second: tut_15
+  - first:
+      213: -3579353828803920128
+    second: tut_16
+  - first:
+      213: -3026767249206595000
+    second: tut_17
+  - first:
+      213: 4087672132902995193
+    second: tut_18
+  - first:
+      213: 4858877421441086216
+    second: tut_19
+  - first:
+      213: 3095253497259259008
+    second: tut_20
+  - first:
+      213: 4750510731132195997
+    second: tut_21
+  - first:
+      213: -373881135087620593
+    second: tut_22
+  - first:
+      213: -6408554968430400201
+    second: tut_23
+  - first:
+      213: -4182329034664181356
+    second: tut_24
+  - first:
+      213: -3207653049603957308
+    second: tut_25
+  - first:
+      213: -6167050330330911905
+    second: tut_26
+  - first:
+      213: -282816046368033857
+    second: tut_27
+  - first:
+      213: -8190747308635880265
+    second: tut_28
+  - first:
+      213: 6890586177166051757
+    second: tut_29
+  - first:
+      213: 4336374655241422880
+    second: tut_30
+  - first:
+      213: 2211607451778579802
+    second: tut_31
+  - first:
+      213: -2588422922363877054
+    second: tut_32
+  - first:
+      213: 5760241069043517681
+    second: tut_33
+  - first:
+      213: -1575232949168736179
+    second: tut_34
+  - first:
+      213: 970438942218088390
+    second: tut_35
+  - first:
+      213: 7358245132909369695
+    second: tut_36
+  - first:
+      213: -1731156214955335943
+    second: tut_37
+  - first:
+      213: -5826984007031589578
+    second: tut_38
+  - first:
+      213: -588756301349818758
+    second: tut_39
+  - first:
+      213: -6342113676826069390
+    second: tut_40
+  - first:
+      213: -1231669334904359306
+    second: tut_41
+  - first:
+      213: -1140027139643452381
+    second: tut_42
+  - first:
+      213: 6266161329814861233
+    second: tut_43
+  - first:
+      213: -7587407102739466108
+    second: tut_44
+  - first:
+      213: 3300116165663938074
+    second: tut_45
+  - first:
+      213: -823537653853499994
+    second: tut_46
+  - first:
+      213: -4757078064443122150
+    second: tut_47
+  - first:
+      213: 351910288676334707
+    second: tut_48
+  - first:
+      213: -1655269491826476357
+    second: tut_49
+  - first:
+      213: 514089567728597330
+    second: tut_50
+  - first:
+      213: 3367987701258801268
+    second: tut_51
+  - first:
+      213: -6514831597934668685
+    second: tut_52
+  - first:
+      213: -6904308930511446513
+    second: tut_53
+  - first:
+      213: 1724172465050774268
+    second: tut_54
+  - first:
+      213: -8598052402050824613
+    second: tut_55
+  - first:
+      213: -656820677385880649
+    second: tut_56
+  - first:
+      213: -2758015687894782365
+    second: tut_57
+  - first:
+      213: -545571789676644589
+    second: tut_58
+  - first:
+      213: -2678365285092562573
+    second: tut_59
+  - first:
+      213: -786424188333911394
+    second: tut_60
+  - first:
+      213: -7962799000248563426
+    second: tut_61
+  - first:
+      213: 7536736630381643803
+    second: tut_62
+  - first:
+      213: 9127639062344118431
+    second: tut_63
+  - first:
+      213: 6866581550002845186
+    second: tut_64
+  - first:
+      213: 7874214682731985686
+    second: tut_65
+  - first:
+      213: -8705150483949643911
+    second: tut_66
+  - first:
+      213: -163393584903050543
+    second: tut_67
+  - first:
+      213: -519278559421179760
+    second: tut_68
+  - first:
+      213: -3690322418827004693
+    second: tut_69
+  - first:
+      213: -8198961210259567058
+    second: tut_70
+  - first:
+      213: 2324828248772800485
+    second: tut_71
+  - first:
+      213: 5644713910314876994
+    second: tut_72
+  - first:
+      213: 4061490515756960381
+    second: tut_73
+  - first:
+      213: -5205835517816028793
+    second: tut_74
+  - first:
+      213: -8023209764580472459
+    second: tut_75
+  - first:
+      213: -8001198891694071230
+    second: tut_76
+  - first:
+      213: 6620343625146507971
+    second: tut_77
+  - first:
+      213: 6471973895209372140
+    second: tut_78
+  - first:
+      213: 3192253277856937171
+    second: tut_79
+  - first:
+      213: -3750041573906608561
+    second: tut_80
+  - first:
+      213: -7423956879528545541
+    second: tut_81
+  - first:
+      213: 5913982508984770581
+    second: tut_82
+  - first:
+      213: -4199232852048037625
+    second: tut_83
+  - first:
+      213: -1791899055753041342
+    second: tut_84
+  - first:
+      213: -3620759001880910828
+    second: tut_85
+  - first:
+      213: 7062287033626242919
+    second: tut_86
+  - first:
+      213: 4916942094313469892
+    second: tut_87
+  - first:
+      213: 6579183258625277214
+    second: tut_88
+  - first:
+      213: 3491051109036993175
+    second: tut_89
+  - first:
+      213: 7543386064223276842
+    second: tut_90
+  - first:
+      213: 8398081549243398839
+    second: tut_91
+  - first:
+      213: -7815497496132694403
+    second: tut_92
+  - first:
+      213: -5552989801074317795
+    second: tut_93
+  - first:
+      213: 8658465680731972822
+    second: tut_94
+  - first:
+      213: -5237811280290831351
+    second: tut_95
+  - first:
+      213: -6124165183975739506
+    second: tut_96
+  - first:
+      213: -638476236386447533
+    second: tut_97
+  - first:
+      213: 2814192644366794346
+    second: tut_98
+  - first:
+      213: -4948695551306436963
+    second: tut_99
+  - first:
+      213: 8158110284989843840
+    second: tut_100
+  - first:
+      213: 4632556295096157606
+    second: tut_101
+  - first:
+      213: 139362204789809894
+    second: tut_102
+  - first:
+      213: 1060703709168473327
+    second: tut_103
+  - first:
+      213: -3338264824822688481
+    second: tut_104
+  - first:
+      213: -3385583335997483463
+    second: tut_105
+  - first:
+      213: -6277096521699800990
+    second: tut_106
+  - first:
+      213: -373988114039569354
+    second: tut_107
+  - first:
+      213: -4590045550975461008
+    second: tut_108
+  - first:
+      213: 2710271459694297836
+    second: tut_109
+  - first:
+      213: 5898716465118261692
+    second: tut_110
+  - first:
+      213: 6763968635643644754
+    second: tut_111
+  - first:
+      213: 682086284141515132
+    second: tut_112
+  - first:
+      213: -6256988917861241124
+    second: tut_113
+  - first:
+      213: 4858695873554171424
+    second: tut_114
+  - first:
+      213: -3471836078216184769
+    second: tut_115
+  - first:
+      213: 2306643437763336469
+    second: tut_116
+  - first:
+      213: 8774269988744448772
+    second: tut_117
+  - first:
+      213: -2581557645258155372
+    second: tut_118
+  - first:
+      213: -485172643796471528
+    second: tut_119
+  - first:
+      213: 4886360390385119954
+    second: tut_120
+  - first:
+      213: -8949787816846961506
+    second: tut_121
+  - first:
+      213: 2193931683372279655
+    second: tut_122
+  - first:
+      213: -9088697763791121415
+    second: tut_123
+  - first:
+      213: -5583104108396466982
+    second: tut_124
+  - first:
+      213: -5322167595925485979
+    second: tut_125
+  - first:
+      213: 6687816844501470273
+    second: tut_126
+  - first:
+      213: -2381821461240331540
+    second: tut_127
+  - first:
+      213: 5530967535071430700
+    second: tut_128
+  - first:
+      213: 6977814132635917486
+    second: tut_129
+  - first:
+      213: 4663064782816184513
+    second: tut_130
+  - first:
+      213: -1153557629123345690
+    second: tut_131
+  - first:
+      213: 7808341222987478742
+    second: tut_132
+  - first:
+      213: -6856653907614678335
+    second: tut_133
+  - first:
+      213: 1618561711083144997
+    second: tut_134
+  - first:
+      213: 7568439718313681400
+    second: tut_135
+  - first:
+      213: -6482655756247428713
+    second: tut_136
+  - first:
+      213: 3840681283469087386
+    second: tut_137
+  - first:
+      213: 3956672815164317457
+    second: tut_138
+  - first:
+      213: -7322641422839676417
+    second: tut_139
+  - first:
+      213: 8650326428306651017
+    second: tut_140
+  - first:
+      213: -4545713598287313819
+    second: tut_141
+  - first:
+      213: -8136621417709932230
+    second: tut_142
+  - first:
+      213: 1187593527202245866
+    second: tut_143
+  - first:
+      213: 6145938251921428690
+    second: tut_144
+  - first:
+      213: 5538059890440355963
+    second: tut_145
+  - first:
+      213: -9213608836721272922
+    second: tut_146
+  - first:
+      213: 6649236028948514764
+    second: tut_147
+  - first:
+      213: 8521867379297701112
+    second: tut_148
+  - first:
+      213: -422852638855074174
+    second: tut_149
+  - first:
+      213: 5060383131715051159
+    second: tut_150
+  - first:
+      213: 5806755333189426743
+    second: tut_151
+  - first:
+      213: -7226710686555724869
+    second: tut_152
+  - first:
+      213: -5629205474422268054
+    second: tut_153
+  - first:
+      213: -3966341633465942627
+    second: tut_154
+  - first:
+      213: -2573735756726099318
+    second: tut_155
+  - first:
+      213: 5651341982805054873
+    second: tut_156
+  - first:
+      213: -858030972043514972
+    second: tut_157
+  - first:
+      213: 559540130470824753
+    second: tut_158
+  - first:
+      213: 2225571632932734586
+    second: tut_159
+  - first:
+      213: 3297043217881923921
+    second: tut_160
+  - first:
+      213: 4399738503068927045
+    second: tut_161
+  - first:
+      213: -2890862436954234942
+    second: tut_162
+  - first:
+      213: 4802831460954689888
+    second: tut_163
+  - first:
+      213: 5392395240683317972
+    second: tut_164
+  - first:
+      213: 1877908220147282398
+    second: tut_165
+  - first:
+      213: -2162721592901907244
+    second: tut_166
+  - first:
+      213: -2940014219317728931
+    second: tut_167
+  - first:
+      213: -8562389509641748486
+    second: tut_168
+  - first:
+      213: -6589834392116645011
+    second: tut_169
+  - first:
+      213: -4799950800879446244
+    second: tut_170
+  - first:
+      213: 160133792743733259
+    second: tut_171
+  - first:
+      213: 7881814144517658959
+    second: tut_172
+  - first:
+      213: 2522533491781021067
+    second: tut_173
+  - first:
+      213: 3388258447673909870
+    second: tut_174
+  - first:
+      213: 7091419803262250280
+    second: tut_175
+  - first:
+      213: 2069575313626743824
+    second: tut_176
+  - first:
+      213: -4442171435502557141
+    second: tut_177
+  - first:
+      213: -1950522753673197720
+    second: tut_178
+  - first:
+      213: -6772932035016081845
+    second: tut_179
+  - first:
+      213: 6995483060696268080
+    second: tut_180
+  - first:
+      213: -1555532246877834416
+    second: tut_181
+  - first:
+      213: -3944360788925761503
+    second: tut_182
+  - first:
+      213: -9041306981043144006
+    second: tut_183
+  - first:
+      213: 5170318143061755747
+    second: tut_184
+  - first:
+      213: -7566803801162020900
+    second: tut_185
+  - first:
+      213: 5198138479435222688
+    second: tut_186
+  - first:
+      213: 7301257819279313633
+    second: tut_187
+  - first:
+      213: 1422244482999930528
+    second: tut_188
+  - first:
+      213: -1776677875019519353
+    second: tut_189
+  - first:
+      213: -726307239341181603
+    second: tut_190
+  - first:
+      213: 2824335618685319049
+    second: tut_191
+  - first:
+      213: -4953527083923759607
+    second: tut_192
+  - first:
+      213: -4749769976356359410
+    second: tut_193
+  - first:
+      213: 2953664286958654709
+    second: tut_194
+  - first:
+      213: 8050090452646290023
+    second: tut_195
+  - first:
+      213: -8387972895445340498
+    second: tut_196
+  - first:
+      213: 1005020524264004137
+    second: tut_197
+  - first:
+      213: 7210102450316416173
+    second: tut_198
+  - first:
+      213: 343763709128836551
+    second: tut_199
+  - first:
+      213: 8241288581220588777
+    second: tut_200
+  - first:
+      213: -5743484514346181132
+    second: tut_201
+  - first:
+      213: -1516691116412403367
+    second: tut_202
+  - first:
+      213: -6711548827050977121
+    second: tut_203
+  - first:
+      213: -1592827503843464841
+    second: tut_204
+  - first:
+      213: 5003738681515658465
+    second: tut_205
+  - first:
+      213: 5290567827435860989
+    second: tut_206
+  - first:
+      213: -2317893213998144070
+    second: tut_207
+  - first:
+      213: 4911385839935285533
+    second: tut_208
+  - first:
+      213: 2320730785142055354
+    second: tut_209
+  - first:
+      213: 9183894314911052225
+    second: tut_210
+  - first:
+      213: 3652823240303557394
+    second: tut_211
+  - first:
+      213: 5573504705803170633
+    second: tut_212
+  - first:
+      213: -1716525126034781245
+    second: tut_213
+  - first:
+      213: -4877539064997024862
+    second: tut_214
+  - first:
+      213: 909564560751516600
+    second: tut_215
+  - first:
+      213: -8144788170378390618
+    second: tut_216
+  - first:
+      213: -5959009247512317765
+    second: tut_217
+  - first:
+      213: 8572777235495192274
+    second: tut_218
+  - first:
+      213: 2558652221539905732
+    second: tut_219
+  - first:
+      213: -4603172709533777587
+    second: tut_220
+  - first:
+      213: -7223452271092042267
+    second: tut_221
+  - first:
+      213: 2490354056747473914
+    second: tut_222
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tut_0
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 857
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc488097d9c5c1940800000000000000
+      internalID: 5268187495526859981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_1
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 857
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc26ffde4f1f6810800000000000000
+      internalID: 1760660402950515922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_2
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 857
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cdac352d971e0ff0800000000000000
+      internalID: -68090980661940792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_3
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 857
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8deaeadf6f1c660800000000000000
+      internalID: 7404470831791659195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_4
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 857
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa8ee5ea8e771b70800000000000000
+      internalID: 8869697126157683375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_5
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 857
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c60178c53faf5530800000000000000
+      internalID: 3845985252328670921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_6
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 857
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1b0db88c7676da0800000000000000
+      internalID: -5951674271509990955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_7
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 856
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 442402febcaad2b40800000000000000
+      internalID: 5417173719663526468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_8
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 857
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013e3d09463f4a750800000000000000
+      internalID: 6315440190732362512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_9
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 857
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7523743cb146028d0800000000000000
+      internalID: -2873186491859258793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_10
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 856
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dacd33ee1cbb00830800000000000000
+      internalID: 4035431707723422893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_11
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 857
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6feba20ecaba88b0800000000000000
+      internalID: -5149097829973889173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_12
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 888
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79fe65af3fc5fdbb0800000000000000
+      internalID: -4909102865863741545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_13
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 857
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33566921d82f44c0800000000000000
+      internalID: -4301174240307686598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_14
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 857
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0ef77b00ba079d0800000000000000
+      internalID: -2778532950520635154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_15
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 857
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69ceab0dfa12d460800000000000000
+      internalID: 7264898823027083630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_16
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 857
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f35bc28a4935ec0800000000000000
+      internalID: -3579353828803920128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_17
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 857
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842314d2933cef5d0800000000000000
+      internalID: -3026767249206595000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_18
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 856
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f442ffb5245ab830800000000000000
+      internalID: 4087672132902995193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_19
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 857
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 803792875433e6340800000000000000
+      internalID: 4858877421441086216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_20
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 857
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0847ce908ac84fa20800000000000000
+      internalID: 3095253497259259008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_21
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 857
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d94d0d637543de140800000000000000
+      internalID: 4750510731132195997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_22
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 857
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ee1eaa615bfcaf0800000000000000
+      internalID: -373881135087620593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_23
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 857
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d242fc53d3017a0800000000000000
+      internalID: -6408554968430400201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 847
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4910a03e6e165f5c0800000000000000
+      internalID: -4182329034664181356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_25
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 857
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd58a7db802c73d0800000000000000
+      internalID: -3207653049603957308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_26
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 857
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5baba4266c3a6aa0800000000000000
+      internalID: -6167050330330911905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_27
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 857
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3f373ed4c331cf0800000000000000
+      internalID: -282816046368033857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_28
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 857
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b485cf18be945e80800000000000000
+      internalID: -8190747308635880265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_29
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 847
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da90338ce9740af50800000000000000
+      internalID: 6890586177166051757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_30
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 857
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0280caa16c5ed2c30800000000000000
+      internalID: 4336374655241422880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_31
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 857
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d7ed1824531be10800000000000000
+      internalID: 2211607451778579802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_32
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 857
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 249c500f013141cd0800000000000000
+      internalID: -2588422922363877054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_33
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 847
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f884f4bbbc70ff40800000000000000
+      internalID: 5760241069043517681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_34
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 857
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d487e4a8af5a32ae0800000000000000
+      internalID: -1575232949168736179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_35
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 857
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf6d1b8311b77d00800000000000000
+      internalID: 970438942218088390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_36
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 857
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f595f4576fcbd1660800000000000000
+      internalID: 7358245132909369695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_37
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 857
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe90e43892b9f7e0800000000000000
+      internalID: -1731156214955335943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_38
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 857
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 635fff41be4622fa0800000000000000
+      internalID: -5826984007031589578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_39
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 857
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e65c6634154d7f0800000000000000
+      internalID: -588756301349818758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_40
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 857
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276b2af76394cf7a0800000000000000
+      internalID: -6342113676826069390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_41
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 857
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 676b84cf34b38eee0800000000000000
+      internalID: -1231669334904359306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_42
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 857
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3245f3b4b5fcd20f0800000000000000
+      internalID: -1140027139643452381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_43
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 847
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b577e8a780e5f650800000000000000
+      internalID: 6266161329814861233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_44
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 857
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48830fa907d14b690800000000000000
+      internalID: -7587407102739466108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_45
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 857
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a165cebfa2e5ccd20800000000000000
+      internalID: 3300116165663938074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_46
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 857
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad47eafdd43294f0800000000000000
+      internalID: -823537653853499994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_47
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 857
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e901854b67bfdb0800000000000000
+      internalID: -4757078064443122150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_48
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 797
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37cab550b8c32e400800000000000000
+      internalID: 351910288676334707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_49
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 797
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba342cca2d4709e0800000000000000
+      internalID: -1655269491826476357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_50
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 797
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2597233fcb9622700800000000000000
+      internalID: 514089567728597330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_51
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 797
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4705a6d48fe7dbe20800000000000000
+      internalID: 3367987701258801268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_52
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 797
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3741d91cd2ba695a0800000000000000
+      internalID: -6514831597934668685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_53
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 797
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ede49bb97fe20a0800000000000000
+      internalID: -6904308930511446513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_54
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 797
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa6cdec8bd7de710800000000000000
+      internalID: 1724172465050774268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_55
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 828
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56019f05e49da880800000000000000
+      internalID: -8598052402050824613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_56
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 828
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb784be21182e6f0800000000000000
+      internalID: -656820677385880649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_57
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 797
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ea31e285f89b9d0800000000000000
+      internalID: -2758015687894782365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_58
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 807
+        width: 7
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31779dc095dbd68f0800000000000000
+      internalID: -545571789676644589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_59
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 797
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 379e15bb6f884dad0800000000000000
+      internalID: -2678365285092562573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_60
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e92159b0e5f0615f0800000000000000
+      internalID: -786424188333911394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_61
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 797
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e19495c7f747e7190800000000000000
+      internalID: -7962799000248563426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_62
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b188293b80ed79860800000000000000
+      internalID: 7536736630381643803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_63
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 797
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f90300ded53ebae70800000000000000
+      internalID: 9127639062344118431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_64
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 206bb2df98ffa4f50800000000000000
+      internalID: 6866581550002845186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_65
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61bb769d884d64d60800000000000000
+      internalID: 7874214682731985686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_66
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 787
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9779cd7b1c7113780800000000000000
+      internalID: -8705150483949643911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_67
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1daa64576628bbdf0800000000000000
+      internalID: -163393584903050543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_68
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0985936c6e62bc8f0800000000000000
+      internalID: -519278559421179760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_69
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4f72fef4759ccc0800000000000000
+      internalID: -3690322418827004693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_70
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 787
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e854f1830773e80800000000000000
+      internalID: -8198961210259567058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_71
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef65eb89f2734020800000000000000
+      internalID: 2324828248772800485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_72
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 797
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 240460bf46d065e40800000000000000
+      internalID: 5644713910314876994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_73
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7acf4afa105d5830800000000000000
+      internalID: 4061490515756960381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_74
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 797
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781c671ad2821c7b0800000000000000
+      internalID: -5205835517816028793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_75
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5794cb75a35d7a090800000000000000
+      internalID: -8023209764580472459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_76
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 242635b000806f090800000000000000
+      internalID: -8001198891694071230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_77
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 797
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c221e3737f20eb50800000000000000
+      internalID: 6620343625146507971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_78
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 797
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce94e8bb7f111d950800000000000000
+      internalID: 6471973895209372140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_79
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 797
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d43db361792d4c20800000000000000
+      internalID: 3192253277856937171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_80
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e895e9e0d25fbc0800000000000000
+      internalID: -3750041573906608561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_81
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 797
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf232e74d8ec8f890800000000000000
+      internalID: -7423956879528545541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_82
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51029ef12cfa21250800000000000000
+      internalID: 5913982508984770581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_83
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 797
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709b68438f359b5c0800000000000000
+      internalID: -4199232852048037625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_84
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 797
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a6b7c7d45e127e0800000000000000
+      internalID: -1791899055753041342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_85
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 678
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41427931fda70cdc0800000000000000
+      internalID: -3620759001880910828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_86
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 678
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76fa325b3a8420260800000000000000
+      internalID: 7062287033626242919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_87
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 678
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c738b0a8cc7c3440800000000000000
+      internalID: 4916942094313469892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_88
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 678
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d7e82d054fd4b50800000000000000
+      internalID: 6579183258625277214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_89
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 678
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a22eebc74b27030800000000000000
+      internalID: 3491051109036993175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_90
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 678
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f09a9a8ad7fa860800000000000000
+      internalID: 7543386064223276842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_91
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 678
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba3a619caafb8470800000000000000
+      internalID: 8398081549243398839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_92
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 678
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e4e008f66c98390800000000000000
+      internalID: -7815497496132694403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_93
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 678
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1629996231dfe2b0800000000000000
+      internalID: -5552989801074317795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_94
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 678
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4a0ff79ac092870800000000000000
+      internalID: 8658465680731972822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_95
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 678
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9042bb5446e8f47b0800000000000000
+      internalID: -5237811280290831351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_96
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 668
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8faf4f5638920ba0800000000000000
+      internalID: -6124165183975739506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_97
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 678
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f48acee3da327f0800000000000000
+      internalID: -638476236386447533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_98
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 678
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6efff0cc450e0720800000000000000
+      internalID: 2814192644366794346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_99
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 678
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ee2da8d93b25bb0800000000000000
+      internalID: -4948695551306436963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_100
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 678
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089c747a41e673170800000000000000
+      internalID: 8158110284989843840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_101
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 678
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5c433f7652a4040800000000000000
+      internalID: 4632556295096157606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_102
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 668
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2ac97df2d1fe100800000000000000
+      internalID: 139362204789809894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_103
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 678
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe41de4576068be00800000000000000
+      internalID: 1060703709168473327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_104
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 678
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15134624d91ca1d0800000000000000
+      internalID: -3338264824822688481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_105
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 678
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 936536cb4edf301d0800000000000000
+      internalID: -3385583335997483463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_106
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 678
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2684e3398f543e8a0800000000000000
+      internalID: -6277096521699800990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_107
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 678
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6340470bac35fcaf0800000000000000
+      internalID: -373988114039569354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_108
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 678
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079de37f3e1ec40c0800000000000000
+      internalID: -4590045550975461008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_109
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 678
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce245ff6881dc9520800000000000000
+      internalID: 2710271459694297836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_110
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 678
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb13f1e4f537cd150800000000000000
+      internalID: 5898716465118261692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_111
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 678
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b4c6713a17edd50800000000000000
+      internalID: 6763968635643644754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_112
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 678
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71db609cd1477900800000000000000
+      internalID: 682086284141515132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_113
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 678
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde235beab5ba29a0800000000000000
+      internalID: -6256988917861241124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_114
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 701
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0264ade872e8d6340800000000000000
+      internalID: 4858695873554171424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_115
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 678
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3cf98f3b7f81dfc0800000000000000
+      internalID: -3471836078216184769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_116
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 678
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5199e5b4cf7d20020800000000000000
+      internalID: 2306643437763336469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_117
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 678
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40bcb72111874c970800000000000000
+      internalID: 8774269988744448772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_118
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 678
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a9133dff67c2cd0800000000000000
+      internalID: -2581557645258155372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_119
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 678
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81136cf0d025449f0800000000000000
+      internalID: -485172643796471528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_120
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 678
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2b171d2e6dfc340800000000000000
+      internalID: 4886360390385119954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_121
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 678
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94d7b90667fbc380800000000000000
+      internalID: -8949787816846961506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_122
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 678
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76721e8fd39627e10800000000000000
+      internalID: 2193931683372279655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_123
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 678
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3d75ea9857ed180800000000000000
+      internalID: -9088697763791121415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_124
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 678
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc210bd464d482b0800000000000000
+      internalID: -5583104108396466982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_125
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 678
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56644c105ccd326b0800000000000000
+      internalID: -5322167595925485979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_126
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 678
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c426b8cf5efcc50800000000000000
+      internalID: 6687816844501470273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_127
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 678
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce24e5c100212fed0800000000000000
+      internalID: -2381821461240331540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_128
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 678
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2886283ba1f1cc40800000000000000
+      internalID: 5530967535071430700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_129
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 678
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eacd67ccbfc26d060800000000000000
+      internalID: 6977814132635917486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_130
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 678
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c88468c6b886b040800000000000000
+      internalID: 4663064782816184513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_131
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 678
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e24928b27dbdffe0800000000000000
+      internalID: -1153557629123345690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_132
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 678
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d63531d8fccc5c60800000000000000
+      internalID: 7808341222987478742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_133
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 678
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c245d0699548d0a0800000000000000
+      internalID: -6856653907614678335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_134
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 674
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 527c82cfc49467610800000000000000
+      internalID: 1618561711083144997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_135
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 618
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f16b0213df780960800000000000000
+      internalID: 7568439718313681400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_136
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 617
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7911bbfafeaf806a0800000000000000
+      internalID: -6482655756247428713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_137
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 618
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a929aac4747dc4530800000000000000
+      internalID: 3840681283469087386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_138
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 618
+        width: 10
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f505846fce8e630800000000000000
+      internalID: 3956672815164317457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_139
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 618
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff184164c60c06a90800000000000000
+      internalID: -7322641422839676417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_140
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 618
+        width: 10
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987346e1e022c0870800000000000000
+      internalID: 8650326428306651017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_141
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 618
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5640c6b01916ae0c0800000000000000
+      internalID: -4545713598287313819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_142
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 618
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3170952ee9e41f80800000000000000
+      internalID: -8136621417709932230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_143
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 617
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec6176550e2b7010800000000000000
+      internalID: 1187593527202245866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_144
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 618
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0134d0742ca4550800000000000000
+      internalID: 6145938251921428690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_145
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 618
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b704982e0242bdc40800000000000000
+      internalID: 5538059890440355963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_146
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 618
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a714db249fa22080800000000000000
+      internalID: -9213608836721272922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_147
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 618
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7843d60f4d64c50800000000000000
+      internalID: 6649236028948514764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_148
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 649
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc470e0b31c34670800000000000000
+      internalID: 8521867379297701112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_149
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 618
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ee4bce3c9b12af0800000000000000
+      internalID: -422852638855074174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_150
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 618
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e1141b5a71a3640800000000000000
+      internalID: 5060383131715051159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_151
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 649
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e5c54c53db59050800000000000000
+      internalID: 5806755333189426743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_152
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 618
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3a3595be095bb90800000000000000
+      internalID: -7226710686555724869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_153
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 618
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f5061227b01e1b0800000000000000
+      internalID: -5629205474422268054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_154
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 618
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d7b678c49b4f8c0800000000000000
+      internalID: -3966341633465942627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_155
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 618
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a82ae9a27f0484cd0800000000000000
+      internalID: -2573735756726099318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_156
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 618
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995d85d57999d6e40800000000000000
+      internalID: 5651341982805054873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_157
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 618
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab20118069a714f0800000000000000
+      internalID: -858030972043514972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_158
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 618
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b0a4ab8c2e3c700800000000000000
+      internalID: 559540130470824753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_159
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 618
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76442bcb91d2ee10800000000000000
+      internalID: 2225571632932734586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_160
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 618
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15186f2965371cd20800000000000000
+      internalID: 3297043217881923921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_161
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 618
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54448049bd20f0d30800000000000000
+      internalID: 4399738503068927045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_162
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 618
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf92d61ee791e7d0800000000000000
+      internalID: -2890862436954234942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_163
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 618
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061564a64c517a240800000000000000
+      internalID: 4802831460954689888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_164
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 618
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4daaf69b6e2a5da40800000000000000
+      internalID: 5392395240683317972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_165
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 618
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed13aae939baf0a10800000000000000
+      internalID: 1877908220147282398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_166
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 618
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dcc30b7b287cf1e0800000000000000
+      internalID: -2162721592901907244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_167
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 618
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5928f6f4a8f237d0800000000000000
+      internalID: -2940014219317728931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_168
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 618
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affb5414b184c2980800000000000000
+      internalID: -8562389509641748486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_169
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 608
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d633c39e8843c84a0800000000000000
+      internalID: -6589834392116645011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_170
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 618
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c179a368d26236db0800000000000000
+      internalID: -4799950800879446244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_171
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 618
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b08b60906d8e83200800000000000000
+      internalID: 160133792743733259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_172
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 618
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49df9d6434d16d60800000000000000
+      internalID: 7881814144517658959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_173
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 618
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d22a788d6d10320800000000000000
+      internalID: 2522533491781021067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_174
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 618
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e62e1dc3b13850f20800000000000000
+      internalID: 3388258447673909870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_175
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 618
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ded963db8c96260800000000000000
+      internalID: 7091419803262250280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_176
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 618
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014c3ac58cb98bc10800000000000000
+      internalID: 2069575313626743824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_177
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 498
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b28ab737d9c3a52c0800000000000000
+      internalID: -4442171435502557141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_178
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 498
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8670efcc3e95ee4e0800000000000000
+      internalID: -1950522753673197720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_179
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 498
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4eb00dd236b102a0800000000000000
+      internalID: -6772932035016081845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_180
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 529
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d3011b7c2f41160800000000000000
+      internalID: 6995483060696268080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_181
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 498
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0537e2cb9a3a96ae0800000000000000
+      internalID: -1555532246877834416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_182
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 498
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128b916b2c0d249c0800000000000000
+      internalID: -3944360788925761503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_183
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 498
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abaf9a12433d68280800000000000000
+      internalID: -9041306981043144006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_184
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 498
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36704f425f8a0c740800000000000000
+      internalID: 5170318143061755747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_185
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 498
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd789a298005df690800000000000000
+      internalID: -7566803801162020900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_186
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 498
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae8608f76f732840800000000000000
+      internalID: 5198138479435222688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_187
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 529
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eacfab8d47435560800000000000000
+      internalID: 7301257819279313633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_188
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 498
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae48f862d3dcb310800000000000000
+      internalID: 1422244482999930528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_189
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 498
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a6a2bc2e8f757e0800000000000000
+      internalID: -1776677875019519353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_190
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 498
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d553649f963abe5f0800000000000000
+      internalID: -726307239341181603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_191
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 498
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987b83ef74e023720800000000000000
+      internalID: 2824335618685319049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_192
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 508
+        width: 7
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e9271bc59814bb0800000000000000
+      internalID: -4953527083923759607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_193
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 498
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03b6723f5d651eb0800000000000000
+      internalID: -4749769976356359410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_194
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 498
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f49de115068df820800000000000000
+      internalID: 2953664286958654709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_195
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 488
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762eebf8d9aa7bf60800000000000000
+      internalID: 8050090452646290023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_196
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 498
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae206dc71fe79b80800000000000000
+      internalID: -8387972895445340498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_197
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 498
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a9bbc87dc82fd00800000000000000
+      internalID: 1005020524264004137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_198
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 498
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da498415afd6f0460800000000000000
+      internalID: 7210102450316416173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_199
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 498
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c58b49a54b45c400800000000000000
+      internalID: 343763709128836551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_200
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 498
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ecd227ec40fe5270800000000000000
+      internalID: 8241288581220588777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_201
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 498
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd5075b34b0b40b0800000000000000
+      internalID: -5743484514346181132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_202
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 498
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9518f342771a3fae0800000000000000
+      internalID: -1516691116412403367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_203
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 498
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98dfeea6e9cbd2a0800000000000000
+      internalID: -6711548827050977121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_204
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 498
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77920fc03d325e9e0800000000000000
+      internalID: -1592827503843464841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_205
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 498
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec4f94e1d9d07540800000000000000
+      internalID: 5003738681515658465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_206
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 498
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df3bc6e886fdb6940800000000000000
+      internalID: 5290567827435860989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_207
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 498
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab52a50176035dfd0800000000000000
+      internalID: -2317893213998144070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_208
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 498
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19e938566fb82440800000000000000
+      internalID: 4911385839935285533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_209
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 498
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1a4b37a54e43020800000000000000
+      internalID: 2320730785142055354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_210
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 488
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1b007983fb37f70800000000000000
+      internalID: 9183894314911052225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_211
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 498
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21bb591326f61b230800000000000000
+      internalID: 3652823240303557394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_212
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 498
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 943bd5f0001195d40800000000000000
+      internalID: 5573504705803170633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_213
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 498
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb0aae0e7dad28e0800000000000000
+      internalID: -1716525126034781245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_214
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 498
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2abe2cc00108f4cb0800000000000000
+      internalID: -4877539064997024862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_215
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 498
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bbd0ef162c6f9c00800000000000000
+      internalID: 909564560751516600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_216
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 498
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3dacddf46e7fe80800000000000000
+      internalID: -8144788170378390618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_217
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 498
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb0b2cc59a85d4da0800000000000000
+      internalID: -5959009247512317765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_218
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 498
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d60f34a97f98f670800000000000000
+      internalID: 8572777235495192274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_219
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 498
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c076a0a3a8228320800000000000000
+      internalID: 2558652221539905732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_220
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 498
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4187703fce3e10c0800000000000000
+      internalID: -4603172709533777587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_221
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 498
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e5f1915e6421cb90800000000000000
+      internalID: -7223452271092042267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tut_222
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 498
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afbd265f1d38f8220800000000000000
+      internalID: 2490354056747473914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tut_0: 5268187495526859981
+      tut_1: 1760660402950515922
+      tut_10: 4035431707723422893
+      tut_100: 8158110284989843840
+      tut_101: 4632556295096157606
+      tut_102: 139362204789809894
+      tut_103: 1060703709168473327
+      tut_104: -3338264824822688481
+      tut_105: -3385583335997483463
+      tut_106: -6277096521699800990
+      tut_107: -373988114039569354
+      tut_108: -4590045550975461008
+      tut_109: 2710271459694297836
+      tut_11: -5149097829973889173
+      tut_110: 5898716465118261692
+      tut_111: 6763968635643644754
+      tut_112: 682086284141515132
+      tut_113: -6256988917861241124
+      tut_114: 4858695873554171424
+      tut_115: -3471836078216184769
+      tut_116: 2306643437763336469
+      tut_117: 8774269988744448772
+      tut_118: -2581557645258155372
+      tut_119: -485172643796471528
+      tut_12: -4909102865863741545
+      tut_120: 4886360390385119954
+      tut_121: -8949787816846961506
+      tut_122: 2193931683372279655
+      tut_123: -9088697763791121415
+      tut_124: -5583104108396466982
+      tut_125: -5322167595925485979
+      tut_126: 6687816844501470273
+      tut_127: -2381821461240331540
+      tut_128: 5530967535071430700
+      tut_129: 6977814132635917486
+      tut_13: -4301174240307686598
+      tut_130: 4663064782816184513
+      tut_131: -1153557629123345690
+      tut_132: 7808341222987478742
+      tut_133: -6856653907614678335
+      tut_134: 1618561711083144997
+      tut_135: 7568439718313681400
+      tut_136: -6482655756247428713
+      tut_137: 3840681283469087386
+      tut_138: 3956672815164317457
+      tut_139: -7322641422839676417
+      tut_14: -2778532950520635154
+      tut_140: 8650326428306651017
+      tut_141: -4545713598287313819
+      tut_142: -8136621417709932230
+      tut_143: 1187593527202245866
+      tut_144: 6145938251921428690
+      tut_145: 5538059890440355963
+      tut_146: -9213608836721272922
+      tut_147: 6649236028948514764
+      tut_148: 8521867379297701112
+      tut_149: -422852638855074174
+      tut_15: 7264898823027083630
+      tut_150: 5060383131715051159
+      tut_151: 5806755333189426743
+      tut_152: -7226710686555724869
+      tut_153: -5629205474422268054
+      tut_154: -3966341633465942627
+      tut_155: -2573735756726099318
+      tut_156: 5651341982805054873
+      tut_157: -858030972043514972
+      tut_158: 559540130470824753
+      tut_159: 2225571632932734586
+      tut_16: -3579353828803920128
+      tut_160: 3297043217881923921
+      tut_161: 4399738503068927045
+      tut_162: -2890862436954234942
+      tut_163: 4802831460954689888
+      tut_164: 5392395240683317972
+      tut_165: 1877908220147282398
+      tut_166: -2162721592901907244
+      tut_167: -2940014219317728931
+      tut_168: -8562389509641748486
+      tut_169: -6589834392116645011
+      tut_17: -3026767249206595000
+      tut_170: -4799950800879446244
+      tut_171: 160133792743733259
+      tut_172: 7881814144517658959
+      tut_173: 2522533491781021067
+      tut_174: 3388258447673909870
+      tut_175: 7091419803262250280
+      tut_176: 2069575313626743824
+      tut_177: -4442171435502557141
+      tut_178: -1950522753673197720
+      tut_179: -6772932035016081845
+      tut_18: 4087672132902995193
+      tut_180: 6995483060696268080
+      tut_181: -1555532246877834416
+      tut_182: -3944360788925761503
+      tut_183: -9041306981043144006
+      tut_184: 5170318143061755747
+      tut_185: -7566803801162020900
+      tut_186: 5198138479435222688
+      tut_187: 7301257819279313633
+      tut_188: 1422244482999930528
+      tut_189: -1776677875019519353
+      tut_19: 4858877421441086216
+      tut_190: -726307239341181603
+      tut_191: 2824335618685319049
+      tut_192: -4953527083923759607
+      tut_193: -4749769976356359410
+      tut_194: 2953664286958654709
+      tut_195: 8050090452646290023
+      tut_196: -8387972895445340498
+      tut_197: 1005020524264004137
+      tut_198: 7210102450316416173
+      tut_199: 343763709128836551
+      tut_2: -68090980661940792
+      tut_20: 3095253497259259008
+      tut_200: 8241288581220588777
+      tut_201: -5743484514346181132
+      tut_202: -1516691116412403367
+      tut_203: -6711548827050977121
+      tut_204: -1592827503843464841
+      tut_205: 5003738681515658465
+      tut_206: 5290567827435860989
+      tut_207: -2317893213998144070
+      tut_208: 4911385839935285533
+      tut_209: 2320730785142055354
+      tut_21: 4750510731132195997
+      tut_210: 9183894314911052225
+      tut_211: 3652823240303557394
+      tut_212: 5573504705803170633
+      tut_213: -1716525126034781245
+      tut_214: -4877539064997024862
+      tut_215: 909564560751516600
+      tut_216: -8144788170378390618
+      tut_217: -5959009247512317765
+      tut_218: 8572777235495192274
+      tut_219: 2558652221539905732
+      tut_22: -373881135087620593
+      tut_220: -4603172709533777587
+      tut_221: -7223452271092042267
+      tut_222: 2490354056747473914
+      tut_23: -6408554968430400201
+      tut_24: -4182329034664181356
+      tut_25: -3207653049603957308
+      tut_26: -6167050330330911905
+      tut_27: -282816046368033857
+      tut_28: -8190747308635880265
+      tut_29: 6890586177166051757
+      tut_3: 7404470831791659195
+      tut_30: 4336374655241422880
+      tut_31: 2211607451778579802
+      tut_32: -2588422922363877054
+      tut_33: 5760241069043517681
+      tut_34: -1575232949168736179
+      tut_35: 970438942218088390
+      tut_36: 7358245132909369695
+      tut_37: -1731156214955335943
+      tut_38: -5826984007031589578
+      tut_39: -588756301349818758
+      tut_4: 8869697126157683375
+      tut_40: -6342113676826069390
+      tut_41: -1231669334904359306
+      tut_42: -1140027139643452381
+      tut_43: 6266161329814861233
+      tut_44: -7587407102739466108
+      tut_45: 3300116165663938074
+      tut_46: -823537653853499994
+      tut_47: -4757078064443122150
+      tut_48: 351910288676334707
+      tut_49: -1655269491826476357
+      tut_5: 3845985252328670921
+      tut_50: 514089567728597330
+      tut_51: 3367987701258801268
+      tut_52: -6514831597934668685
+      tut_53: -6904308930511446513
+      tut_54: 1724172465050774268
+      tut_55: -8598052402050824613
+      tut_56: -656820677385880649
+      tut_57: -2758015687894782365
+      tut_58: -545571789676644589
+      tut_59: -2678365285092562573
+      tut_6: -5951674271509990955
+      tut_60: -786424188333911394
+      tut_61: -7962799000248563426
+      tut_62: 7536736630381643803
+      tut_63: 9127639062344118431
+      tut_64: 6866581550002845186
+      tut_65: 7874214682731985686
+      tut_66: -8705150483949643911
+      tut_67: -163393584903050543
+      tut_68: -519278559421179760
+      tut_69: -3690322418827004693
+      tut_7: 5417173719663526468
+      tut_70: -8198961210259567058
+      tut_71: 2324828248772800485
+      tut_72: 5644713910314876994
+      tut_73: 4061490515756960381
+      tut_74: -5205835517816028793
+      tut_75: -8023209764580472459
+      tut_76: -8001198891694071230
+      tut_77: 6620343625146507971
+      tut_78: 6471973895209372140
+      tut_79: 3192253277856937171
+      tut_8: 6315440190732362512
+      tut_80: -3750041573906608561
+      tut_81: -7423956879528545541
+      tut_82: 5913982508984770581
+      tut_83: -4199232852048037625
+      tut_84: -1791899055753041342
+      tut_85: -3620759001880910828
+      tut_86: 7062287033626242919
+      tut_87: 4916942094313469892
+      tut_88: 6579183258625277214
+      tut_89: 3491051109036993175
+      tut_9: -2873186491859258793
+      tut_90: 7543386064223276842
+      tut_91: 8398081549243398839
+      tut_92: -7815497496132694403
+      tut_93: -5552989801074317795
+      tut_94: 8658465680731972822
+      tut_95: -5237811280290831351
+      tut_96: -6124165183975739506
+      tut_97: -638476236386447533
+      tut_98: 2814192644366794346
+      tut_99: -4948695551306436963
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
