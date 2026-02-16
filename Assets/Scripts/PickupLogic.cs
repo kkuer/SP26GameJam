@@ -1,4 +1,3 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PickupLogic : MonoBehaviour
@@ -59,8 +58,8 @@ public class PickupLogic : MonoBehaviour
                 }
                 HomunManager.instance.CountInventory();
             }
-            
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 }

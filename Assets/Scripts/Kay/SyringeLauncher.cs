@@ -78,7 +78,7 @@ public class SyringeLauncher : MonoBehaviour
         homun.startDir = transform.right;
 
         CanLaunch = false;
-        Debug.Log("Launch!");
+        //Debug.Log("Launch!");
 
         ShakeManager.Instance.shakeCam(1f, 2f, 0.3f);
 

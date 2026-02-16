@@ -50,6 +50,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLogic
   hitDamage: 10
+  pickupPrefab: {fileID: 2617380668310022070, guid: 9ca8ce7b3ea251747b99853a89ac53c7, type: 3}
+  lifestealMult: 10
+  baseDotDamage: 10
+  hitSoundIndex: 3
 --- !u!114 &3130872942954632704
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -104,7 +104,7 @@ public class HomunManager : MonoBehaviour
         toConfig.sizeCount = ability.sizeCount;
         toConfig.ricochetCount = ability.ricochetCount;
 
-        Debug.Log("Build Emmiters");
+        //Debug.Log("Build Emmiters");
 
         toConfig.BuildEmitters();
 
