@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLogic
   hitDamage: 10
+  velocity: {x: 0, y: 0}
   pickupPrefab: {fileID: 2617380668310022070, guid: 9ca8ce7b3ea251747b99853a89ac53c7, type: 3}
   lifestealMult: 10
   baseDotDamage: 10
@@ -143,7 +144,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3d1f96a961f0e9f469d613db4f57578b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

@@ -1011,6 +1011,10 @@ PrefabInstance:
       propertyPath: currentWeapon
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2634173054096155950, guid: 8e86ba52be3d0994db8f210b035063a8, type: 3}
+      propertyPath: swordAttackSpeed
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 6071828671861401631, guid: 8e86ba52be3d0994db8f210b035063a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

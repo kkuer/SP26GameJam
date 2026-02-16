@@ -4,6 +4,9 @@ using UnityEngine;
 public class EnemyLogic : MonoBehaviour
 {
     public float hitDamage = 10;
+    public Vector2 velocity;
+    private Rigidbody2D rb;
+    public float startingForce;
 
     public GameObject pickupPrefab;
 
@@ -13,7 +16,14 @@ public class EnemyLogic : MonoBehaviour
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         GetComponent<HealthTracker>().SetHealth();
+        SetRandomMotion();
+    }
+    private void SetRandomMotion()
+    {
+        transform.Rotate(0,0,Random.Range(0,360));
+        rb.AddForce(Vector2.up * startingForce, ForceMode2D.Impulse);
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -93,6 +103,15 @@ public class EnemyLogic : MonoBehaviour
             //deal damage to the player 
             player.healthTracker.TakeDamage(hitDamage, Color.red);        
         }
+        foreach (var contact in col.contacts)
+        {
+            Movement();
+        }
+    }
+    void Movement()
+    {
+        velocity = velocity.normalized * (rb.linearVelocity);
+
     }
 
     public void SpawnPickup()
